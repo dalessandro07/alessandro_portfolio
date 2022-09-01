@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string
+  description: string
+  actualYear: number
+}
+
+const { title, description, actualYear } = Astro.props as Props
+---
+
+<footer class="mt-12 flex flex-col justify-between min-h-[50vh]">
+  <section class="flex justify-between">
+    <aside class="flex flex-col gap-6">
+      <img class="w-10 h-10 rounded-full" src="/images/profile.png" alt="" />
+      <p class="text-gray-500 max-w-md">
+        {description}
+      </p>
+    </aside>
+
+    <article class="flex flex-col gap-4 w-2/6">
+      <p class="text-lg text-gray-400">Enlaces</p>
+
+      <ul class="flex flex-col gap-2">
+        <li class="hover:text-blue-600 text-gray-300 transition-all duration-200">
+          <a href="#">Home</a>
+        </li>
+        <li class="hover:text-blue-600 text-gray-300 transition-all duration-200">
+          <a href="#">About</a>
+        </li>
+        <li class="hover:text-blue-600 text-gray-300 transition-all duration-200">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <div class="flex justify-center">
+    <p class="text-gray-400">
+      &copy; {actualYear} - {title}
+    </p>
+  </div>
+</footer>
