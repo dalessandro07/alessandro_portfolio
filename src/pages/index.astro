@@ -8,21 +8,21 @@ import Footer from '../components/Footer.astro'
 const title = 'Alessandro Rios - Desarrollador Front-End'
 
 const description =
-  'Alessandro es un estudiante de computación e informática, especializado en software y con certificaciones en desarrollo web.'
+	'Alessandro es un estudiante de computación e informática, especializado en software y con certificaciones en desarrollo web.'
 
 const actualYear = new Date().getFullYear()
 ---
 
 <Layout title={title} description={description}>
-  <div class="min-h-screen flex flex-col gap-32 m-5 mx-12">
-    <Header />
+	<div class="min-h-screen flex flex-col gap-32 m-5 mx-12">
+		<Header />
 
-    <main class="grow flex flex-col gap-20">
-      <HeroSection />
-      <About />
-    </main>
+		<main class="grow flex flex-col gap-20">
+			<HeroSection />
+			<About />
+		</main>
 
-    <Footer title={title} description={description} actualYear={actualYear} />
-  </div>
+		<Footer title={title} description={description} actualYear={actualYear} />
+	</div>
 </Layout>
 

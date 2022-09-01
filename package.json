@@ -16,12 +16,9 @@
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",
     "@typescript-eslint/parser": "^5.36.1",
-    "standard": "^17.0.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "standard"
-    ]
+    "eslint": "^8.23.0",
+    "eslint-plugin-astro": "^0.17.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5"
   }
 }
-
