@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon'
+
+interface Props {
+	name: string
+	description: string
+	url: string
+	imagePaths: string[]
+}
+
+const { name, description, url, imagePaths } = Astro.props as Props
+---
+
+<article class="flex gap-20 w-full">
+	<aside class="w-1/3 flex flex-col justify-between">
+		<h3 class="text-3xl font-extrabold">{name}</h3>
+
+		<p set:html={description} id="description" class="text-lg text-gray-500"></p>
+
+		<div class="flex items-center gap-2">
+			<a
+				href={url}
+				class="font-extrabold text-3xl hover:text-blue-600 transition-all duration-200 flex items-center gap-2">
+				{url.replace('https://', '')}
+				<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
+			</a>
+		</div>
+	</aside>
+
+	<section class="w-2/3 max-h-[70vh] grid grid-cols-2 grid-rows-2 first:row-span-2">
+		{imagePaths?.map((path) => <img class="object-cover w-full h-full" src={path} alt="" />)}
+	</section>
+</article>

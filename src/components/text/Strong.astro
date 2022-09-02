@@ -1,0 +1,12 @@
+---
+interface Props {
+	color?: string
+}
+
+const { color } = Astro.props as Props
+const textColor = color || 'text-customBlack'
+---
+
+<strong class={textColor}>
+	<slot />
+</strong>

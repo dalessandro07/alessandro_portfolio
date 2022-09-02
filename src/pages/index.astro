@@ -4,6 +4,7 @@ import Header from '../components/Header.astro'
 import HeroSection from '../components/HeroSection.astro'
 import About from '../components/About.astro'
 import Footer from '../components/Footer.astro'
+import Projects from '../components/Projects.astro'
 
 const title = 'Alessandro Rios - Desarrollador Front-End'
 
@@ -14,12 +15,13 @@ const actualYear = new Date().getFullYear()
 ---
 
 <Layout title={title} description={description}>
-	<div class="min-h-screen flex flex-col gap-32 m-5 mx-12">
+	<div class="min-h-screen flex flex-col gap-32 my-6 mx-12">
 		<Header />
 
-		<main class="grow flex flex-col gap-20">
+		<main class="grow flex flex-col gap-32">
 			<HeroSection />
 			<About />
+			<Projects />
 		</main>
 
 		<Footer title={title} description={description} actualYear={actualYear} />

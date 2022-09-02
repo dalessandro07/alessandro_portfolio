@@ -1,20 +1,54 @@
-<section class="flex justify-between max-h-screen">
-	<article class="w-2/5 pt-8 pb-4 flex flex-col items-start justify-between">
-		<p class="text-gray-400 text-lg">
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, corporis deleniti distinctio,
-			natus eos mollitia nisi error nam architecto tenetur excepturi aperiam quaerat perspiciatis,
-			fugiat impedit eius. In, temporibus optio?
-			<br />
-			<br />
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eveniet repellat ullam eos at,
-			id veritatis, hic, beatae ad quod sequi est perspiciatis quam? Odio nobis recusandae veritatis
-			quas deserunt?
-		</p>
+---
+import Strong from './text/Strong.astro'
+---
 
-		<button class="bg-blue-600 px-6 py-3 rounded-sm hover:bg-blue-500 transition-all duration-200"
-			>Contáctame</button
-		>
+<section class="flex justify-between max-h-screen">
+	<article class="w-2/5 flex flex-col py-2 justify-between">
+		<section class="flex flex-col gap-7 items-start text-gray-500 text-lg">
+			<p>
+				Me encuentro estudiando la carrera de Computación e Informática en el Instituto
+				<Strong>Cibertec.</Strong>
+				También desarrollo proyectos individuales y colaboro en proyectos grupales como
+				<Strong>front end</Strong>
+				programando aplicaciones
+				<Strong>web.</Strong>
+			</p>
+
+			<p>
+				Me especializo en el desarrollo de interfaces, enfocadas en la experiencia de usuario. <br
+				/> Utilizo tecnologías como HTML, CSS, Javascript y
+				<Strong>React.</Strong>
+				<br /> Sin embargo, también he desarrollado otro tipo de software como extensiones de navegador
+				y aplicaciones de escritorio.
+			</p>
+
+			<p>
+				Actualmente estoy disponible para el rol de desarrollador web frontend o para colaborar en
+				proyectos freelance.
+			</p>
+
+			<p>
+				Nunca dejo de capacitarme, soy apasionado por el aprendizaje, la tecnología y el mundo del
+				desarrollo de software. Me defino como una persona <Strong>comunicativa</Strong>,
+				<Strong>responsable,</Strong> con
+				<Strong>iniciativa</Strong> y sobre todo muy <Strong>perseverante</Strong>.
+			</p>
+		</section>
+
+		<footer>
+			<a
+				href="/about"
+				class="px-8 py-3 text-lg font-semibold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800">
+				Más sobre mí
+			</a>
+		</footer>
 	</article>
 
-	<img class="w-1/3 object-contain rounded-sm" src="/images/perfil-completo.jpeg" alt="" />
+	<article class="w-2/5">
+		<img
+			class="w-full h-full object-cover rounded-lg object-top"
+			src="/images/perfil-completo.webp"
+			alt="profile"
+		/>
+	</article>
 </section>
