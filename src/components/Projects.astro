@@ -5,8 +5,8 @@ const projects = [
 	{
 		name: 'DrCafe',
 		description:
-			'Proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y destacando en el <strong class="text-customBlack font-bold">top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class="text-customBlack font-bold">complejas y dinámicas</strong>, además de aprender a trabajar con Firebase y React Router.',
-		url: 'https://astro.build',
+			'Proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y destacando en el <strong class="dark:text-customWhite text-customBlack font-bold">top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class="dark:text-customWhite text-customBlack font-bold">complejas y dinámicas</strong>, además de aprender a trabajar con Firebase y React Router.',
+		url: 'https://drcafe.netlify.app',
 		imagePaths: [
 			'/images/drcafe/DRCAFE.webp',
 			'/images/drcafe/drcafe-products.webp',
@@ -14,16 +14,17 @@ const projects = [
 		]
 	},
 	{
-		name: 'Snowpack',
-		description: 'The web application build tool.',
-		url: 'https://snowpack.dev',
+		name: 'AllExpenses',
+		description:
+			'PWA para llevar el control de tus gastos, tiene gráficos y estadísticas para que puedas ver tus gastos de manera más visual. <br/> <br/> Fue un proyecto personal para aprender a trabajar con <strong class="dark:text-customWhite text-customBlack font-bold">Autenticación de usuarios</strong> y <strong class="dark:text-customWhite text-customBlack font-bold">Base de datos</strong> con Firebase.',
+		url: 'https://allexpenses.netlify.app',
 		imagePaths: ['/images/allexLogin.webp']
 	}
 ]
 ---
 
-<section class="mt-12 flex flex-col gap-24">
-	<h2 class="font-extrabold text-6xl">Proyectos</h2>
+<section class="flex flex-col gap-32">
+	<h2 class="font-extrabold text-7xl">Proyectos</h2>
 	<article class="flex flex-col gap-40">
 		{projects.map((project) => <Project {...project} />)}
 	</article>

@@ -8,27 +8,29 @@ interface Props {
 const { title, description, actualYear } = Astro.props as Props
 ---
 
-<footer class="mt-12 flex flex-col justify-between min-h-[50vh]">
+<footer class="mt-12 flex flex-col justify-between h-[80vh]">
 	<section class="flex justify-between">
 		<aside class="flex flex-col gap-6">
-			<img class="w-10 h-10 rounded-full" src="/images/profile.webp" alt="" />
+			<img class="w-12 h-12 rounded-full object-cover" src="/favicon.webp" alt="" />
 			<p class="text-gray-500 max-w-md">
 				{description}
 			</p>
 		</aside>
 
 		<article class="flex flex-col gap-4 w-2/6">
-			<p class="text-lg text-gray-400">Enlaces</p>
+			<p class="text-xl text-gray-500 dark:text-gray-400 font-bold">Enlaces</p>
 
-			<ul class="flex flex-col gap-2">
-				<li class="hover:text-blue-600 text-gray-300 transition-all duration-200">
-					<a href="#">Home</a>
+			<ul class="flex flex-col gap-2 text-lg text-customBlack dark:text-customWhite font-semibold">
+				<li class="hover:text-blue-600 transition-all duration-200 w-max">
+					<a rel="noreferrer" target="_blank" href="https://linkedin.com/in/alessandro-rios">
+						LinkedIn
+					</a>
 				</li>
-				<li class="hover:text-blue-600 text-gray-300 transition-all duration-200">
-					<a href="#">About</a>
+				<li class="hover:text-blue-600 transition-all duration-200 w-max">
+					<a rel="noreferrer" target="_blank" href="https://github.com/dalessandro07">Github</a>
 				</li>
-				<li class="hover:text-blue-600 text-gray-300 transition-all duration-200">
-					<a href="#">Contact</a>
+				<li class="hover:text-blue-600 transition-all duration-200 w-max">
+					<a rel="noreferrer" target="_blank" href="https://twitter.com/alessandro___r">Twitter</a>
 				</li>
 			</ul>
 		</article>

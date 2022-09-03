@@ -1,15 +1,20 @@
-<header>
-	<nav class="flex gap-8 items-center">
+---
+import ThemeToggle from './buttons/ThemeToggle'
+---
+
+<header
+	class="fixed bg-customWhite/80 dark:bg-customBlack/80 backdrop-blur-lg w-full px-16 py-4 top-0 right-0 left-0 2xl:max-w-7xl 2xl:mx-auto flex justify-between items-center">
+	<nav class="flex gap-10 justify-between md:justify-start items-center">
 		<a href="/">
 			<img
-				class="w-7 h-7 rounded-full object-cover"
+				class="w-6 h-6 object-top rounded-full object-cover 2xl:h-8 2xl:w-8"
 				src="/images/profile.webp"
 				alt="logo"
 				class="w-32"
 			/>
 		</a>
 
-		<ul class="flex gap-8 text-gray-500">
+		<ul class="flex gap-12 text-gray-500 text-nav 2xl:text-lg">
 			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
 				<a href="#proyectos">Proyectos</a>
 			</li>
@@ -24,4 +29,6 @@
 			</li>
 		</ul>
 	</nav>
+
+	<ThemeToggle client:idle />
 </header>

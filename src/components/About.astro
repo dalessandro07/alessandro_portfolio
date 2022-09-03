@@ -2,9 +2,10 @@
 import Strong from './text/Strong.astro'
 ---
 
-<section class="flex justify-between max-h-screen">
-	<article class="w-2/5 flex flex-col py-2 justify-between">
-		<section class="flex flex-col gap-7 items-start text-gray-500 text-lg">
+<section class="flex flex-col-reverse lg:flex-row gap-10 justify-between">
+	<article class="w-2/5 flex flex-col py-2 justify-between 2xl:justify-around">
+		<section
+			class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-lg 2xl:text-xl">
 			<p>
 				Me encuentro estudiando la carrera de Computación e Informática en el Instituto
 				<Strong>Cibertec.</Strong>
@@ -31,7 +32,7 @@ import Strong from './text/Strong.astro'
 				Nunca dejo de capacitarme, soy apasionado por el aprendizaje, la tecnología y el mundo del
 				desarrollo de software. Me defino como una persona <Strong>comunicativa</Strong>,
 				<Strong>responsable,</Strong> con
-				<Strong>iniciativa</Strong> y sobre todo muy <Strong>perseverante</Strong>.
+				<Strong>iniciativa</Strong> y sobre todo muy <Strong>perseverante.</Strong>
 			</p>
 		</section>
 
@@ -44,7 +45,7 @@ import Strong from './text/Strong.astro'
 		</footer>
 	</article>
 
-	<article class="w-2/5">
+	<article class="w-full lg:w-2/5 max-h-screen/50">
 		<img
 			class="w-full h-full object-cover rounded-lg object-top"
 			src="/images/perfil-completo.webp"
