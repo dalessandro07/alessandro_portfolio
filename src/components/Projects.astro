@@ -18,13 +18,17 @@ const projects = [
 		description:
 			'PWA para llevar el control de tus gastos, tiene gráficos y estadísticas para que puedas ver tus gastos de manera más visual. <br/> <br/> Fue un proyecto personal para aprender a trabajar con <strong class="dark:text-customWhite text-customBlack font-bold">Autenticación de usuarios</strong> y <strong class="dark:text-customWhite text-customBlack font-bold">Base de datos</strong> con Firebase.',
 		url: 'https://allexpenses.netlify.app',
-		imagePaths: ['/images/allexLogin.webp']
+		imagePaths: [
+			'/images/allex/allexLogin.webp',
+			'/images/allex/home_allexpenses.webp',
+			'/images/allex/home_allexpenses.webp'
+		]
 	}
 ]
 ---
 
 <section class="flex flex-col gap-32">
-	<h2 class="font-extrabold text-7xl">Proyectos</h2>
+	<h2 class="font-extrabold text-5xl sm:text-7xl">Proyectos</h2>
 	<article class="flex flex-col gap-40">
 		{projects.map((project) => <Project {...project} />)}
 	</article>

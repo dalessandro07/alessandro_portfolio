@@ -4,8 +4,9 @@ import Strong from './text/Strong.astro'
 
 <div class="flex flex-col gap-16">
 	<section class="flex flex-col md:flex-row gap-10 justify-between">
-		<article class="w-2/5 py-4">
-			<section class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-lg">
+		<article class="w-full md:w-2/5 py-4">
+			<section
+				class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-sm sm:text-lg">
 				<p>
 					Me encuentro estudiando la carrera de Computación e Informática en el Instituto
 					<Strong>Cibertec.</Strong>
@@ -37,7 +38,7 @@ import Strong from './text/Strong.astro'
 			</section>
 		</article>
 
-		<article class="w-full md:w-2/5 h-screen/90">
+		<article class="w-full md:w-2/5 h-screen/50 md:h-screen/90">
 			<img
 				class="w-full h-full object-cover rounded-lg object-top"
 				src="/images/perfil-completo.webp"
