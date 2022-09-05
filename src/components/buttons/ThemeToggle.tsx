@@ -17,9 +17,10 @@ export default function ThemeToggle(): JSX.Element {
 	}, [theme])
 
 	if (!isMounted) return <></>
+
 	return (
 		<button
-			class="hover:bg-customBlack/30 transition-all duration-200 p-2 rounded-full h-8 w-8 flex items-center justify-center"
+			class="hover:bg-customBlack/30 transition-all duration-200 p-2 rounded-full w-10 h-10 md:h-8 md:w-8 items-center justify-center flex"
 			onClick={handleClick}>
 			{theme === 'light' ? (
 				<svg

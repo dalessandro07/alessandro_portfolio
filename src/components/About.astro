@@ -2,54 +2,55 @@
 import Strong from './text/Strong.astro'
 ---
 
-<section class="flex flex-col-reverse lg:flex-row gap-10 justify-between">
-	<article class="w-2/5 flex flex-col py-2 justify-between 2xl:justify-around">
-		<section
-			class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-lg 2xl:text-xl">
-			<p>
-				Me encuentro estudiando la carrera de Computación e Informática en el Instituto
-				<Strong>Cibertec.</Strong>
-				También desarrollo proyectos individuales y colaboro en proyectos grupales como
-				<Strong>front end</Strong>
-				programando aplicaciones
-				<Strong>web.</Strong>
-			</p>
+<div class="flex flex-col gap-16">
+	<section class="flex flex-col md:flex-row gap-10 justify-between">
+		<article class="w-2/5 py-4">
+			<section class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-lg">
+				<p>
+					Me encuentro estudiando la carrera de Computación e Informática en el Instituto
+					<Strong>Cibertec.</Strong>
+					También desarrollo proyectos individuales y colaboro en proyectos grupales como
+					<Strong>front end</Strong>
+					programando aplicaciones
+					<Strong>web.</Strong>
+				</p>
 
-			<p>
-				Me especializo en el desarrollo de interfaces, enfocadas en la experiencia de usuario. <br
-				/> Utilizo tecnologías como HTML, CSS, Javascript y
-				<Strong>React.</Strong>
-				<br /> Sin embargo, también he desarrollado otro tipo de software como extensiones de navegador
-				y aplicaciones de escritorio.
-			</p>
+				<p>
+					Me especializo en el desarrollo de interfaces, enfocadas en la experiencia de usuario. <br
+					/> Utilizo tecnologías como HTML, CSS, Javascript y
+					<Strong>React.</Strong>
+					<br /> Sin embargo, también he desarrollado otro tipo de software como extensiones de navegador
+					y aplicaciones de escritorio.
+				</p>
 
-			<p>
-				Actualmente estoy disponible para el rol de desarrollador web frontend o para colaborar en
-				proyectos freelance.
-			</p>
+				<p>
+					Actualmente estoy disponible para el rol de desarrollador web frontend o para colaborar en
+					proyectos freelance.
+				</p>
 
-			<p>
-				Nunca dejo de capacitarme, soy apasionado por el aprendizaje, la tecnología y el mundo del
-				desarrollo de software. Me defino como una persona <Strong>comunicativa</Strong>,
-				<Strong>responsable,</Strong> con
-				<Strong>iniciativa</Strong> y sobre todo muy <Strong>perseverante.</Strong>
-			</p>
-		</section>
+				<p>
+					Nunca dejo de capacitarme, soy apasionado por el aprendizaje, la tecnología y el mundo del
+					desarrollo de software. Me defino como una persona <Strong>comunicativa</Strong>,
+					<Strong>responsable,</Strong> con
+					<Strong>iniciativa</Strong> y sobre todo muy <Strong>perseverante.</Strong>
+				</p>
+			</section>
+		</article>
 
-		<footer>
-			<a
-				href="/about"
-				class="px-8 py-3 text-lg font-semibold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800">
-				Más sobre mí
-			</a>
-		</footer>
-	</article>
+		<article class="w-full md:w-2/5 h-screen/90">
+			<img
+				class="w-full h-full object-cover rounded-lg object-top"
+				src="/images/perfil-completo.webp"
+				alt="profile"
+			/>
+		</article>
+	</section>
 
-	<article class="w-full lg:w-2/5 max-h-screen/50">
-		<img
-			class="w-full h-full object-cover rounded-lg object-top"
-			src="/images/perfil-completo.webp"
-			alt="profile"
-		/>
-	</article>
-</section>
+	<footer>
+		<a
+			href="/about"
+			class="px-8 py-3 text-lg font-semibold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800">
+			Más sobre mí
+		</a>
+	</footer>
+</div>

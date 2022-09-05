@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -38,6 +41,10 @@ module.exports = {
 				'screen/70': '70vw',
 				'screen/80': '80vw',
 				'screen/90': '90vw'
+			},
+			screens: {
+				xs: { min: '375px', max: '639px' },
+				...defaultTheme.screens
 			}
 		}
 	},
