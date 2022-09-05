@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 interface Props {
 	title: string
 	description: string
@@ -15,9 +17,16 @@ const { title, description, actualYear } = Astro.props as Props
 			<p class="text-gray-500 max-w-md">
 				{description}
 			</p>
+
+			<a
+				href="mailto:dev.alessandro@outlook.com?body=Hola%20Alessandro%2C"
+				class="font-extrabold flex gap-2 items-center hover:text-blue-600 transition-all duration-200">
+				<Icon class="w-6 h-6 group-hover:text-blue-600" name="mail" />
+				dev.alessandro@outlook.com
+			</a>
 		</aside>
 
-		<article class="flex flex-col gap-4 w-2/6">
+		<article class="flex flex-col gap-4 w-2/6 md:pt-16">
 			<p class="text-xl text-gray-500 dark:text-gray-400 font-bold">Enlaces</p>
 
 			<ul class="flex flex-col gap-2 text-lg text-customBlack dark:text-customWhite font-semibold">
@@ -37,7 +46,7 @@ const { title, description, actualYear } = Astro.props as Props
 	</section>
 
 	<div class="flex justify-center">
-		<p class="text-gray-400">
+		<p class="text-gray-400 text-center">
 			&copy; {actualYear} - {title}
 		</p>
 	</div>

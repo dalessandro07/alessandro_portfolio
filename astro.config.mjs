@@ -1,15 +1,16 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-
-import preact from "@astrojs/preact";
+import { defineConfig } from 'astro/config'
+import preact from '@astrojs/preact'
+import tailwind from '@astrojs/tailwind'
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), preact()],
-  vite: {
-    ssr: {
-      external: ['svgo']
-    }
-  }
-});
+	site: 'https://alessandrorios.netlify.app/',
+	integrations: [tailwind(), sitemap(), preact()],
+	vite: {
+		ssr: {
+			external: ['svgo']
+		}
+	}
+})
+

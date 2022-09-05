@@ -31,7 +31,7 @@ const { name, description, url, imagePaths } = Astro.props as Props
 		{
 			imagePaths?.map((path) => (
 				<img
-					class="object-contain md:object-cover max-h-[60vh] md:max-h-[80vh] md:w-full object-top md:h-full md:first:row-span-2 rounded-xl md:first:object-left-top last:object-bottom"
+					class="object-contain md:object-cover max-h-[60vh] md:max-h-[80vh] dark:border border-2 w-full object-top md:h-full md:first:row-span-2 rounded-xl md:first:object-left-top"
 					src={path}
 					alt=""
 				/>
