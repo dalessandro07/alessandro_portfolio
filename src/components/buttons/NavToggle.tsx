@@ -16,10 +16,12 @@ export default function NavToggle(): JSX.Element {
 				menu.classList.add('opacity-100')
 				menu.classList.remove('opacity-0')
 				document.body.classList.add('overflow-hidden')
+				menu.classList.remove('pointer-events-none')
 			} else {
 				menu.classList.remove('opacity-100')
 				menu.classList.add('opacity-0')
 				document.body.classList.remove('overflow-hidden')
+				menu.classList.add('pointer-events-none')
 			}
 		}
 	}, [isActive])

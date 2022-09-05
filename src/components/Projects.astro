@@ -27,9 +27,9 @@ const projects = [
 ]
 ---
 
-<section class="flex flex-col gap-32">
+<section class="flex flex-col gap-16 md:gap-32">
 	<h2 class="font-extrabold text-5xl sm:text-7xl">Proyectos</h2>
-	<article class="flex flex-col gap-40">
+	<article class="flex flex-col gap-20 md:gap-40">
 		{projects.map((project) => <Project {...project} />)}
 	</article>
 </section>
