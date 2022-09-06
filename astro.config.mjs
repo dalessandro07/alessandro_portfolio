@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://alessandrorios.netlify.app/',
+	site: 'http://www.alessandrorios.com/',
 	integrations: [tailwind(), sitemap(), preact(), robotsTxt()],
 	vite: {
 		ssr: {
