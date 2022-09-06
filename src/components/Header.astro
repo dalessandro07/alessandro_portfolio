@@ -6,7 +6,7 @@ import HeaderMobile from './header/HeaderMobile'
 <header
 	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full md:px-16 md:py-4 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-center">
 	<nav class="flex gap-10 justify-between md:justify-start items-center">
-		<a href="/">
+		<a aria-label="Inicio" title="Alessandro Rios" href="/">
 			<img
 				class="w-6 h-6 object-top rounded-full object-cover 2xl:h-8 2xl:w-8"
 				src="/images/profile.webp"
@@ -16,18 +16,18 @@ import HeaderMobile from './header/HeaderMobile'
 		</a>
 
 		<ul class="flex gap-12 text-gray-500 text-nav 2xl:text-lg">
-			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="/#proyectos">Proyectos</a>
-			</li>
-			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="/#sobre-mi">Sobre mí</a>
-			</li>
-			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="/recursos">Recursos</a>
-			</li>
-			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="/#contacto">Contacto</a>
-			</li>
+			<a class="" href="/#proyectos">
+				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Proyectos</li>
+			</a>
+			<a href="/#sobre-mi">
+				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Sobre mí</li>
+			</a>
+			<a href="/recursos">
+				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Recursos</li>
+			</a>
+			<a href="#contacto">
+				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Contacto</li>
+			</a>
 		</ul>
 	</nav>
 

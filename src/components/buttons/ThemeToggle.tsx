@@ -20,8 +20,10 @@ export default function ThemeToggle(): JSX.Element {
 
 	return (
 		<button
-			class="hover:bg-customBlack/30 transition-all duration-200 p-2 rounded-full w-10 h-10 md:h-8 md:w-8 items-center justify-center flex"
-			onClick={handleClick}>
+			class="hover:scale-125 hover:rotate-180 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex"
+			onClick={handleClick}
+			aria-label="Cambiar tema"
+			title="Cambiar tema">
 			{theme === 'light' ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

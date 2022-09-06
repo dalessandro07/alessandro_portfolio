@@ -39,7 +39,9 @@ export default function NavToggle({ isActive, setIsActive }: Props): JSX.Element
 	return (
 		<button
 			class="hover:bg-customBlack/30 transition-all duration-200 p-2 rounded-full h-10 w-10 items-center justify-center flex"
-			onClick={handleClick}>
+			onClick={handleClick}
+			aria-label="Menú"
+			title="Menú">
 			{isActive ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

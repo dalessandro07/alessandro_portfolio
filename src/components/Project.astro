@@ -31,6 +31,7 @@ const { name, description, url, imagePaths } = Astro.props as Props
 		{
 			imagePaths?.map((path) => (
 				<a
+					aria-label={name}
 					target="_blank"
 					class="md:max-h-[80vh] w-full md:h-full md:first:row-span-2"
 					rel="noreferrer"

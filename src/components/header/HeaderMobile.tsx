@@ -32,7 +32,7 @@ export default function HeaderMobile(): JSX.Element {
 				<li
 					onClick={handleNavigation}
 					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link">
-					<a href="#proyectos">Proyectos</a>
+					<a href="/#proyectos">Proyectos</a>
 				</li>
 				<li
 					onClick={handleNavigation}
@@ -42,7 +42,7 @@ export default function HeaderMobile(): JSX.Element {
 				<li
 					onClick={handleNavigation}
 					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link">
-					<a href="#sobre-mi">Sobre mí</a>
+					<a href="/#sobre-mi">Sobre mí</a>
 				</li>
 				<li
 					onClick={handleNavigation}
