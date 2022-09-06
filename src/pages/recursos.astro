@@ -56,6 +56,33 @@ const data = {
 			url: 'https://lofigenerator.com/',
 			title: 'Lofi generator, música para concentrarse.',
 			desc: 'Para escuchar lofi lo prefiero por encima de YouTube, Spotify u otro reproductor, puedo disfrutar sin interrupciones, me gusta mucho su interfaz minimalista y limpia. Para mí indispensable.'
+		},
+		{
+			url: 'https://squoosh.app/',
+			title: 'Comprime imágenes sin perder calidad.',
+			desc: 'Lo utilizo mucho para comprimir imágenes, de hecho las imágenes de este sitio web las comprimí con esta aplicación. Es muy fácil de usar, sin registros ni publicidad y puedes comprimir imágenes en JPG, PNG, WebP, etc.'
+		}
+	],
+	vscodeExtensions: [
+		{
+			url: 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
+			title: 'Formatea tu código automáticamente.',
+			desc: 'Prettier es una herramienta que te permite formatear tu código automáticamente. Es muy útil para mantener un código limpio y ordenado. Puedes configurar las reglas de formateo para que se adapten a tus necesidades.'
+		},
+		{
+			url: 'https://marketplace.visualstudio.com/items?itemName=GitHub.copilot',
+			title: 'Crea código con ayuda de un asistente.',
+			desc: 'Github Copilot. Como dice su nombre es un copiloto, te ahorra mucho tiempo al momento de escribir código repetitivo y da sugerencias. Es muy útil para agilizar el desarrollo de proyectos.'
+		},
+		{
+			url: 'https://marketplace.visualstudio.com/items?itemName=NuclleaR.vscode-extension-auto-import',
+			title: 'Importa automáticamente tus dependencias.',
+			desc: 'Auto Import. Ahorra tiempo al momento de importar dependencias. Deja de escribir import { algo } from "algo", en su lugar, escribe algo y presiona ctrl + espacio. Es muy útil para proyectos con muchas dependencias.'
+		},
+		{
+			url: 'https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold',
+			title: 'Compacta bloques de código.',
+			desc: 'Inline Fold. Te permite compactar u ocultar clases en html, js, jsx, tsx, astro, etc. Es muy útil para proyectos con Tailwind en los que tengas muchas clases html. Esta extensión aún está en desarrollo.'
 		}
 	]
 }
@@ -64,7 +91,8 @@ const data = {
 <Layout
 	title="Recursos para desarrolladores - Alessandro Rios"
 	description="Recursos que he utilizado mucho a la hora de desarrollar software. Especialmente desarrollo web.">
-	<div class="min-h-screen flex flex-col justify-center my-6 px-5 sm:px-14 xl:max-w-7xl xl:mx-auto">
+	<div
+		class="min-h-screen flex flex-col gap-16 sm:gap-6 justify-center mt-28 mb-6 px-5 sm:px-14 xl:max-w-7xl xl:mx-auto">
 		<header
 			class="flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[60vh] xl:min-h-[90vh] justify-center">
 			<h1 class="text-6xl xs:text-7xl md:text-9xl xl:text-11xl font-bold font-poppins">Recursos</h1>
@@ -112,6 +140,25 @@ const data = {
 					{
 						data.websites.map((website) => (
 							<Resource url={website.url} title={website.title} desc={website.desc} />
+						))
+					}
+				</section>
+			</article>
+
+			<article class="flex flex-col gap-12">
+				<h3 class="text-3xl font-bold pb-2 border-b dark:border-gray-600 border-gray-300">
+					Extensiones de <a
+						rel="noreferrer"
+						target="_blank"
+						class="hover:text-blue-600 transition-all duration-200"
+						href="https://code.visualstudio.com/download">VS Code</a
+					>
+				</h3>
+
+				<section class="flex flex-wrap gap-6">
+					{
+						data.vscodeExtensions.map((extension) => (
+							<Resource url={extension.url} title={extension.title} desc={extension.desc} />
 						))
 					}
 				</section>

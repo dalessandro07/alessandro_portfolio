@@ -23,7 +23,7 @@ export default function HeaderMobile(): JSX.Element {
 
 			<ul
 				id="mobile-menu"
-				class="flex opacity-0 transition-all duration-300 ease-in-out flex-col h-screen z-40 fixed inset-0 p-8 bg-customWhite dark:bg-customBlack backdrop-blur-2xl items-center gap-16 grow justify-center">
+				class="flex opacity-0 transition-all duration-300 ease-in-out flex-col h-screen z-40 fixed inset-0 p-8 bg-customWhite dark:bg-customBlack backdrop-blur-2xl items-center gap-12 grow justify-center">
 				<li
 					onClick={handleNavigation}
 					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link">
@@ -33,6 +33,11 @@ export default function HeaderMobile(): JSX.Element {
 					onClick={handleNavigation}
 					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link">
 					<a href="#proyectos">Proyectos</a>
+				</li>
+				<li
+					onClick={handleNavigation}
+					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link">
+					<a href="/recursos">Recursos</a>
 				</li>
 				<li
 					onClick={handleNavigation}
