@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from './buttons/ThemeToggle'
-import HeaderMobile from './HeaderMobile.astro'
+import HeaderMobile from './header/HeaderMobile'
 ---
 
 <header
@@ -17,16 +17,16 @@ import HeaderMobile from './HeaderMobile.astro'
 
 		<ul class="flex gap-12 text-gray-500 text-nav 2xl:text-lg">
 			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="#proyectos">Proyectos</a>
+				<a href="/#proyectos">Proyectos</a>
 			</li>
 			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="#sobre-mi">Sobre mí</a>
+				<a href="/#sobre-mi">Sobre mí</a>
 			</li>
 			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="#proyectos">Experiencia</a>
+				<a href="/recursos">Recursos</a>
 			</li>
 			<li class="hover:text-blue-600 font-extrabold transition-all duration-200">
-				<a href="#contacto">Contacto</a>
+				<a href="/#contacto">Contacto</a>
 			</li>
 		</ul>
 	</nav>
@@ -34,4 +34,4 @@ import HeaderMobile from './HeaderMobile.astro'
 	<ThemeToggle client:idle />
 </header>
 
-<HeaderMobile />
+<HeaderMobile client:load />

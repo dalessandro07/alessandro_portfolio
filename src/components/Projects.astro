@@ -1,11 +1,12 @@
 ---
+import { Icon } from 'astro-icon'
 import Project from './Project.astro'
 
 const projects = [
 	{
 		name: 'DrCafe',
 		description:
-			'Proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y destacando en el <strong class="dark:text-customWhite text-customBlack font-bold">top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class="dark:text-customWhite text-customBlack font-bold">complejas y dinámicas</strong>, además de aprender a trabajar con Firebase y React Router.',
+			'E-Commerce. Este fue el proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y dentro del <strong class="dark:text-customWhite text-customBlack font-bold">top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class="dark:text-customWhite text-customBlack font-bold">complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos, firebase y rutas dinámicas.',
 		url: 'https://drcafe.netlify.app',
 		imagePaths: [
 			'/images/drcafe/DRCAFE.webp',
@@ -16,19 +17,40 @@ const projects = [
 	{
 		name: 'AllExpenses',
 		description:
-			'PWA para llevar el control de tus gastos, tiene gráficos y estadísticas para que puedas ver tus gastos de manera más visual. <br/> <br/> Fue un proyecto personal para aprender a trabajar con <strong class="dark:text-customWhite text-customBlack font-bold">Autenticación de usuarios</strong> y <strong class="dark:text-customWhite text-customBlack font-bold">Base de datos</strong> con Firebase.',
+			'Aplicación web (dispositivos móviles) para llevar el control de tus gastos, tiene gráficos y estadísticas para que puedas ver tus gastos de manera más visual. <br/> <br/> Fue un proyecto personal para aprender a trabajar con <strong class="dark:text-customWhite text-customBlack font-bold">Autenticación de usuarios</strong> y <strong class="dark:text-customWhite text-customBlack font-bold">Base de datos</strong> con Firebase.',
 		url: 'https://allexpenses.netlify.app',
 		imagePaths: [
 			'/images/allex/allexLogin.webp',
 			'/images/allex/home_allexpenses.webp',
 			'/images/allex/balance.webp'
 		]
+	},
+	{
+		name: 'Space Tourism',
+		description:
+			'Este proyecto web, fue un reto de maquetación y <strong class="dark:text-customWhite text-customBlack font-bold">animaciones</strong>, incluye transiciones realizadas con framer motion y carruseles con desplazamiento horizontal y vertical. <br/> <br/> Fue un proyecto personal para reforzar mis habilidades de <strong class="dark:text-customWhite text-customBlack font-bold">maquetación web</strong> y <strong class="dark:text-customWhite text-customBlack font-bold">diseño responsive</strong>.',
+		url: 'https://space-tourismweb.netlify.app/',
+		imagePaths: [
+			'/images/spaceT/space-tourism.webp',
+			'/images/spaceT/destination.webp',
+			'/images/spaceT/crew.webp'
+		]
 	}
 ]
+
+const languages = ['html-1', 'css-3', 'javascript', 'react-2', 'tailwindcss']
 ---
 
+<div id="proyectos"></div>
 <section class="flex flex-col gap-16 md:gap-32">
-	<h2 class="font-extrabold text-5xl sm:text-7xl">Proyectos</h2>
+	<article class="flex flex-col gap-8">
+		<h2 class="font-extrabold text-5xl sm:text-7xl">Últimos proyectos</h2>
+
+		<section class="flex gap-4 pb-2 items-center">
+			{languages.map((lang) => <Icon class="w-7 h-7" name={lang} />)}
+		</section>
+	</article>
+
 	<article class="flex flex-col gap-20 md:gap-40">
 		{projects.map((project) => <Project {...project} />)}
 	</article>

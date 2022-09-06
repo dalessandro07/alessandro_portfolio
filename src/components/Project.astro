@@ -17,24 +17,30 @@ const { name, description, url, imagePaths } = Astro.props as Props
 
 		<p set:html={description} id="description" class="text-lg text-gray-500 dark:text-gray-400"></p>
 
-		<div class="flex items-center gap-2">
-			<a
-				href={url}
-				class="font-bold text-xl hover:text-blue-600 transition-all duration-200 flex items-center gap-2">
-				{url.replace('https://', '')}
-				<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
-			</a>
-		</div>
+		<a
+			target="_blank"
+			rel="noreferrer"
+			href={url}
+			class="font-bold text-xl hover:text-blue-600 transition-all duration-200 flex items-center gap-2">
+			{url.replace('https://', '')}
+			<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
+		</a>
 	</aside>
 
 	<section class="md:w-2/3 flex flex-wrap md:grid md:grid-cols-2 md:grid-rows-2 items-center gap-6">
 		{
 			imagePaths?.map((path) => (
-				<img
-					class="object-contain md:object-cover max-h-[60vh] md:max-h-[80vh] dark:border border-2 w-full object-top md:h-full md:first:row-span-2 rounded-xl md:first:object-left-top"
-					src={path}
-					alt=""
-				/>
+				<a
+					target="_blank"
+					class="md:max-h-[80vh] w-full md:h-full md:first:row-span-2"
+					rel="noreferrer"
+					href={url}>
+					<img
+						class="w-full h-full object-contain md:object-cover object-top md:first:object-left-top rounded-xl border border-gray-300"
+						src={path}
+						alt=""
+					/>
+				</a>
 			))
 		}
 	</section>

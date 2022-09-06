@@ -4,17 +4,18 @@ import { Icon } from 'astro-icon'
 interface Props {
 	title: string
 	description: string
-	actualYear: number
 }
 
-const { title, description, actualYear } = Astro.props as Props
+const { title, description } = Astro.props as Props
+
+const actualYear = new Date().getFullYear()
 ---
 
-<footer class="mt-20 flex flex-col justify-between h-[80vh]">
+<footer id="contacto" class="mt-20 flex flex-col justify-between gap-12 h-[80vh]">
 	<section class="flex flex-col md:flex-row gap-16 md:gap-0 justify-between">
 		<aside class="flex flex-col gap-6">
 			<img class="w-12 h-12 rounded-full object-cover" src="/favicon.webp" alt="" />
-			<p class="text-gray-500 max-w-md">
+			<p class="text-gray-500 dark:text-gray-400 max-w-md">
 				{description}
 			</p>
 

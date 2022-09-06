@@ -1,0 +1,24 @@
+---
+interface Props {
+	url: string
+	title: string
+	desc: string
+	lang?: string
+}
+
+const { url, title, desc, lang } = Astro.props as Props
+---
+
+<div class="flex break-words flex-col max-w-lg gap-3 md:w-1/2">
+	<a
+		href={url}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="text hover:text-blue-600 transition-all duration-200 font-bold">
+		{title}
+	</a>
+	<div class="flex gap-2 text-sm text-gray-500">
+		{lang && <p>({lang})</p>}
+		<p>{desc}</p>
+	</div>
+</div>

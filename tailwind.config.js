@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	mode: 'jit',
 	theme: {
 		extend: {
 			colors: {
@@ -12,7 +13,10 @@ module.exports = {
 			},
 			fontSize: {
 				nav: '15px',
-				'7.5xl': '5.25rem'
+				'7.5xl': '5.25rem',
+				'10xl': '9rem',
+				'11xl': '10rem',
+				'12xl': '12rem'
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif']
@@ -45,6 +49,13 @@ module.exports = {
 			screens: {
 				xs: { min: '375px', max: '639px' },
 				...defaultTheme.screens
+			},
+			backgroundSize: {
+				'size-200': '200% 200%'
+			},
+			backgroundPosition: {
+				'pos-0': '0% 0%',
+				'pos-100': '100% 100%'
 			}
 		}
 	},
