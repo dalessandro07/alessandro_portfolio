@@ -12,7 +12,11 @@ export default function HeaderMobile(): JSX.Element {
 		<nav class="flex flex-col justify-center md:hidden top-0 pt-4 pb-2 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl">
 			<div class="flex items-center justify-between z-50">
 				<a href="/">
-					<img class="w-8 h-8 rounded-full object-cover" src="/favicon.webp" alt="" />
+					<img
+						class="w-8 h-8 rounded-full object-cover"
+						src="/favicon.webp"
+						alt="Logo de Alessandro Rios"
+					/>
 				</a>
 
 				<article class="flex gap-6 items-center">
