@@ -6,12 +6,11 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'http://alessandrorios.com/',
-	integrations: [tailwind(), sitemap(), preact(), robotsTxt()],
-	vite: {
-		ssr: {
-			external: ['svgo']
-		}
-	}
+  site: 'https://alessandrorios.com/',
+  integrations: [tailwind(), sitemap(), preact(), robotsTxt()],
+  vite: {
+    ssr: {
+      external: ['svgo']
+    }
+  }
 })
-
