@@ -1,37 +1,39 @@
-import { useEffect, useState } from 'preact/hooks'
-import type { JSX } from 'preact/jsx-runtime'
+import { useEffect, useState } from "preact/hooks";
+import type { JSX } from "preact/jsx-runtime";
 
 export default function ThemeToggle(): JSX.Element {
-	const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
-	const [isMounted, setIsMounted] = useState(false)
+	const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+	const [isMounted, setIsMounted] = useState(false);
 
-	const handleClick = () => setTheme(theme === 'light' ? 'dark' : 'light')
+	const handleClick = () => setTheme(theme === "light" ? "dark" : "light");
 
-	useEffect(() => setIsMounted(true), [])
+	useEffect(() => setIsMounted(true), []);
 
 	useEffect(() => {
-		if (theme === 'dark') document.documentElement.classList.add('dark')
-		else document.documentElement.classList.remove('dark')
+		if (theme === "dark") document.documentElement.classList.add("dark");
+		else document.documentElement.classList.remove("dark");
 
-		localStorage.setItem('theme', theme)
-	}, [theme])
+		localStorage.setItem("theme", theme);
+	}, [theme]);
 
-	if (!isMounted) return <></>
+	if (!isMounted) return <></>;
 
 	return (
 		<button
-			class="hover:scale-125 hover:rotate-180 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex"
+			class="hover:scale-125 hover:rotate-180 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex animate__animated animate__tada"
 			onClick={handleClick}
 			aria-label="Cambiar tema"
-			title="Cambiar tema">
-			{theme === 'light' ? (
+			title="Cambiar tema"
+		>
+			{theme === "light" ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="currentColor"
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-4 h-4 text-customBlack">
+					className="w-4 h-4 text-customBlack"
+				>
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
@@ -45,7 +47,8 @@ export default function ThemeToggle(): JSX.Element {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-6 h-6">
+					className="w-6 h-6"
+				>
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
@@ -54,5 +57,5 @@ export default function ThemeToggle(): JSX.Element {
 				</svg>
 			)}
 		</button>
-	)
+	);
 }

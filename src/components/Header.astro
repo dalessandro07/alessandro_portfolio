@@ -1,10 +1,11 @@
 ---
-import ThemeToggle from './buttons/ThemeToggle'
-import HeaderMobile from './header/HeaderMobile'
+import ThemeToggle from "./buttons/ThemeToggle";
+import HeaderMobile from "./header/HeaderMobile";
 ---
 
 <header
-	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full md:px-16 md:py-4 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-center">
+	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full md:px-16 md:py-4 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-center animate__animated animate__fadeInDown animate__faster"
+>
 	<nav class="flex gap-10 justify-between md:justify-start items-center">
 		<a aria-label="Inicio" title="Alessandro Rios" href="/">
 			<img
@@ -17,16 +18,32 @@ import HeaderMobile from './header/HeaderMobile'
 
 		<ul class="flex gap-12 text-gray-500 text-nav 2xl:text-lg">
 			<a class="" href="/#proyectos">
-				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Proyectos</li>
+				<li
+					class="hover:text-blue-600 font-extrabold transition-all duration-200"
+				>
+					Proyectos
+				</li>
 			</a>
 			<a href="/#sobre-mi">
-				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Sobre mí</li>
+				<li
+					class="hover:text-blue-600 font-extrabold transition-all duration-200"
+				>
+					Sobre mí
+				</li>
 			</a>
 			<a href="/recursos">
-				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Recursos</li>
+				<li
+					class="hover:text-blue-600 font-extrabold transition-all duration-200"
+				>
+					Recursos
+				</li>
 			</a>
 			<a href="#contacto">
-				<li class="hover:text-blue-600 font-extrabold transition-all duration-200">Contacto</li>
+				<li
+					class="hover:text-blue-600 font-extrabold transition-all duration-200"
+				>
+					Contacto
+				</li>
 			</a>
 		</ul>
 	</nav>

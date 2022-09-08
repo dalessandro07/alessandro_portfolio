@@ -1,20 +1,21 @@
 ---
 interface Props {
-	url: string
-	title: string
-	desc: string
-	lang?: string
+	url: string;
+	title: string;
+	desc: string;
+	lang?: string;
 }
 
-const { url, title, desc, lang } = Astro.props as Props
+const { url, title, desc, lang } = Astro.props as Props;
 ---
 
-<div class="flex break-words flex-col max-w-lg gap-3 md:w-1/2">
+<div class="flex break-words flex-col max-w-lg gap-3 md:w-1/2 px-6">
 	<a
 		href={url}
 		target="_blank"
 		rel="noreferrer"
-		class="text hover:text-blue-600 transition-all duration-200 font-bold">
+		class="text hover:text-blue-600 transition-all duration-200 font-bold"
+	>
 		{title}
 	</a>
 	<div class="flex gap-2 text-sm text-gray-500">

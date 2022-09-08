@@ -1,24 +1,33 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 
 interface Props {
-	title: string
-	description: string
+	title: string;
+	description: string;
 }
 
-const { title, description } = Astro.props as Props
+const { title, description } = Astro.props as Props;
 
-const actualYear = new Date().getFullYear()
+const actualYear = new Date().getFullYear();
 ---
 
-<footer id="contacto" class="mt-20 flex flex-col justify-between gap-12 min-h-[80vh]">
+<script type="module" is:inline>
+	import ScrollReveal from "/node_modules/scrollreveal/dist/scrollreveal.es.js";
+	ScrollReveal().reveal("#contacto", { delay: 250 });
+</script>
+
+<footer
+	id="contacto"
+	class="mt-20 flex flex-col justify-between gap-12 min-h-[80vh]"
+>
 	<section class="flex flex-col md:flex-row gap-16 md:gap-0 justify-between">
 		<aside class="flex flex-col gap-6">
 			<a
 				aria-label="LinkedIn de Alessandro Rios"
 				rel="noreferrer"
 				target="_blank"
-				href="https://linkedin.com/in/alessandro-rios">
+				href="https://linkedin.com/in/alessandro-rios"
+			>
 				<img
 					title="Alessandro Rios"
 					class="w-12 h-12 rounded-full object-cover"
@@ -33,7 +42,8 @@ const actualYear = new Date().getFullYear()
 
 			<a
 				href="mailto:dev.alessandro@outlook.com?body=Hola%20Alessandro%2C"
-				class="font-extrabold flex gap-2 items-center hover:text-blue-600 transition-all duration-200">
+				class="font-extrabold flex gap-2 items-center hover:text-blue-600 transition-all duration-200"
+			>
 				<Icon class="w-6 h-6 group-hover:text-blue-600" name="mail" />
 				dev.alessandro@outlook.com
 			</a>
@@ -42,17 +52,31 @@ const actualYear = new Date().getFullYear()
 		<article class="flex flex-col gap-4 w-2/6 md:pt-16">
 			<p class="text-xl text-gray-500 dark:text-gray-400 font-bold">Enlaces</p>
 
-			<ul class="flex flex-col gap-2 text-lg text-customBlack dark:text-customWhite font-semibold">
+			<ul
+				class="flex flex-col gap-2 text-lg text-customBlack dark:text-customWhite font-semibold"
+			>
 				<li class="hover:text-blue-600 transition-all duration-200 w-max">
-					<a rel="noreferrer" target="_blank" href="https://linkedin.com/in/alessandro-rios">
+					<a
+						rel="noreferrer"
+						target="_blank"
+						href="https://linkedin.com/in/alessandro-rios"
+					>
 						LinkedIn
 					</a>
 				</li>
 				<li class="hover:text-blue-600 transition-all duration-200 w-max">
-					<a rel="noreferrer" target="_blank" href="https://github.com/dalessandro07">Github</a>
+					<a
+						rel="noreferrer"
+						target="_blank"
+						href="https://github.com/dalessandro07">Github</a
+					>
 				</li>
 				<li class="hover:text-blue-600 transition-all duration-200 w-max">
-					<a rel="noreferrer" target="_blank" href="https://twitter.com/alessandro___r">Twitter</a>
+					<a
+						rel="noreferrer"
+						target="_blank"
+						href="https://twitter.com/alessandro___r">Twitter</a
+					>
 				</li>
 			</ul>
 		</article>

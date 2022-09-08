@@ -1,0 +1,42 @@
+---
+import Resource from "./Resource.astro";
+
+interface Channel {
+	url: string;
+	title: string;
+	desc: string;
+	lang?: string;
+}
+
+interface Props {
+	resourceList: Channel[];
+}
+
+const { resourceList } = Astro.props as Props;
+---
+
+<script type="module" is:inline>
+	import ScrollReveal from "/node_modules/scrollreveal/dist/scrollreveal.es.js";
+	ScrollReveal().reveal("#resource", { delay: 500 });
+</script>
+
+<article id="resource" class="flex flex-col gap-12">
+	<h3
+		class="text-3xl font-bold pb-2 border-b dark:border-gray-600 border-gray-300"
+	>
+		<slot />
+	</h3>
+
+	<section class="flex flex-wrap gap-6">
+		{
+			resourceList.map((resource) => (
+				<Resource
+					url={resource.url}
+					title={resource.title}
+					desc={resource.desc}
+					lang={resource.lang}
+				/>
+			))
+		}
+	</section>
+</article>

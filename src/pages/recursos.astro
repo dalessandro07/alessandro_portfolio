@@ -1,109 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Resource from '../components/recursos/Resource.astro'
-import Footer from '../components/Footer.astro'
+import Layout from "../layouts/Layout.astro";
+import ResourceContainer from "../components/recursos/ResourceContainer.astro";
+import Footer from "../components/Footer.astro";
 
-const data = {
-	channels: [
-		{
-			url: 'https://www.youtube.com/c/midudev',
-			title: 'Consejos, tips, recursos para desarrolladores web y mucho más...',
-			desc: 'Miguel Ángel Durán',
-			lang: 'español'
-		},
-		{
-			url: 'https://www.youtube.com/c/midulive',
-			title: 'Todos los streams de twitch de midudev. Cursos, entrevistas y mucho más...',
-			desc: 'Miguel Ángel Durán',
-			lang: 'español'
-		},
-		{
-			url: 'https://www.youtube.com/c/FaztTech',
-			title: 'Tutoriales, cursos, proyectos específicos y más. Todo gratis.',
-			desc: 'faztweb',
-			lang: 'español'
-		},
-		{
-			url: 'https://www.youtube.com/c/freeCodeCampEspa%C3%B1ol',
-			title: 'Cursos y tutoriales gratuitos de primer nivel.',
-			desc: 'freeCodeCamp',
-			lang: 'español'
-		},
-		{
-			url: 'https://www.youtube.com/c/LamaDev',
-			title: 'Tips, proyectos y consejos sobre buenas prácticas y desarrollo web.',
-			desc: 'LamaDev',
-			lang: 'inglés'
-		}
-	],
-	websites: [
-		{
-			url: 'https://heroicons.com/',
-			title: '280 Iconos minimalistas personalizables con tailwind.',
-			desc: 'Estoy seguro de que todos mis proyectos tienen al menos 1 ícono de este sitio web. Son muy fáciles de usar y se pueden integrar con React y tailwind muy fácilmente.'
-		},
-		{
-			url: 'https://react-hook-form.com/',
-			title: 'Deja de perder el tiempo validando formularios y usa react-hook-form.',
-			desc: 'Te permite crear formularios complejos de manera sencilla. Ahora solo me enfoco en el diseño y dejo que la validación y control de los campos la haga react-hook-form. Dato importante: tiene mejor rendimiento que otras librerías similares.'
-		},
-		{
-			url: 'https://rapidapi.com/hub',
-			title: 'Un conjunto de APIS gratuitas y de pago. 100% recomendado.',
-			desc: 'Si estás buscando una API para usar en tu proyecto, este es el lugar correcto. Puedes filtrar por categoría, idioma, autenticación, etc.'
-		},
-		{
-			url: 'https://lofigenerator.com/',
-			title: 'Lofi generator, música para concentrarse.',
-			desc: 'Para escuchar lofi lo prefiero por encima de YouTube, Spotify u otro reproductor, puedo disfrutar sin interrupciones, me gusta mucho su interfaz minimalista y limpia. Para mí indispensable.'
-		},
-		{
-			url: 'https://squoosh.app/',
-			title: 'Comprime imágenes sin perder calidad.',
-			desc: 'Lo utilizo mucho para comprimir imágenes, de hecho las imágenes de este sitio web las comprimí con esta aplicación. Es muy fácil de usar, sin registros ni publicidad y puedes comprimir imágenes en JPG, PNG, WebP, etc.'
-		}
-	],
-	vscodeExtensions: [
-		{
-			url: 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
-			title: 'Formatea tu código automáticamente.',
-			desc: 'Prettier es una herramienta que te permite formatear tu código automáticamente. Es muy útil para mantener un código limpio y ordenado. Puedes configurar las reglas de formateo para que se adapten a tus necesidades.'
-		},
-		{
-			url: 'https://marketplace.visualstudio.com/items?itemName=GitHub.copilot',
-			title: 'Crea código con ayuda de un asistente.',
-			desc: 'Github Copilot. Como dice su nombre es un copiloto, te ahorra mucho tiempo al momento de escribir código repetitivo y da sugerencias. Es muy útil para agilizar el desarrollo de proyectos.'
-		},
-		{
-			url: 'https://marketplace.visualstudio.com/items?itemName=NuclleaR.vscode-extension-auto-import',
-			title: 'Importa automáticamente tus dependencias.',
-			desc: 'Auto Import. Ahorra tiempo al momento de importar dependencias. Deja de escribir import { algo } from "algo", en su lugar, escribe algo y presiona ctrl + espacio. Es muy útil para proyectos con muchas dependencias.'
-		},
-		{
-			url: 'https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold',
-			title: 'Compacta bloques de código.',
-			desc: 'Inline Fold. Te permite compactar u ocultar clases en html, js, jsx, tsx, astro, etc. Es muy útil para proyectos con Tailwind en los que tengas muchas clases html. Esta extensión aún está en desarrollo.'
-		}
-	]
-}
+import data from "../data/resources.json";
+
+const { channels, vscodeExtensions, websites } = data;
 ---
 
 <Layout
 	title="Recursos para desarrolladores - Alessandro Rios"
-	description="Recursos que he utilizado mucho a la hora de desarrollar software. Especialmente desarrollo web.">
+	description="Recursos que he utilizado mucho a la hora de desarrollar software. Especialmente desarrollo web."
+>
 	<div
-		class="min-h-screen flex flex-col gap-16 sm:gap-6 justify-center mt-28 mb-6 px-5 sm:px-14 xl:max-w-7xl xl:mx-auto">
+		class="min-h-screen flex flex-col gap-16 sm:gap-6 justify-center mt-28 mb-6 px-5 sm:px-14 xl:max-w-7xl xl:mx-auto"
+	>
 		<header
-			class="flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[60vh] xl:min-h-[90vh] justify-center">
-			<h1 class="text-6xl xs:text-7xl md:text-9xl xl:text-11xl font-bold font-poppins">Recursos</h1>
-			<p class="dark:text-gray-400 text-gray-600 text-lg xl:text-2xl text-center">
-				Recursos y herramientas que utilizo a menudo y que recomiendo a otros desarrolladores.
+			class="animate__animated animate__fadeIn animate__slow flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[60vh] xl:min-h-[90vh] justify-center"
+		>
+			<h1
+				class="text-6xl xs:text-7xl md:text-9xl xl:text-11xl font-bold font-poppins"
+			>
+				Recursos
+			</h1>
+			<p
+				class="dark:text-gray-400 text-gray-600 text-lg xl:text-2xl text-center"
+			>
+				Recursos y herramientas que utilizo a menudo y que recomiendo a otros
+				desarrolladores.
 			</p>
 
 			<div class="flex flex-col items-center gap-2">
 				<a
 					href="mailto:dev.alessandro@outlook.com?subject=Quiero%20agregar%20este%20recurso%20a%20alessandrorios.com.&body=Enlace%3A%20%0A%0AT%C3%ADtulo%3A%0A%0ADescripci%C3%B3n%20o%20autor%3A"
-					class="px-8 py-4 text-customWhite rounded-full transition-all duration-500 bg-gradient-to-tl to-customBlack via-blue-600 from-blue-400 bg-size-200 bg-pos-0 hover:bg-pos-100">
+					class="px-8 py-4 text-customWhite rounded-full transition-all duration-500 bg-gradient-to-tl to-customBlack via-blue-600 from-blue-400 bg-size-200 bg-pos-0 hover:bg-pos-100"
+				>
 					¿Quieres agregar uno?
 					<br />
 				</a>
@@ -111,58 +42,21 @@ const data = {
 			</div>
 		</header>
 
-		<section class="flex flex-col gap-16">
-			<article class="flex flex-col gap-12">
-				<h3 class="text-3xl font-bold pb-2 border-b dark:border-gray-600 border-gray-300">
-					Canales de YouTube
-				</h3>
+		<section class="flex flex-col gap-24">
+			<ResourceContainer resourceList={channels}>
+				Canales de Youtube
+			</ResourceContainer>
 
-				<section class="flex flex-wrap gap-6">
-					{
-						data.channels.map((channel) => (
-							<Resource
-								url={channel.url}
-								title={channel.title}
-								desc={channel.desc}
-								lang={channel.lang}
-							/>
-						))
-					}
-				</section>
-			</article>
+			<ResourceContainer resourceList={websites}>Sitios Web</ResourceContainer>
 
-			<article class="flex flex-col gap-12">
-				<h3 class="text-3xl font-bold pb-2 border-b dark:border-gray-600 border-gray-300">
-					Sitios web
-				</h3>
-
-				<section class="flex flex-wrap gap-6">
-					{
-						data.websites.map((website) => (
-							<Resource url={website.url} title={website.title} desc={website.desc} />
-						))
-					}
-				</section>
-			</article>
-
-			<article class="flex flex-col gap-12">
-				<h3 class="text-3xl font-bold pb-2 border-b dark:border-gray-600 border-gray-300">
-					Extensiones de <a
-						rel="noreferrer"
-						target="_blank"
-						class="hover:text-blue-600 transition-all duration-200"
-						href="https://code.visualstudio.com/download">VS Code</a
-					>
-				</h3>
-
-				<section class="flex flex-wrap gap-6">
-					{
-						data.vscodeExtensions.map((extension) => (
-							<Resource url={extension.url} title={extension.title} desc={extension.desc} />
-						))
-					}
-				</section>
-			</article>
+			<ResourceContainer resourceList={vscodeExtensions}>
+				Extensiones de <a
+					rel="noreferrer"
+					target="_blank"
+					class="hover:text-blue-600 transition-all duration-200"
+					href="https://code.visualstudio.com/download">VS Code</a
+				>
+			</ResourceContainer>
 		</section>
 
 		<Footer

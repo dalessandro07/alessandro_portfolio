@@ -1,0 +1,47 @@
+[
+	{
+		"name": "DrCafe",
+		"description": "E-Commerce. Este fue el proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y dentro del <strong class='dark:text-customWhite text-customBlack font-bold'>top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='dark:text-customWhite text-customBlack font-bold'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos, firebase y rutas dinámicas.",
+		"url": "https://drcafe.netlify.app",
+		"src": [
+			"/images/drcafe/DRCAFE.webp",
+			"/images/drcafe/drcafe-products.webp",
+			"/images/drcafe/drcafe-order.webp"
+		]
+	},
+	{
+		"name": "AllExpenses",
+		"description": "Aplicación web (dispositivos móviles) para llevar el control de tus gastos, tiene gráficos y estadísticas para que puedas ver tus gastos de manera más visual. <br/> <br/> Fue un proyecto personal para aprender a trabajar con <strong class='dark:text-customWhite text-customBlack font-bold'>Autenticación de usuarios</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>Base de datos</strong> con Firebase.",
+		"url": "https://allexpenses.netlify.app",
+		"src": [
+			"/images/allex/allexLogin.webp",
+			"/images/allex/home_allexpenses.webp",
+			"/images/allex/balance.webp"
+		]
+	},
+	{
+		"name": "Space Tourism",
+		"description": "Este proyecto web, fue un reto de maquetación y <strong class='dark:text-customWhite text-customBlack font-bold'>animaciones</strong>, incluye transiciones realizadas con framer motion y carruseles con desplazamiento horizontal y vertical. <br/> <br/> Fue un proyecto personal para reforzar mis habilidades de <strong class='dark:text-customWhite text-customBlack font-bold'>maquetación web</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>diseño responsive</strong>.",
+		"url": "https://space-tourismweb.netlify.app",
+		"src": [
+			"/images/spaceT/space-tourism.webp",
+			"/images/spaceT/destination.webp",
+			"/images/spaceT/crew.webp"
+		]
+	},
+	{
+		"name": "Organízalo",
+		"description": "Aplicación de escritorio para organizar archivos en carpetas y subcarpetas, por extensión y fecha de creación. Es muy útil para ordenar carpetas con muchos archivos. Este proyecto está desarrollado en <strong class='dark:text-customWhite text-customBlack font-bold'>Python</strong>.",
+		"url": "https://drive.google.com/file/d/1oovbniNBxbFnIsT5V1lsBnHNxk7ZmjiY/view?usp=sharing",
+		"src": ["/images/organizalo/organizalo.webp"],
+		"isSecondary": true
+	},
+	{
+		"name": "CEJ Extension",
+		"description": "Extensión de navegador para <strong class='dark:text-customWhite text-customBlack font-bold'>Chrome</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>Edge</strong> que permite buscar expedientes judiciales mucho más rápido. Envíame un correo a dev.alessandro@outlook.com para darte más detalles de la extensión.",
+		"url": "mailto:dev.alessandro@outlook.com",
+		"src": ["/videos/cej/demo.mp4"],
+		"isSecondary": true,
+		"isVideo": true
+	}
+]
