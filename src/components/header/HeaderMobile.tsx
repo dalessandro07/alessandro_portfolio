@@ -9,7 +9,7 @@ export default function HeaderMobile(): JSX.Element {
 	const handleNavigation = () => setIsActive(false);
 
 	return (
-		<nav class="flex flex-col justify-center md:hidden top-0 pt-4 pb-2 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl z-50">
+		<nav class="min-h-[12vh] flex flex-col justify-center md:hidden top-0 pt-4 pb-2 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl z-50">
 			<div class="flex items-center justify-between z-50">
 				<a href="/">
 					<img
@@ -20,14 +20,13 @@ export default function HeaderMobile(): JSX.Element {
 				</a>
 
 				<article class="flex gap-6 items-center">
-					<ThemeToggle />
 					<NavToggle isActive={isActive} setIsActive={setIsActive} />
 				</article>
 			</div>
 
 			<ul
 				id="mobile-menu"
-				class="mt-8 flex opacity-0 transition-all duration-300 ease-in-out flex-col h-screen z-40 fixed inset-0 p-8 bg-customWhite dark:bg-customBlack backdrop-blur-2xl items-center gap-12 grow justify-center"
+				class="mt-4 flex opacity-0 transition-all duration-300 ease-in-out flex-col h-screen z-40 fixed inset-0 p-8 bg-customWhite dark:bg-customBlack backdrop-blur-2xl items-center gap-12 grow justify-center"
 			>
 				<li
 					onClick={handleNavigation}
@@ -58,6 +57,10 @@ export default function HeaderMobile(): JSX.Element {
 					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link"
 				>
 					<a href="#contacto">Contacto</a>
+				</li>
+
+				<li>
+					<ThemeToggle />
 				</li>
 			</ul>
 		</nav>

@@ -50,6 +50,7 @@ export default function NavToggle({
 			class="hamburger hamburger--spin"
 			type="button"
 			onClick={handleClick}
+			aria-label="Menú"
 		>
 			<span class="hamburger-box">
 				<span class="hamburger-inner"></span>

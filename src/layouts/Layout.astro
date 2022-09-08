@@ -42,6 +42,8 @@ const { title, description } = Astro.props;
 		<slot />
 
 		<script is:inline>
+			window.paceOptions = {};
+
 			const theme = (() => {
 				if (
 					typeof localStorage !== "undefined" &&
