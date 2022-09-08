@@ -20,7 +20,7 @@ export default function ThemeToggle(): JSX.Element {
 
 	return (
 		<button
-			class="hover:scale-125 hover:rotate-180 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex animate__animated animate__tada"
+			class="hover:scale-125 hover:rotate-180 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex"
 			onClick={handleClick}
 			aria-label="Cambiar tema"
 			title="Cambiar tema"
@@ -32,7 +32,7 @@ export default function ThemeToggle(): JSX.Element {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-4 h-4 text-customBlack"
+					className="w-8 h-8 md:w-4 md:h-4 text-customBlack"
 				>
 					<path
 						strokeLinecap="round"
@@ -47,7 +47,7 @@ export default function ThemeToggle(): JSX.Element {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-6 h-6"
+					className="w-11 h-11 md:w-6 md:h-6"
 				>
 					<path
 						strokeLinecap="round"
