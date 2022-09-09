@@ -22,7 +22,7 @@ const { resourceList } = Astro.props as Props;
 		<slot />
 	</h3>
 
-	<section class="flex flex-wrap gap-6">
+	<section class="flex flex-wrap gap-x-2 sm:gap-x-0 gap-y-10 justify-between">
 		{
 			resourceList.map((resource) => (
 				<Resource
