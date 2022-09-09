@@ -20,7 +20,7 @@ export default function ThemeToggle(): JSX.Element {
 
 	return (
 		<button
-			class="hover:scale-125 hover:rotate-180 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex"
+			class="hover:scale-125 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex"
 			onClick={handleClick}
 			aria-label="Cambiar tema"
 			title="Cambiar tema"

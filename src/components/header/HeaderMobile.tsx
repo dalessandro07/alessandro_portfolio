@@ -19,7 +19,8 @@ export default function HeaderMobile(): JSX.Element {
 					/>
 				</a>
 
-				<article class="flex gap-6 items-center">
+				<article class="flex gap-4 items-center">
+					<ThemeToggle />
 					<NavToggle isActive={isActive} setIsActive={setIsActive} />
 				</article>
 			</div>
@@ -57,10 +58,6 @@ export default function HeaderMobile(): JSX.Element {
 					class="hover:text-blue-600 transition-all duration-200 text-2xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link"
 				>
 					<a href="#contacto">Contacto</a>
-				</li>
-
-				<li>
-					<ThemeToggle />
 				</li>
 			</ul>
 		</nav>

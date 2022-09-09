@@ -11,39 +11,7 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/webp" href="/favicon.webp" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="canonical" href={Astro.request.url} />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta
-			name="keywords"
-			content="Alessandro, Alessandro Rios, Rios, front, en desarrollo, Desarrollador Front end, desarrollador, en proyectos, estudiante, certificaciones en desarrollo, especializado en software, programador web, Desarrollador Web, web, desarrollo web, software, computación, programador"
-		/>
-	</head>
-
-	<body
-		class="dark:bg-customBlack transition-all duration-200 dark:text-customWhite text-customBlack bg-customWhite"
-	>
-		<Header />
-
-		<slot />
-
-		<script is:inline>
-			window.paceOptions = {};
-
+		<script defer>
 			const theme = (() => {
 				if (
 					typeof localStorage !== "undefined" &&
@@ -63,8 +31,50 @@ const { title, description } = Astro.props;
 				document.documentElement.classList.add("dark");
 			}
 
-			window.localStorage.setItem("theme", theme);
+			if (theme) window.localStorage.setItem("theme", theme);
 		</script>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/webp" href="/favicon.webp" />
+		<link rel="shortcut icon" href="/favicon.webp" />
+		<link rel="apple-touch-icon" href="/favicon.webp" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="canonical" href={Astro.request.url} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta
+			name="keywords"
+			content="Alessandro, Alessandro Rios, Rios, front, en desarrollo, Desarrollador Front end, desarrollador, en proyectos, estudiante, certificaciones en desarrollo, especializado en software, programador web, Desarrollador Web, web, desarrollo web, software, computación, programador"
+		/>
+		<!-- FONTS -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- GSAP -->
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+		></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"
+		></script>
+	</head>
+
+	<body
+		class="transition-all duration-200 text-customBlack bg-customWhite dark:text-customWhite dark:bg-customBlack"
+	>
+		<Header />
+
+		<slot />
 
 		<style>
 			body {

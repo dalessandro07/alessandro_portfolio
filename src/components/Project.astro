@@ -14,11 +14,6 @@ const { name, description, url, src, isSecondary, isVideo } =
 	Astro.props as Props;
 ---
 
-<script type="module" is:inline>
-	import ScrollReveal from "/node_modules/scrollreveal/dist/scrollreveal.es.js";
-	ScrollReveal().reveal(".project", { delay: 500 });
-</script>
-
 {
 	isSecondary ? (
 		<article class="project flex flex-col md:flex-col-reverse gap-12 md:w-1/3">
