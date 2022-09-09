@@ -20,6 +20,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@typescript-eslint/parser": "^5.36.1",
+    "astro-fonts-next": "^1.0.5",
     "astro-robots-txt": "^0.3.8",
     "eslint": "^8.23.0",
     "eslint-plugin-astro": "^0.17.1",

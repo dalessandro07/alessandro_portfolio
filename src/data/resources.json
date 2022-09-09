@@ -78,6 +78,11 @@
 			"url": "https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold",
 			"title": "Compacta bloques de código.",
 			"desc": "Inline Fold. Te permite compactar u ocultar clases en html, js, jsx, tsx, astro, etc. Es muy útil para proyectos con Tailwind en los que tengas muchas clases html. Esta extensión aún está en desarrollo."
+		},
+		{
+			"url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
+			"title": "Muestra los errores en línea.",
+			"desc": "Error Lens. Te permite ver los errores de tu código en tiempo real en la misma línea. Es muy útil y te ahorrará tiempo al momento de depurar tu código."
 		}
 	]
 }

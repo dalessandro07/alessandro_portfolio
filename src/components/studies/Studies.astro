@@ -1,0 +1,15 @@
+---
+import studies from "../../data/studies.json";
+import Study from "./Study.astro";
+---
+
+<div id="estudios"></div>
+<section class="flex flex-col gap-16 md:gap-32 mb-12 md:mb-0">
+	<header id="title" class="flex flex-col gap-8 md:mt-14">
+		<h2 class="font-extrabold text-5xl sm:text-7xl">Estudios</h2>
+	</header>
+
+	<article class="flex flex-wrap gap-20 md:gap-6 lg:gap-20">
+		{studies.map((study) => <Study {...study} />)}
+	</article>
+</section>

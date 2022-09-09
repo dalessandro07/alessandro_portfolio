@@ -1,0 +1,54 @@
+---
+import Icon from "astro-icon";
+import type { Project } from "../../env";
+import SecondaryProject from "./SecondaryProject.astro";
+
+const props = Astro.props as Project;
+const { name, description, url, src, isSecondary, isVideo } = props;
+---
+
+{
+	isSecondary ? (
+		<SecondaryProject {...props} />
+	) : (
+		<article class="project flex flex-col md:flex-row gap-20 w-full md:max-h-screen">
+			<aside class="md:w-1/3 flex flex-col justify-center gap-10">
+				<h3 class="text-4xl font-black">{name}</h3>
+
+				<p
+					set:html={description}
+					id="description"
+					class="text-lg text-gray-500 dark:text-gray-400"
+				/>
+
+				<a
+					target="_blank"
+					rel="noreferrer"
+					href={url}
+					class="font-bold text-xl hover:text-blue-600 transition-all duration-200 flex items-center gap-2 w-max"
+				>
+					{url?.replace("https://", "").substring(0, 30)}
+					<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
+				</a>
+			</aside>
+
+			<section class="md:w-2/3 flex flex-wrap justify-center md:grid md:grid-cols-2 md:grid-rows-2 items-center gap-6">
+				{src?.map((path) => (
+					<a
+						aria-label={name}
+						target="_blank"
+						class="w-full sm:w-auto md:first:flex md:first:items-center md:w-full md:h-full md:first:row-span-2 md:first:max-h-[90%]"
+						rel="noreferrer"
+						href={url}
+					>
+						<img
+							class="w-full md:w-full max-h-[50vh] md:max-h-[80vh] md:h-full object-cover sm:object-contain md:object-cover object-top md:first:object-left-top rounded-xl border border-gray-300"
+							src={path}
+							alt={name}
+						/>
+					</a>
+				))}
+			</section>
+		</article>
+	)
+}

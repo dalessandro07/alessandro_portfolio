@@ -1,29 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from "../layouts/Layout.astro";
 
-import HeroSection from '../components/HeroSection.astro'
-import About from '../components/About.astro'
-import Projects from '../components/Projects.astro'
+import HeroSection from "../components/HeroSection.astro";
+import About from "../components/About.astro";
+import Studies from "../components/studies/Studies.astro";
+import Projects from "../components/projects/Projects.astro";
 
-import Footer from '../components/Footer.astro'
+import Footer from "../components/Footer.astro";
 
-const title = 'Alessandro Rios - Desarrollador Front-End'
+const title = "Alessandro Rios - Desarrollador Front-End";
 
 const description =
-	'Alessandro es un estudiante de computación e informática, especializado en software y con certificaciones en desarrollo web.'
+	"Alessandro es desarrollador front end y estudiante de computación e informática, especializado en software y con certificaciones en desarrollo web. Disponible para proyectos freelance.";
 ---
 
 <Layout title={title} description={description}>
 	<div
-		id="container"
-		class="min-h-screen flex flex-col md:gap-32 px-5 my-6 sm:px-14 xl:max-w-7xl xl:mx-auto">
-		<main class="grow flex flex-col gap-24 md:gap-32 mt-36">
+		class="min-h-screen flex flex-col md:gap-32 px-5 my-6 sm:px-14 xl:max-w-7xl xl:mx-auto"
+	>
+		<main class="grow flex flex-col gap-24 mt-36">
 			<HeroSection />
 			<About />
 			<Projects />
+			<Studies />
 		</main>
 
 		<Footer title={title} description={description} />
 	</div>
 </Layout>
-
