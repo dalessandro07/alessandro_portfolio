@@ -5,9 +5,11 @@ import Strong from "./text/Strong.astro";
 <div id="sobre-mi"></div>
 <div id="about" class="flex flex-col gap-16">
 	<section class="flex flex-col md:flex-row gap-10 justify-between">
-		<article class="w-full md:w-2/5 py-4">
+		<article
+			class="w-full md:w-2/5 py-4 flex flex-col items-start justify-between gap-10"
+		>
 			<div
-				class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-sm sm:text-lg"
+				class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-sm sm:text-lg 2xl:text-xl"
 			>
 				<p>
 					Me encuentro estudiando la carrera de Computación e Informática en el
@@ -43,6 +45,15 @@ import Strong from "./text/Strong.astro";
 					<Strong>perseverante.</Strong>
 				</p>
 			</div>
+
+			<a
+				rel="noreferrer"
+				target="_blank"
+				href="https://linkedin.com/in/alessandro-rios"
+				class="px-10 py-5 text-2xl font-semibold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800 hidden 2xl:flex"
+			>
+				Más sobre mí
+			</a>
 		</article>
 
 		<article class="w-full md:w-2/5 h-screen/50 md:h-screen/90">
@@ -54,7 +65,7 @@ import Strong from "./text/Strong.astro";
 		</article>
 	</section>
 
-	<footer>
+	<footer class="2xl:hidden">
 		<a
 			rel="noreferrer"
 			target="_blank"
