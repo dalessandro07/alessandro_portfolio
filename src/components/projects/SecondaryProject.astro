@@ -20,9 +20,13 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 			target="_blank"
 			rel="noreferrer"
 			href={url}
-			class="font-bold text-lg hover:text-blue-600 transition-all duration-200 flex items-center gap-2 w-max"
+			class="font-bold text-xl hover:text-blue-600 transition-all duration-200 flex items-end gap-2 w-max"
 		>
-			{url.replace("https://", "").substring(0, 30)}
+			{
+				url?.replace("https://", "").length > 20
+					? url?.replace("https://", "").slice(0, 20) + "..."
+					: url?.replace("https://", "")
+			}
 			<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
 		</a>
 	</aside>

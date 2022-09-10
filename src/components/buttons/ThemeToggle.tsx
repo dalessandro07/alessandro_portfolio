@@ -32,7 +32,7 @@ export default function ThemeToggle(): JSX.Element {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-8 h-8 md:w-4 md:h-4 2xl:w-6 2xl:h-6 text-customBlack"
+					className="w-6 h-6 md:w-4 md:h-4 2xl:w-6 2xl:h-6 text-customBlack"
 				>
 					<path
 						strokeLinecap="round"
@@ -47,7 +47,7 @@ export default function ThemeToggle(): JSX.Element {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-11 h-11 md:w-6 md:h-6 2xl:w-8 2xl:h-8"
+					className="w-8 h-8 md:w-6 md:h-6 2xl:w-8 2xl:h-8"
 				>
 					<path
 						strokeLinecap="round"

@@ -3,22 +3,19 @@ import type { JSX } from "preact/jsx-runtime";
 import ThemeToggle from "../buttons/ThemeToggle";
 import NavToggle from "../buttons/NavToggle";
 import MobileNavItem from "./MobileNavItem";
+import LogoMobile from "./LogoMobile";
 
 export default function HeaderMobile(): JSX.Element {
 	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<nav class="min-h-[12vh] flex flex-col justify-center md:hidden top-0 pt-4 pb-2 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl z-50">
+		<nav class="flex flex-col justify-center md:hidden top-0 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl z-50">
 			<div class="flex items-center justify-between z-50">
-				<a href="/">
-					<img
-						class="w-10 h-10 rounded-full object-cover"
-						src="/favicon.webp"
-						alt="Logo de Alessandro Rios"
-					/>
+				<a class="w-20 h-auto mt-1.5" href="/">
+					<LogoMobile />
 				</a>
 
-				<article class="flex gap-4 items-center">
+				<article class="flex gap-6 items-center">
 					<ThemeToggle />
 					<NavToggle isActive={isActive} setIsActive={setIsActive} />
 				</article>

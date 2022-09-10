@@ -1,22 +1,20 @@
 ---
+import Icon from "astro-icon";
 import ThemeToggle from "./buttons/ThemeToggle";
 import HeaderMobile from "./header/HeaderMobile";
 ---
 
 <header
-	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full md:px-16 md:py-4 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-center min-h-[10vh]"
+	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full px-16 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-center"
 >
 	<nav class="flex gap-10 justify-between md:justify-start items-center">
 		<a aria-label="Inicio" title="Alessandro Rios" href="/">
-			<img
-				class="w-6 h-6 object-top rounded-full object-cover 2xl:h-10 2xl:w-10"
-				src="/images/profile.webp"
-				alt="Logo de Alessandro Rios"
-				class="w-32"
-			/>
+			<Icon name="logo" class="w-16 h-auto mt-1.5" />
 		</a>
 
-		<ul class="flex gap-11 text-gray-500 text-nav 2xl:text-lg">
+		<ul
+			class="flex gap-11 text-gray-500 dark:text-gray-400 text-nav 2xl:text-lg"
+		>
 			<a
 				class="hover:text-blue-600 font-extrabold transition-all duration-200"
 				href="/#sobre-mi"
