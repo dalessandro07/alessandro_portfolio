@@ -4,8 +4,6 @@ import ResourceContainer from "../components/resources/ResourceContainer.astro";
 import Footer from "../components/Footer.astro";
 
 import data from "../data/resources.json";
-
-const { channels, vscodeExtensions, websites } = data;
 ---
 
 <Layout
@@ -43,20 +41,27 @@ const { channels, vscodeExtensions, websites } = data;
 		</header>
 
 		<section class="flex flex-col gap-24">
-			<ResourceContainer resourceList={channels}>
-				Canales de Youtube
-			</ResourceContainer>
-
-			<ResourceContainer resourceList={websites}>Sitios Web</ResourceContainer>
-
-			<ResourceContainer resourceList={vscodeExtensions}>
-				Extensiones de <a
-					rel="noreferrer"
-					target="_blank"
-					class="hover:text-blue-600 transition-all duration-200"
-					href="https://code.visualstudio.com/download">VS Code</a
-				>
-			</ResourceContainer>
+			{
+				Object.entries(data).map(([key, value]) => (
+					<ResourceContainer resourceList={value}>
+						{key.includes("VS Code") ? (
+							<>
+								Extensiones de
+								<a
+									rel="noreferrer"
+									target="_blank"
+									class="hover:text-blue-600 transition-all duration-200"
+									href="https://code.visualstudio.com/download"
+								>
+									VS Code
+								</a>
+							</>
+						) : (
+							<>{key}</>
+						)}
+					</ResourceContainer>
+				))
+			}
 		</section>
 
 		<Footer

@@ -1,5 +1,5 @@
 {
-	"channels": [
+	"Canales de Youtube": [
 		{
 			"url": "https://www.youtube.com/c/midudev",
 			"title": "Consejos, tips, recursos para desarrolladores web y mucho más...",
@@ -31,7 +31,7 @@
 			"lang": "inglés"
 		}
 	],
-	"websites": [
+	"Sitios Web": [
 		{
 			"url": "https://heroicons.com/",
 			"title": "280 Iconos minimalistas personalizables con tailwind.",
@@ -58,7 +58,7 @@
 			"desc": "Lo utilizo mucho para comprimir imágenes, de hecho las imágenes de este sitio web las comprimí con esta aplicación. Es muy fácil de usar, sin registros ni publicidad y puedes comprimir imágenes en JPG, PNG, WebP, etc."
 		}
 	],
-	"vscodeExtensions": [
+	"Extensiones de VS Code": [
 		{
 			"url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
 			"title": "Formatea tu código automáticamente.",
@@ -83,6 +83,13 @@
 			"url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
 			"title": "Muestra los errores en línea.",
 			"desc": "Error Lens. Te permite ver los errores de tu código en tiempo real en la misma línea. Es muy útil y te ahorrará tiempo al momento de depurar tu código."
+		}
+	],
+	"Paquetes NPM": [
+		{
+			"url": "https://www.npmjs.com/package/spanish-word-to-number",
+			"title": "Convierte palabras a números.",
+			"desc": "Con spanish-word-to-number puedes convertir palabras a números sólo llamando una función, incluye cientos y miles. Ejemplo: GetNumberFromWord('doscientos treinta y cuatro') -> 234"
 		}
 	]
 }
