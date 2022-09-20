@@ -9,8 +9,8 @@ export default function HeaderMobile(): JSX.Element {
 	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<nav class="flex flex-col justify-center md:hidden top-0 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl z-50">
-			<div class="flex items-center justify-between z-50">
+		<nav class="flex flex-col justify-center md:hidden top-0 fixed right-0 left-0 px-4 dark:bg-customBlack/60 bg-customWhite/60 backdrop-blur-xl z-50 py-2">
+			<div class="flex items-end justify-between z-50">
 				<a class="w-20 h-auto mt-1.5" href="/">
 					<LogoMobile />
 				</a>

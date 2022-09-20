@@ -16,8 +16,8 @@ export default defineConfig({
 		robotsTxt(),
 		fonts({
 			url: [
-				'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap',
-				'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap'
+				'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap',
+				'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap'
 			]
 		})
 	],

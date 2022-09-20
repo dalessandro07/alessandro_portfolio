@@ -1,15 +1,22 @@
 ---
-import Icon from "astro-icon";
 import ThemeToggle from "./buttons/ThemeToggle";
 import HeaderMobile from "./header/HeaderMobile";
 ---
 
 <header
-	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full px-16 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-center"
+	id="header"
+	class="fixed hidden z-50 dark:bg-customBlack/60 bg-customWhite/60 transition-all duration-200 backdrop-blur-lg w-full px-16 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-end py-4"
 >
-	<nav class="flex gap-10 justify-between md:justify-start items-center">
-		<a aria-label="Inicio" title="Alessandro Rios" href="/">
-			<Icon name="logo" class="w-16 h-auto mt-1.5" />
+	<nav
+		class="flex gap-10 mb-1 lg:mb-2 items-end justify-between md:justify-start"
+	>
+		<a
+			class="hover:scale-110 transition-all duraiton-200"
+			aria-label="Inicio"
+			title="Alessandro Rios"
+			href="/"
+		>
+			<img class="w-10 h-10 object-cover" src="/logo.webp" alt="" />
 		</a>
 
 		<ul
