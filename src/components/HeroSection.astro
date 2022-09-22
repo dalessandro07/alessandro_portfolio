@@ -1,15 +1,31 @@
 ---
 import Icon from "astro-icon";
+
+const heroTitle =
+	"Soy Alessandro Rios desarrollador front end y estudiante de informática.";
+
+const heroWords = heroTitle.split(" ");
+
+const heroLetters = heroWords.map((word) => word.split(""));
 ---
 
-<section
-	id="heroTitle"
-	class="flex flex-col gap-10 max-w-4xl 2xl:max-w-5xl justify-center"
->
+<section class="flex flex-col gap-10 max-w-4xl 2xl:max-w-5xl justify-center">
 	<h1
 		class="text-4xl xs:text-5xl sm:text-7xl md:text-7.5xl 2xl:text-8xl font-bold font-poppins !leading-min"
 	>
-		Soy Alessandro Rios desarrollador front end y estudiante de informática.
+		{
+			heroLetters.map((word) => (
+				<span class="hidden sm:inline mx-2">
+					{word.map((letter) => (
+						<span class="hover:text-transparent bg-gradient-to-br bg-clip-text from-blue-500 to-blue-800 transition-all duration-150 -mx-2">
+							{letter}
+						</span>
+					))}
+				</span>
+			))
+		}
+
+		<span class="sm:hidden">{heroTitle}</span>
 	</h1>
 
 	<article class="flex gap-8 items-center">
