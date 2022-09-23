@@ -1,0 +1,21 @@
+---
+interface Props {
+	href: string;
+	target?: string;
+	color?: string;
+	isBold?: boolean;
+}
+
+const { href, target, isBold = true } = Astro.props as Props;
+---
+
+<a
+	rel={target === "_blank" ? "noreferrer" : null}
+	target={target ?? "_self"}
+	class={`${
+		isBold ? "font-bold" : ""
+	} hover:text-blue-600 transition-all duration-200`}
+	href={href}
+>
+	<slot />
+</a>

@@ -19,7 +19,7 @@ module.exports = {
 				"12xl": "12rem",
 			},
 			fontFamily: {
-				poppins: "Poppins, sans-serif",
+				inter: "Inter, sans-serif",
 			},
 			lineHeight: {
 				min: "1.1",
