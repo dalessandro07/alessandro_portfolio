@@ -4,7 +4,7 @@
 		"country": "Peru",
 		"degree": "Computación e Informática",
 		"date": "2022 - 2025",
-		"description": "Estoy estudiando la carrera de Computación e Informática en CIBERTEC. Actualemente viendo algoritmos en Java y arquitectura de entornos web",
+		"description": "Estoy estudiando la carrera de Computación e Informática en CIBERTEC. Actualemente viendo algoritmos en <strong>Java</strong> y reforzando arquitectura de entornos web.",
 		"image": "/images/studies/cibertec.webp",
 		"url": "https://www.cibertec.edu.pe/"
 	},
@@ -13,7 +13,7 @@
 		"country": "Argentina",
 		"degree": "Desarrollo Front End",
 		"date": "2021 - 2022",
-		"description": "Estudié la carrera de Desarrollo Front End en Coderhouse. Aprendí HTML, CSS, JavaScript, React, Firebase, Git, entre otras tecnologías.",
+		"description": "Estudié la carrera de Desarrollo Front End en Coderhouse. Aprendí HTML, CSS, JavaScript, <strong>React</strong>, Firebase, Git, entre otras tecnologías.",
 		"image": "/images/studies/coderhouse.webp",
 		"url": "https://www.coderhouse.com/"
 	}

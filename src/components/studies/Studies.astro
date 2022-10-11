@@ -4,12 +4,13 @@ import Study from "./Study.astro";
 ---
 
 <div id="estudios"></div>
-<section class="flex flex-col gap-32 mb-12 md:mb-0">
+
+<section class="flex flex-col gap-32 mb-20 md:mb-0">
 	<header id="title" class="flex flex-col gap-8 md:mt-14">
 		<h2 class="font-extrabold text-5xl sm:text-7xl">Estudios</h2>
 	</header>
 
-	<article class="flex flex-wrap gap-24 lg:gap-44">
+	<article class="flex flex-wrap justify-between gap-y-20">
 		{studies.map((study) => <Study {...study} />)}
 	</article>
 </section>

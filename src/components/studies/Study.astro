@@ -1,6 +1,4 @@
 ---
-import Icon from "astro-icon";
-
 interface Study {
 	institute: string;
 	country: string;
@@ -15,7 +13,7 @@ const { institute, country, degree, date, description, image, url } =
 	Astro.props as Study;
 ---
 
-<article class="flex flex-col md:max-w-xs lg:max-w-sm gap-5">
+<article class="flex flex-col md:max-w-xs lg:max-w-md gap-5">
 	<header class="flex flex-col gap-4">
 		<a
 			target="_blank"
@@ -24,6 +22,7 @@ const { institute, country, degree, date, description, image, url } =
 			class="font-bold text-lg w-max hover:text-blue-600 transition-all duration-200 flex gap-6 items-center"
 		>
 			<h3 class="text-4xl font-black">{institute}</h3>
+
 			<img
 				class="w-9 h-9 rounded-full object-cover"
 				src={image}
@@ -31,7 +30,7 @@ const { institute, country, degree, date, description, image, url } =
 			/>
 		</a>
 
-		<p><span class="font-bold">{degree}</span> - {country}</p>
+		<p><span>{degree}</span> - {country}</p>
 	</header>
 
 	<section>
