@@ -35,13 +35,5 @@
 		"url": "https://1drv.ms/u/s!ArTaDJ7bM_jWeIUMcUUr-z-r-CE?e=EZPMtl",
 		"src": ["/images/organizalo/organizalo.webp"],
 		"isSecondary": true
-	},
-	{
-		"name": "CEJ Extension",
-		"description": "Extensión de navegador para <strong class='dark:text-customWhite text-customBlack font-bold'>Chrome</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>Edge</strong> que permite buscar expedientes judiciales mucho más rápido. Envíame un correo a dev.alessandro@outlook.com para darte más detalles de la extensión.",
-		"url": "mailto:dev.alessandro@outlook.com",
-		"src": ["/videos/cej/demo.mp4"],
-		"isSecondary": true,
-		"isVideo": true
 	}
 ]
