@@ -5,7 +5,7 @@ import Study from "./Study.astro";
 
 <div id="estudios"></div>
 
-<section class="flex flex-col gap-32 mb-20 md:mb-0">
+<section id="studies" class="flex flex-col gap-32 mb-20 md:mb-0">
 	<header id="title" class="flex flex-col gap-8 md:mt-14">
 		<h2 class="font-extrabold text-5xl sm:text-7xl">Estudios</h2>
 	</header>
@@ -14,3 +14,9 @@ import Study from "./Study.astro";
 		{studies.map((study) => <Study {...study} />)}
 	</article>
 </section>
+
+<script is:inline>
+	window
+		.ScrollReveal()
+		.reveal("#studies", { delay: 300, easing: "ease-in-out" });
+</script>

@@ -27,8 +27,10 @@ const { title, description } = Astro.props;
 
 			if (theme === "light") {
 				document.documentElement.classList.remove("dark");
+				document.documentElement.style.setProperty("color-scheme", "light");
 			} else {
 				document.documentElement.classList.add("dark");
+				document.documentElement.style.setProperty("color-scheme", "dark");
 			}
 
 			if (theme) window.localStorage.setItem("theme", theme);

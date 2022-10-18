@@ -7,7 +7,7 @@ const languages = ["html-1", "css-3", "javascript", "react-2", "tailwindcss"];
 ---
 
 <div id="proyectos"></div>
-<section class="flex flex-col gap-32">
+<section id="projects" class="flex flex-col gap-32">
 	<header id="title" class="flex flex-col gap-8 md:mt-14">
 		<h2 class="font-extrabold text-5xl sm:text-7xl">Proyectos</h2>
 
@@ -26,3 +26,9 @@ const languages = ["html-1", "css-3", "javascript", "react-2", "tailwindcss"];
 		{projects.map((project) => <Project {...project} />)}
 	</article>
 </section>
+
+<script is:inline>
+	window
+		.ScrollReveal()
+		.reveal("#projects", { delay: 300, easing: "ease-in-out" });
+</script>

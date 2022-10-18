@@ -11,27 +11,27 @@ import Strong from "./text/Strong.astro";
 			<div
 				class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-base sm:text-lg 2xl:text-xl"
 			>
-				<p>
+				<p class="ab-paragraph">
 					Apasionado por el aprendizaje, la tecnología y el mundo del desarrollo
 					de software. Me especializo en la programación de aplicaciones (web o
 					desktop) como
 					<Strong>front end.</Strong>
 				</p>
 
-				<p>
+				<p class="ab-paragraph">
 					Utilizo tecnologías como HTML, CSS, Javascript y <Strong>React</Strong
 					> para web. Y Python, <Strong>Java</Strong> (aprendiendo actualmente) o
 					Electron para aplicaciones de escritorio.
 				</p>
 
-				<p>
+				<p class="ab-paragraph">
 					Me gusta aprender nuevas tecnologías y siempre estoy haciendo <a
 						class="hover:text-blue-600 font-semibold transition-all duration-200"
 						href="#proyectos">proyectos</a
 					> para mejorar mis habilidades.
 				</p>
 
-				<p>
+				<p class="ab-paragraph">
 					Como estudiante y compañero siempre estoy dispuesto a
 					<Strong>compartir</Strong> mis conocimientos y <Strong>ayudar</Strong>
 					a otros. Si tienes alguna duda con un proyecto y está en mis manos ayudarte,
@@ -41,18 +41,19 @@ import Strong from "./text/Strong.astro";
 					>.
 				</p>
 
-				<p>
+				<p class="ab-paragraph">
 					Actualmente estoy disponible para el rol de desarrollador web front
 					end o para colaborar en proyectos freelance.
 				</p>
 
-				<p>
+				<p class="ab-paragraph">
 					Me defino como una persona comunicativa, responsable, con iniciativa y
 					sobre todo <Strong>perseverante.</Strong>
 				</p>
 			</div>
 
 			<a
+				id="ab-more1"
 				rel="noreferrer"
 				target="_blank"
 				href="https://linkedin.com/in/alessandro-rios"
@@ -73,6 +74,7 @@ import Strong from "./text/Strong.astro";
 
 	<footer class="2xl:hidden flex justify-center sm:justify-start">
 		<a
+			id="ab-more2"
 			rel="noreferrer"
 			target="_blank"
 			href="https://linkedin.com/in/alessandro-rios"
@@ -82,3 +84,16 @@ import Strong from "./text/Strong.astro";
 		</a>
 	</footer>
 </div>
+
+<script is:inline>
+	window.ScrollReveal().reveal("#about", { delay: 300, easing: "ease-in-out" });
+	window
+		.ScrollReveal()
+		.reveal(".ab-paragraph", { delay: 300, easing: "ease-in-out" });
+	window
+		.ScrollReveal()
+		.reveal("#ab-more1", { delay: 300, easing: "ease-in-out" });
+	window
+		.ScrollReveal()
+		.reveal("#ab-more2", { delay: 300, easing: "ease-in-out" });
+</script>

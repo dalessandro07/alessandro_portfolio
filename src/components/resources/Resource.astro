@@ -9,7 +9,10 @@ interface Props {
 const { url, title, desc, lang } = Astro.props as Props;
 ---
 
-<div class="flex break-words flex-col gap-3 w-ful sm:w-1/2 pl-1 sm:pr-12">
+<div
+	id="resource-item"
+	class="flex break-words flex-col gap-3 w-ful sm:w-1/2 pl-1 sm:pr-12"
+>
 	<a
 		href={url}
 		target="_blank"

@@ -11,7 +11,10 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 	isSecondary ? (
 		<SecondaryProject {...props} />
 	) : (
-		<article class="project flex flex-col md:flex-row gap-20 w-full md:max-h-screen">
+		<article
+			id="project"
+			class="project flex flex-col md:flex-row gap-20 w-full md:max-h-screen"
+		>
 			<aside class="md:w-1/3 flex flex-col justify-center gap-10">
 				<h3 class="text-4xl font-black">{name}</h3>
 
@@ -54,3 +57,9 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 		</article>
 	)
 }
+
+<script is:inline>
+	window
+		.ScrollReveal()
+		.reveal("#project", { delay: 300, easing: "ease-in-out" });
+</script>

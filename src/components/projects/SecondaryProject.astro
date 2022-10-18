@@ -5,7 +5,10 @@ import type { Project } from "../../env";
 const { name, description, url, src, isVideo } = Astro.props as Project;
 ---
 
-<article class="flex flex-col md:flex-col-reverse gap-12 md:w-1/3">
+<article
+	id="secondary-project"
+	class="flex flex-col md:flex-col-reverse gap-12 md:w-1/3"
+>
 	<aside class="flex flex-col md:justify-between gap-8 md:gap-4 md:h-1/2">
 		<h3 class="text-4xl font-black">{name}</h3>
 
@@ -63,3 +66,9 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 		}
 	</section>
 </article>
+
+<script is:inline>
+	window
+		.ScrollReveal()
+		.reveal("#secondary-project", { delay: 300, easing: "ease-in-out" });
+</script>
