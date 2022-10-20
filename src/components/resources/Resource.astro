@@ -30,3 +30,15 @@ const { url, title, desc, lang } = Astro.props as Props;
 		<p class="w-11/12 sm:w-4/5">{desc}</p>
 	</div>
 </div>
+
+<script is:inline>
+	function scrollReveal() {
+		window.ScrollReveal().reveal("#resource-item", {
+			duration: 1000,
+			distance: "50px",
+			origin: "bottom",
+		});
+	}
+
+	window.addEventListener("load", scrollReveal);
+</script>

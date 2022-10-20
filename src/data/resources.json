@@ -1,4 +1,31 @@
 {
+	"Sitios Web": [
+		{
+			"url": "https://heroicons.com/",
+			"title": "280 Iconos minimalistas personalizables con tailwind.",
+			"desc": "Estoy seguro de que todos mis proyectos tienen al menos 1 ícono de este sitio web. Son muy fáciles de usar y se pueden integrar con React y tailwind muy fácilmente."
+		},
+		{
+			"url": "https://react-hook-form.com/",
+			"title": "Deja de perder el tiempo validando formularios y usa react-hook-form.",
+			"desc": "Te permite crear formularios complejos de manera sencilla. Ahora solo me enfoco en el diseño y dejo que la validación y control de los campos la haga react-hook-form. Dato importante: tiene mejor rendimiento que otras librerías similares."
+		},
+		{
+			"url": "https://rapidapi.com/hub",
+			"title": "Un conjunto de APIS gratuitas y de pago. 100% recomendado.",
+			"desc": "Si estás buscando una API para usar en tu proyecto, este es el lugar correcto. Puedes filtrar por categoría, idioma, autenticación, etc."
+		},
+		{
+			"url": "https://lofigenerator.com/",
+			"title": "Lofi generator, música para concentrarse.",
+			"desc": "Para escuchar lofi lo prefiero por encima de YouTube, Spotify u otro reproductor, puedo disfrutar sin interrupciones, me gusta mucho su interfaz minimalista y limpia. Para mí indispensable."
+		},
+		{
+			"url": "https://squoosh.app/",
+			"title": "Comprime imágenes sin perder calidad.",
+			"desc": "Lo utilizo mucho para comprimir imágenes, de hecho las imágenes de este sitio web las comprimí con esta aplicación. Es muy fácil de usar, sin registros ni publicidad y puedes comprimir imágenes en JPG, PNG, WebP, etc."
+		}
+	],
 	"Canales de Youtube": [
 		{
 			"url": "https://www.youtube.com/c/midudev",
@@ -31,33 +58,7 @@
 			"lang": "inglés"
 		}
 	],
-	"Sitios Web": [
-		{
-			"url": "https://heroicons.com/",
-			"title": "280 Iconos minimalistas personalizables con tailwind.",
-			"desc": "Estoy seguro de que todos mis proyectos tienen al menos 1 ícono de este sitio web. Son muy fáciles de usar y se pueden integrar con React y tailwind muy fácilmente."
-		},
-		{
-			"url": "https://react-hook-form.com/",
-			"title": "Deja de perder el tiempo validando formularios y usa react-hook-form.",
-			"desc": "Te permite crear formularios complejos de manera sencilla. Ahora solo me enfoco en el diseño y dejo que la validación y control de los campos la haga react-hook-form. Dato importante: tiene mejor rendimiento que otras librerías similares."
-		},
-		{
-			"url": "https://rapidapi.com/hub",
-			"title": "Un conjunto de APIS gratuitas y de pago. 100% recomendado.",
-			"desc": "Si estás buscando una API para usar en tu proyecto, este es el lugar correcto. Puedes filtrar por categoría, idioma, autenticación, etc."
-		},
-		{
-			"url": "https://lofigenerator.com/",
-			"title": "Lofi generator, música para concentrarse.",
-			"desc": "Para escuchar lofi lo prefiero por encima de YouTube, Spotify u otro reproductor, puedo disfrutar sin interrupciones, me gusta mucho su interfaz minimalista y limpia. Para mí indispensable."
-		},
-		{
-			"url": "https://squoosh.app/",
-			"title": "Comprime imágenes sin perder calidad.",
-			"desc": "Lo utilizo mucho para comprimir imágenes, de hecho las imágenes de este sitio web las comprimí con esta aplicación. Es muy fácil de usar, sin registros ni publicidad y puedes comprimir imágenes en JPG, PNG, WebP, etc."
-		}
-	],
+
 	"Extensiones de VS Code": [
 		{
 			"url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
