@@ -15,8 +15,9 @@ interface Props {
 const { resourceList } = Astro.props as Props;
 ---
 
-<article id="resource" class="flex flex-col gap-12">
+<article class="flex flex-col gap-12">
 	<h3
+		id="resource-title"
 		class="text-3xl font-bold pb-2 border-b dark:border-gray-600 border-gray-300"
 	>
 		<slot />

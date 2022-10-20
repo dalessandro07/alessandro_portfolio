@@ -39,7 +39,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			aria-label="LinkedIn"
 		>
 			<Icon
-				class="text-gray-500 hover:text-blue-600 transition-all duration-200 w-8 h-8"
+				class="text-gray-600 hover:text-blue-600 transition-all duration-200 w-8 h-8"
 				name="linkedin"
 			/>
 		</a>
@@ -51,7 +51,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			arial-label="Github"
 		>
 			<Icon
-				class="text-gray-500 hover:text-blue-600 transition-all duration-200 w-8 h-8"
+				class="text-gray-600 hover:text-blue-600 transition-all duration-200 w-8 h-8"
 				name="github"
 			/>
 		</a>
@@ -63,7 +63,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			aria-label="Twitter"
 		>
 			<Icon
-				class="text-gray-500 hover:text-blue-600 transition-all duration-200 w-8 h-8"
+				class="text-gray-600 hover:text-blue-600 transition-all duration-200 w-8 h-8"
 				name="twitter"
 			/>
 		</a>
@@ -71,5 +71,10 @@ const heroLetters = heroWords.map((word) => word.split(""));
 </section>
 
 <script is:inline>
-	window.ScrollReveal().reveal("#hero", { delay: 300, easing: "ease-in-out" });
+	window.ScrollReveal().reveal("#hero", {
+		delay: 500,
+		easing: "ease-in-out",
+		opacity: 0,
+		distance: "5px",
+	});
 </script>

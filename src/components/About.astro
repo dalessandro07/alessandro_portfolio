@@ -9,19 +9,19 @@ import Strong from "./text/Strong.astro";
 			class="w-full md:w-2/5 py-4 flex flex-col items-start justify-between gap-10"
 		>
 			<div
-				class="flex flex-col gap-7 items-start text-gray-500 dark:text-gray-400 text-base sm:text-lg 2xl:text-xl"
+				class="flex flex-col gap-7 items-start text-gray-600 dark:text-gray-400 text-base sm:text-lg 2xl:text-xl"
 			>
 				<p class="ab-paragraph">
 					Apasionado por el aprendizaje, la tecnología y el mundo del desarrollo
-					de software. Me especializo en la programación de aplicaciones (web o
-					desktop) como
-					<Strong>front end.</Strong>
+					de software. Desarrollo aplicaciones (web o desktop) como
+					<Strong>front-end.</Strong>
 				</p>
 
 				<p class="ab-paragraph">
-					Utilizo tecnologías como HTML, CSS, Javascript y <Strong>React</Strong
-					> para web. Y Python, <Strong>Java</Strong> (aprendiendo actualmente) o
-					Electron para aplicaciones de escritorio.
+					Utilizo tecnologías web como HTML, CSS, Javascript y <Strong>
+						React
+					</Strong>. Además de Python, <Strong>Java</Strong> o Electron para aplicaciones
+					de escritorio.
 				</p>
 
 				<p class="ab-paragraph">
@@ -42,11 +42,6 @@ import Strong from "./text/Strong.astro";
 				</p>
 
 				<p class="ab-paragraph">
-					Actualmente estoy disponible para el rol de desarrollador web front
-					end o para colaborar en proyectos freelance.
-				</p>
-
-				<p class="ab-paragraph">
 					Me defino como una persona comunicativa, responsable, con iniciativa y
 					sobre todo <Strong>perseverante.</Strong>
 				</p>
@@ -63,7 +58,10 @@ import Strong from "./text/Strong.astro";
 			</a>
 		</article>
 
-		<article class="w-full md:w-2/5 h-screen/50 md:h-screen/90">
+		<article
+			id="profile_img"
+			class="w-full md:w-2/5 h-screen/50 md:h-screen/90"
+		>
 			<img
 				class="w-full h-full object-cover rounded-lg object-top"
 				src="/images/perfil-completo.webp"
@@ -87,6 +85,9 @@ import Strong from "./text/Strong.astro";
 
 <script is:inline>
 	window.ScrollReveal().reveal("#about", { delay: 300, easing: "ease-in-out" });
+	window
+		.ScrollReveal()
+		.reveal("#profile-img", { delay: 300, easing: "ease-in-out" });
 	window
 		.ScrollReveal()
 		.reveal(".ab-paragraph", { delay: 300, easing: "ease-in-out" });

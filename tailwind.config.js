@@ -1,64 +1,64 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-	mode: "jit",
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	mode: 'jit',
 	theme: {
 		extend: {
 			colors: {
-				customBlack: "#111111",
-				customWhite: "#f0f0f0",
+				customBlack: '#121213',
+				customWhite: '#e8e8e8'
 			},
 			fontSize: {
-				nav: "15px",
-				"7.5xl": "5.25rem",
-				"10xl": "9rem",
-				"11xl": "10rem",
-				"12xl": "12rem",
+				nav: '15px',
+				'7.5xl': '5.25rem',
+				'10xl': '9rem',
+				'11xl': '10rem',
+				'12xl': '12rem'
 			},
 			fontFamily: {
-				inter: "Inter, sans-serif",
+				inter: 'Inter, sans-serif'
 			},
 			lineHeight: {
-				min: "1.1",
+				min: '1.1'
 			},
 			height: {
-				"screen/10": "10vh",
-				"screen/20": "20vh",
-				"screen/30": "30vh",
-				"screen/40": "40vh",
-				"screen/50": "50vh",
-				"screen/60": "60vh",
-				"screen/70": "70vh",
-				"screen/80": "80vh",
-				"screen/90": "90vh",
+				'screen/10': '10vh',
+				'screen/20': '20vh',
+				'screen/30': '30vh',
+				'screen/40': '40vh',
+				'screen/50': '50vh',
+				'screen/60': '60vh',
+				'screen/70': '70vh',
+				'screen/80': '80vh',
+				'screen/90': '90vh'
 			},
 			width: {
-				"screen/10": "10vw",
-				"screen/20": "20vw",
-				"screen/30": "30vw",
-				"screen/40": "40vw",
-				"screen/50": "50vw",
-				"screen/60": "60vw",
-				"screen/70": "70vw",
-				"screen/80": "80vw",
-				"screen/90": "90vw",
+				'screen/10': '10vw',
+				'screen/20': '20vw',
+				'screen/30': '30vw',
+				'screen/40': '40vw',
+				'screen/50': '50vw',
+				'screen/60': '60vw',
+				'screen/70': '70vw',
+				'screen/80': '80vw',
+				'screen/90': '90vw'
 			},
 			screens: {
-				xs: { min: "390px", max: "639px" },
-				...defaultTheme.screens,
+				xs: { min: '390px', max: '639px' },
+				...defaultTheme.screens
 			},
 			backgroundSize: {
-				"size-200": "200% 200%",
+				'size-200': '200% 200%'
 			},
 			backgroundPosition: {
-				"pos-0": "0% 0%",
-				"pos-100": "100% 100%",
-			},
-		},
+				'pos-0': '0% 0%',
+				'pos-100': '100% 100%'
+			}
+		}
 	},
 	plugins: [],
-	darkMode: "class",
-};
+	darkMode: 'class'
+}
