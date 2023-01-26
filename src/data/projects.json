@@ -39,7 +39,7 @@
 	{
 		"name": "Extensión CEJBOT",
 		"description": "Extensión de navegador. El proceso de buscar expedientes manualmente en el CEJ puede llevar mucho tiempo, con esta extensión, puede acceder a los expedientes en segundos. Ahorrando entre 33 y 55 minutos diarios*. ¡Mire nuestro video para ver cómo funciona! <br/> <br/> Este proyecto está desarrollado en <strong class='dark:text-customWhite text-customBlack font-bold'>React</strong>.",
-		"url": "mailto:dev.alessandro@outlook.com?body=Hola%20Alessandro%2C,%2Cme%2Cinteresa%2Cla%2Cextensión%2CCEJBOT%2Cpara%2CChrome%2C.%2C%2CQuisiera%2Cmás%2Cinformación%2C.%2C%2CGracias%2C!",
+		"url": "mailto:dev.alessandro@outlook.com?subject=Extensi%C3%B3n%20CEJBOT&body=Hola%20Alessandro%2C%0A%0AVi%20tu%20extensi%C3%B3n%20para%20el%20CEJ%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n.%0A%0AGracias.",
 		"src": ["/images/cejbot/cejbot-video.mp4"],
 		"isSecondary": true,
 		"isVideo": true
