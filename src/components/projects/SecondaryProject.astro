@@ -16,8 +16,7 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 			set:html={description}
 			id="description"
 			class="text-gray-600 dark:text-gray-400"
-		>
-		</p>
+		/>
 
 		<a
 			target="_blank"
@@ -67,7 +66,7 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 	</section>
 </article>
 
-<script is:inline>
+<script>
 	window
 		.ScrollReveal()
 		.reveal("#secondary-project", { delay: 300, easing: "ease-in-out" });

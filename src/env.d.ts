@@ -8,3 +8,9 @@ export interface Project {
 	isVideo?: boolean
 	isSecondary?: boolean
 }
+
+declare global {
+	export interface Window {
+		ScrollReveal: any
+	}
+}

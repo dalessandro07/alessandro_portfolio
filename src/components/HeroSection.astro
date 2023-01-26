@@ -3,9 +3,7 @@ import Icon from "astro-icon";
 
 const heroTitle =
 	"Soy Alessandro Rios desarrollador front- end especializado en React.";
-
 const heroWords = heroTitle.split(" ");
-
 const heroLetters = heroWords.map((word) => word.split(""));
 ---
 
@@ -20,7 +18,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			heroLetters.map((word) => (
 				<span class="hidden sm:flex">
 					{word.map((letter) => (
-						<span class="hover:text-transparent bg-gradient-to-br bg-clip-text from-blue-500 to-blue-800 transition-all duration-150">
+						<span class="letter hover:text-transparent bg-gradient-to-br bg-clip-text [-webkit-background-clip:text] from-blue-500 to-blue-800 transition-all duration-150">
 							{letter}
 						</span>
 					))}
@@ -70,7 +68,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 	</article>
 </section>
 
-<script is:inline>
+<script>
 	window.ScrollReveal().reveal("#hero", {
 		delay: 500,
 		easing: "ease-in-out",
