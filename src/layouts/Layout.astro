@@ -11,9 +11,6 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html class="scroll-smooth motion-reduce:scroll-auto sr" lang="es">
 	<head>
-		<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"
-		></script>
-
 		<script defer>
 			const theme = (() => {
 				if (
@@ -38,6 +35,9 @@ const { title, description } = Astro.props;
 
 			if (theme) window.localStorage.setItem("themeARPortfolio", theme);
 		</script>
+
+		<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"
+		></script>
 
 		<link rel="stylesheet" href="../css/lato-v1.0.css?v=1.0" />
 

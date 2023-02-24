@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect } from "preact/hooks";
 import type { JSX } from "preact/jsx-runtime";
 import type { StateUpdater } from "preact/hooks/src/index";
 
@@ -13,11 +13,7 @@ export default function NavToggle({
 	isActive,
 	setIsActive,
 }: Props): JSX.Element {
-	const [isMounted, setIsMounted] = useState(false);
-
 	const handleClick = () => setIsActive(!isActive);
-
-	useEffect(() => setIsMounted(true), []);
 
 	useEffect(() => {
 		const menu = document?.querySelector("#mobile-menu");
@@ -41,8 +37,6 @@ export default function NavToggle({
 			}
 		}
 	}, [isActive]);
-
-	if (!isMounted) return <></>;
 
 	return (
 		<button

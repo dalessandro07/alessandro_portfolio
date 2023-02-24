@@ -36,17 +36,11 @@ const darkIcon = (
 );
 
 export default function ThemeToggle(): JSX.Element {
-	const [theme, setTheme] = useState("");
-	const [isMounted, setIsMounted] = useState(false);
+	const [theme, setTheme] = useState(
+		localStorage.getItem("themeARPortfolio") ?? "light"
+	);
 
 	const handleClick = () => setTheme(theme === "light" ? "dark" : "light");
-
-	useEffect(() => {
-		const localTheme = localStorage.getItem("themeARPortfolio");
-		localTheme && setTheme(localTheme);
-	}, []);
-
-	useEffect(() => setIsMounted(true), []);
 
 	useEffect(() => {
 		if (theme === "dark") {
@@ -59,17 +53,6 @@ export default function ThemeToggle(): JSX.Element {
 
 		localStorage.setItem("themeARPortfolio", theme);
 	}, [theme]);
-
-	if (!isMounted)
-		return (
-			<button
-				class="md:hover:scale-125 transition-all h-8 duration-200 p-2 rounded-full items-center justify-center flex"
-				aria-label="Cambiar tema"
-				title="Cambiar tema"
-			>
-				{theme === "light" ? lightIcon : darkIcon}
-			</button>
-		);
 
 	return (
 		<button

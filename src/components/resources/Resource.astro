@@ -28,10 +28,7 @@ const { url, title, desc, lang } = Astro.props as Props;
 		{title}
 	</a>
 
-	<div
-		id="description"
-		class="flex gap-2 text-sm text-gray-600 dark:text-gray-400"
-	>
+	<div class="flex gap-2 text-sm text-gray-600 dark:text-gray-400">
 		{lang && <p>({lang})</p>}
 		<p class="w-11/12 sm:w-4/5">{desc}</p>
 	</div>
