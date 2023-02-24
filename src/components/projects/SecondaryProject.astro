@@ -46,9 +46,8 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 					{isVideo ? (
 						<video
 							controls
-							autoplay
-							loop
-							muted
+							preload="none"
+							poster="/images/cejbot/cejbot-poster.webp"
 							class="h-screen/40 object-cover rounded-xl border border-gray-300"
 						>
 							<source src={path} type="video/mp4" />

@@ -1,31 +1,31 @@
 {
-  "name": "my-portfolio",
-  "version": "0.0.1",
-  "private": true,
-  "author": "Alessandro Rios",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^2.0.1",
-    "astro-icon": "^0.8.0",
-    "astro-seo": "^0.7.0",
-    "tailwindcss": "^3.2.4"
-  },
-  "devDependencies": {
-    "@astrojs/preact": "^2.0.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^3.0.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "astro-robots-txt": "^0.3.11",
-    "eslint": "^8.32.0",
-    "eslint-plugin-astro": "^0.23.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
-    "preact": "^10.11.3"
-  }
+	"name": "my-portfolio",
+	"version": "0.0.1",
+	"private": true,
+	"author": "Alessandro Rios",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build && cp _redirects dist/_redirects",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^2.0.1",
+		"astro-icon": "^0.8.0",
+		"astro-seo": "^0.7.0",
+		"tailwindcss": "^3.2.4"
+	},
+	"devDependencies": {
+		"@astrojs/preact": "^2.0.0",
+		"@astrojs/sitemap": "^1.0.0",
+		"@astrojs/tailwind": "^3.0.0",
+		"@typescript-eslint/parser": "^5.49.0",
+		"astro-robots-txt": "^0.3.11",
+		"eslint": "^8.32.0",
+		"eslint-plugin-astro": "^0.23.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.6.1",
+		"preact": "^10.11.3"
+	}
 }
