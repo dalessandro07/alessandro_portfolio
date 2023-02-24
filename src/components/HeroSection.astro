@@ -7,9 +7,15 @@ const heroWords = heroTitle.split(" ");
 const heroLetters = heroWords.map((word) => word.split(""));
 ---
 
+<style>
+	html.sr .load-hidden {
+		visibility: hidden;
+	}
+</style>
+
 <section
 	id="hero"
-	class="flex flex-col gap-10 max-w-4xl 2xl:max-w-5xl justify-center"
+	class="flex flex-col gap-10 max-w-4xl 2xl:max-w-5xl justify-center load-hidden"
 >
 	<h1
 		class="flex flex-wrap gap-x-[18px] text-4xl xs:text-5xl sm:text-7xl md:text-7.5xl 2xl:text-8xl font-bold font-inter !leading-min"
@@ -70,7 +76,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 
 <script>
 	window.ScrollReveal().reveal("#hero", {
-		delay: 500,
+		delay: 250,
 		easing: "ease-in-out",
 		opacity: 0,
 		distance: "5px",

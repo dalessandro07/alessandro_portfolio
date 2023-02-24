@@ -1,6 +1,12 @@
+<style>
+	html.sr .load-hidden {
+		visibility: hidden;
+	}
+</style>
+
 <header
 	id="resourcesHeader"
-	class="flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[90vh] 2xl:min-h-[70vh] justify-center"
+	class="flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[90vh] 2xl:min-h-[70vh] justify-center load-hidden"
 >
 	<h1
 		class="text-6xl xs:text-7xl md:text-9xl xl:text-11xl font-bold font-inter"
@@ -25,7 +31,7 @@
 
 <script>
 	window.ScrollReveal().reveal("#resourcesHeader", {
-		delay: 500,
+		delay: 250,
 		easing: "ease-in-out",
 		opacity: 0,
 		distance: "5px",

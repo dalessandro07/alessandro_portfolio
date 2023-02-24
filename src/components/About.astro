@@ -2,8 +2,14 @@
 import Strong from "./text/Strong.astro";
 ---
 
+<style>
+	html.sr .load-hidden {
+		visibility: hidden;
+	}
+</style>
+
 <div id="sobre-mi"></div>
-<div id="about" class="flex flex-col gap-20 sm:gap-16">
+<div id="about" class="flex flex-col gap-20 sm:gap-16 load-hidden">
 	<section class="flex flex-col md:flex-row gap-10 justify-between">
 		<article
 			class="w-full md:w-2/5 py-4 flex flex-col items-start justify-between gap-10"

@@ -9,9 +9,15 @@ interface Props {
 const { url, title, desc, lang } = Astro.props as Props;
 ---
 
+<style>
+	html.sr .load-hidden {
+		visibility: hidden;
+	}
+</style>
+
 <div
 	id="resource-item"
-	class="flex break-words flex-col gap-3 w-ful sm:w-1/2 pl-1 sm:pr-12"
+	class="flex break-words flex-col gap-3 w-ful sm:w-1/2 pl-1 sm:pr-12 load-hidden"
 >
 	<a
 		href={url}
@@ -32,13 +38,10 @@ const { url, title, desc, lang } = Astro.props as Props;
 </div>
 
 <script>
-	function scrollReveal() {
-		window.ScrollReveal().reveal("#resource-item", {
-			duration: 1000,
-			distance: "50px",
-			origin: "bottom",
-		});
-	}
-
-	window.addEventListener("load", scrollReveal);
+	window.ScrollReveal().reveal("#resource-item", {
+		duration: 1000,
+		delay: 300,
+		distance: "50px",
+		origin: "bottom",
+	});
 </script>
