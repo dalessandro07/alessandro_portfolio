@@ -58,6 +58,7 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 							class="w-full max-h-[60vh] md:max-h-[40vh] object-contain md:object-cover object-top md:first:object-left-top rounded-xl border border-gray-300"
 							src={path}
 							alt={name}
+							loading="lazy"
 						/>
 					)}
 				</a>

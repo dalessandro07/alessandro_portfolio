@@ -27,6 +27,7 @@ const { institute, country, degree, date, description, image, url } =
 				class="w-9 h-9 rounded-full object-cover"
 				src={image}
 				alt={institute}
+				loading="lazy"
 			/>
 		</a>
 
@@ -38,8 +39,7 @@ const { institute, country, degree, date, description, image, url } =
 			set:html={description}
 			id="description"
 			class="text-gray-600 dark:text-gray-400"
-		>
-		</p>
+		/>
 	</section>
 
 	<footer>
