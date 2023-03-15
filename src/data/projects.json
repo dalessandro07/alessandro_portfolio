@@ -20,6 +20,16 @@
 		]
 	},
 	{
+		"name": "La Casa De Las Plantas",
+		"description": "E-Commerce. Este fue un proyecto para un emprendimiento familiar. Cuenta con 5 secciones/páginas y diseño responsive (adaptable a dispositivos móviles).<br/> <br/> Desde el diseño hasta el desarrollo fue un reto implementar <strong class='dark:text-customWhite text-customBlack font-bold'>interfaces adaptables y validaciones</strong> usando HTML/CSS y Javascript.",
+		"url": "https://dalessandro07.github.io/e-commerce/",
+		"src": [
+			"/images/lcdp/lcdp-home.webp",
+			"/images/lcdp/lcdp-products.webp",
+			"/images/lcdp/lcdp-services.webp"
+		]
+	},
+	{
 		"name": "Space Tourism",
 		"description": "Este proyecto web, fue un reto de maquetación y <strong class='dark:text-customWhite text-customBlack font-bold'>animaciones</strong>, incluye transiciones realizadas con framer motion y carruseles con desplazamiento horizontal y vertical. <br/> <br/> Fue un proyecto personal para reforzar mis habilidades de <strong class='dark:text-customWhite text-customBlack font-bold'>maquetación web</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>diseño responsive</strong>.",
 		"url": "https://space-tourismweb.netlify.app",
