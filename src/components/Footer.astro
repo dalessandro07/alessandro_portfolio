@@ -13,15 +13,15 @@ const { title, description } = Astro.props as Props;
 const actualYear = new Date().getFullYear();
 ---
 
-<footer
-	id="contacto"
-	class="flex flex-col justify-between gap-32 min-h-[75vh] 2xl:min-h-[50vh]"
->
+<footer id="footer" class="flex flex-col justify-between gap-32">
 	<div class="hidden sm:flex mb-52">
 		<WriteMe />
 	</div>
 
-	<section class="flex flex-col md:flex-row gap-16 md:gap-0 justify-between">
+	<section
+		id="contacto"
+		class="flex flex-col md:flex-row gap-16 md:gap-0 justify-between"
+	>
 		<FooterAside description={description} />
 
 		<FooterLinks />
@@ -37,5 +37,5 @@ const actualYear = new Date().getFullYear();
 <script>
 	window
 		.ScrollReveal()
-		.reveal("#contacto", { delay: 300, easing: "ease-in-out" });
+		.reveal("#footer", { delay: 300, easing: "ease-in-out" });
 </script>
