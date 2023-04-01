@@ -1,5 +1,15 @@
 [
 	{
+		"name": "SkillSwap",
+		"description": "SkillSwap es una aplicación web que permite a los usuarios <strong class='dark:text-customWhite text-customBlack font-bold'>publicar proyectos, reaccionar y comentar.</strong> Además, en el formulario de nuevo proyecto se puede pasar una URL y captura los metadatos del sitio (title y description), ahorrando tiempo. <br/> <br/> Está desarrollado en NextJS, Tailwind y Supabase. Desplegado en Vercel. <br/> <br/> En desarrollo (fase beta)...",
+		"url": "https://skillswapp.vercel.app",
+		"src": [
+			"/images/skillswap/skillswap.webp",
+			"/images/skillswap/skillswap-projects.webp",
+			"/images/skillswap/skillswap-login.webp"
+		]
+	},
+	{
 		"name": "DrCafe",
 		"description": "E-Commerce. Este fue el proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y dentro del <strong class='dark:text-customWhite text-customBlack font-bold'>top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='dark:text-customWhite text-customBlack font-bold'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos, firebase y rutas dinámicas.",
 		"url": "https://drcafe.netlify.app",
