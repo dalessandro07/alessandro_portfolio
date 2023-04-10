@@ -47,7 +47,7 @@ module.exports = {
 				'screen/90': '90vw'
 			},
 			screens: {
-				xs: { min: '390px', max: '639px' },
+				xs: '475px',
 				...defaultTheme.screens
 			},
 			backgroundSize: {

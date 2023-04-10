@@ -1,7 +1,32 @@
 ---
 import ThemeToggle from "./buttons/ThemeToggle";
 import HeaderMobile from "./header/HeaderMobile";
+
+const navigation = [
+	{
+		name: "Proyectos",
+		href: "/#proyectos",
+	},
+	{
+		name: "Estudios",
+		href: "/#estudios",
+	},
+	{
+		name: "Recursos",
+		href: "/recursos",
+	},
+	{
+		name: "Contacto",
+		href: "#contacto",
+	},
+	{
+		name: "Publicaciones",
+		href: "/publicaciones",
+	},
+];
 ---
+
+<div id="top"></div>
 
 <header
 	class="fixed hidden z-50 dark:bg-customBlack/70 bg-customWhite/70 transition-all duration-200 backdrop-blur-lg w-full px-16 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto md:flex justify-between items-end py-4"
@@ -28,36 +53,16 @@ import HeaderMobile from "./header/HeaderMobile";
 		<ul
 			class="flex gap-11 text-gray-600 dark:text-gray-400 text-nav 2xl:text-lg"
 		>
-			<a
-				class="hover:text-blue-600 font-extrabold transition-all duration-200"
-				href="/#sobre-mi"
-			>
-				Sobre mí
-			</a>
-			<a
-				class="hover:text-blue-600 font-extrabold transition-all duration-200"
-				href="/#proyectos"
-			>
-				Proyectos
-			</a>
-			<a
-				class="hover:text-blue-600 font-extrabold transition-all duration-200"
-				href="/#estudios"
-			>
-				Estudios
-			</a>
-			<a
-				class="hover:text-blue-600 font-extrabold transition-all duration-200"
-				href="/recursos"
-			>
-				Recursos
-			</a>
-			<a
-				class="hover:text-blue-600 font-extrabold transition-all duration-200"
-				href="#contacto"
-			>
-				Contacto
-			</a>
+			{
+				navigation.map(({ name, href }) => (
+					<a
+						class="hover:text-blue-600 font-extrabold transition-all duration-200"
+						href={href}
+					>
+						{name}
+					</a>
+				))
+			}
 		</ul>
 	</nav>
 
