@@ -19,7 +19,7 @@ export default function GoTopPage(): JSX.Element {
 			href="#top"
 			className={`${
 				show ? "flex" : "hidden"
-			} items-center justify-center fixed w-12 h-12 m-5 bg-customBlack/70 hover:scale-110 hover:bg-customBlack/40 backdrop-blur-lg right-0 bottom-0 transition-all duration-200 border border-gray-500 rounded-full`}
+			} items-center justify-center fixed w-12 h-12 m-5 dark:bg-customBlack/70 hover:scale-110 hover:bg-customBlack/40 backdrop-blur-lg right-0 bottom-0 transition-all duration-200 border border-gray-500 rounded-full`}
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
