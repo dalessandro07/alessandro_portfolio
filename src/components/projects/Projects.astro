@@ -3,7 +3,36 @@ import Icon from "astro-icon";
 import Project from "./Project.astro";
 import projects from "../../data/projects.json";
 
-const languages = ["html-1", "css-3", "javascript", "react-2", "tailwindcss"];
+const languages = [
+	{
+		name: "html-5",
+		url: "https://developer.mozilla.org/es/docs/Web/HTML",
+	},
+	{
+		name: "css-3",
+		url: "https://developer.mozilla.org/es/docs/Web/CSS",
+	},
+	{
+		name: "javascript",
+		url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+	},
+	{
+		name: "tailwindcss",
+		url: "https://tailwindcss.com/docs/installation",
+	},
+	{
+		name: "react",
+		url: "https://es.react.dev/learn",
+	},
+	{
+		name: "next",
+		url: "https://nextjs.org/docs",
+	},
+	{
+		name: "python",
+		url: "https://www.python.org/",
+	},
+];
 ---
 
 <div id="proyectos"></div>
@@ -14,9 +43,9 @@ const languages = ["html-1", "css-3", "javascript", "react-2", "tailwindcss"];
 		<section class="flex gap-4 pb-2 items-center">
 			{
 				languages.map((lang) => (
-					<span title={lang}>
-						<Icon class="w-7 h-7" name={lang} />
-					</span>
+					<a href={lang.url} target="_blank" title={lang.name}>
+						<Icon class="w-7 h-7" name={lang.name} />
+					</a>
 				))
 			}
 		</section>
