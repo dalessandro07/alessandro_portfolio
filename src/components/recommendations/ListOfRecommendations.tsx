@@ -59,7 +59,7 @@ export default function RecommendationsCarousel() {
 										alt={recommendation.name}
 										className="w-12 sm:w-16 h-12 sm:h-16 rounded-full mb-4 select-none"
 									/>
-									<h3 className="text-lg select-none font-medium text-gray-200">
+									<h3 className="text-lg select-none font-medium text-customBlack dark:text-customWhite">
 										{recommendation.name}
 									</h3>
 									<h4 className="text-sm font-medium text-gray-500 truncate max-w-[420px] sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
