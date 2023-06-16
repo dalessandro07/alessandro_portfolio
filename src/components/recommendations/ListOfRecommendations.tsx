@@ -53,7 +53,7 @@ export default function RecommendationsCarousel() {
 								className="flex flex-col items-start gap-5 p-1.5 glide__slides"
 								key={recommendation.id}
 							>
-								<header className="w-full">
+								<header className="max-w-screen sm:max-w-screen-xs">
 									<img
 										src={recommendation.avatar}
 										alt={recommendation.name}
@@ -62,7 +62,7 @@ export default function RecommendationsCarousel() {
 									<h3 className="text-lg select-none font-medium text-gray-200">
 										{recommendation.name}
 									</h3>
-									<h4 className="text-sm font-medium text-gray-500 truncate max-w-[80vh] sm:max-w-full pr-24 select-none">
+									<h4 className="text-sm font-medium text-gray-500 truncate max-w-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
 										{recommendation.title}
 									</h4>
 								</header>
@@ -74,7 +74,7 @@ export default function RecommendationsCarousel() {
 								</section>
 
 								<footer>
-									<p className="text-xs font-medium text-gray-400">
+									<p className="text-xs font-medium text-gray-400 select-none">
 										{recommendation.date}
 									</p>
 								</footer>
