@@ -7,9 +7,9 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 
 <article
 	id="secondary-project"
-	class="flex flex-col md:flex-col-reverse gap-12 md:w-1/3"
+	class="flex flex-col lg:flex-col-reverse gap-12 lg:w-1/3"
 >
-	<aside class="flex flex-col md:justify-between gap-8 md:gap-4 md:h-1/2">
+	<aside class="flex flex-col lg:justify-between gap-8 lg:gap-4 lg:h-1/2">
 		<h3 class="text-4xl font-black">{name}</h3>
 
 		<p set:html={description} class="text-gray-600 dark:text-gray-400" />
@@ -29,13 +29,13 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 		</a>
 	</aside>
 
-	<section class="flex md:h-1/2 2xl:h-auto">
+	<section class="flex lg:h-1/2 2xl:h-auto">
 		{
 			src?.map((path) => (
 				<a
 					aria-label={name}
 					target="_blank"
-					class="flex justify-center md:w-full md:max-h-[80vh] md:h-full mx-auto"
+					class="flex justify-center lg:w-full lg:max-h-[80vh] lg:h-full mx-auto"
 					rel="noreferrer"
 					href={url}
 				>
@@ -50,7 +50,7 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 						</video>
 					) : (
 						<img
-							class="w-full max-h-[60vh] md:max-h-[40vh] object-contain md:object-cover object-top md:first:object-left-top rounded-xl border border-gray-300"
+							class="w-full max-h-[60vh] lg:max-h-[40vh] object-contain lg:object-cover object-top lg:first:object-left-top rounded-xl border border-gray-300"
 							src={path}
 							alt={name}
 							loading="lazy"
@@ -65,5 +65,5 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 <script>
 	window
 		.ScrollReveal()
-		.reveal("#secondary-project", { delay: 300, easing: "ease-in-out" });
+		.reveal("#secondary-project", { delay: 200, easing: "ease-in-out" });
 </script>
