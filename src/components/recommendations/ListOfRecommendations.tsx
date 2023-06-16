@@ -1,7 +1,7 @@
 import { recommendations } from "../../data/recommendations.json";
 import { useEffect, useRef } from "preact/hooks";
 
-import Glide from "@glidejs/glide";
+import * as Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 
