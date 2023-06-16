@@ -19,7 +19,7 @@ export default function RecommendationsCarousel() {
 
 	useEffect(() => {
 		if (sliderRef.current) {
-			const glide = new Glide(sliderRef.current, {
+			const glide = new Glide.default(sliderRef.current, {
 				type: "carousel",
 				perView: 3,
 				hoverpause: true,
@@ -57,7 +57,7 @@ export default function RecommendationsCarousel() {
 									<img
 										src={recommendation.avatar}
 										alt={recommendation.name}
-										className="w-12 sm:w-16 h-12 sm:h-16 rounded-full mb-4"
+										className="w-12 sm:w-16 h-12 sm:h-16 rounded-full mb-4 select-none"
 									/>
 									<h3 className="text-lg select-none font-medium text-gray-200">
 										{recommendation.name}
