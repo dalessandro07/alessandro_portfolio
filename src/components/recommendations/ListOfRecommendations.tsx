@@ -62,7 +62,7 @@ export default function RecommendationsCarousel() {
 									<h3 className="text-lg select-none font-medium text-gray-200">
 										{recommendation.name}
 									</h3>
-									<h4 className="text-sm font-medium text-gray-500 truncate max-w-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
+									<h4 className="text-sm font-medium text-gray-500 truncate max-w-[420px] sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
 										{recommendation.title}
 									</h4>
 								</header>
