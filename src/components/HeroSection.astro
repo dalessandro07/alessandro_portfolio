@@ -2,7 +2,10 @@
 import Icon from "astro-icon";
 
 const heroTitle =
-	"Soy Alessandro Rios desarrollador front- end especializado en React.";
+	"Soy Alessandro Rios desarrollador front- end especializado    en React.";
+const heroTitleSM =
+	"Soy Alessandro Rios desarrollador front-end especializado en React.";
+
 const heroWords = heroTitle.split(" ");
 const heroLetters = heroWords.map((word) => word.split(""));
 ---
@@ -18,11 +21,11 @@ const heroLetters = heroWords.map((word) => word.split(""));
 	class="flex flex-col gap-10 max-w-4xl 2xl:max-w-5xl justify-center load-hidden"
 >
 	<h1
-		class="flex flex-wrap gap-x-[18px] text-4xl xs:text-5xl sm:text-7xl md:text-7.5xl 2xl:text-8xl font-bold font-inter !leading-min"
+		class="flex flex-wrap gap-x-[18px] text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl 2xl:text-8xl font-bold font-inter !leading-min hover:cursor-default"
 	>
 		{
 			heroLetters.map((word) => (
-				<span class="hidden sm:flex">
+				<span class="hidden lg:flex">
 					{word.map((letter) => (
 						<span class="letter hover:text-transparent bg-gradient-to-br bg-clip-text [-webkit-background-clip:text] from-blue-500 to-blue-800 transition-all duration-150">
 							{letter}
@@ -32,7 +35,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			))
 		}
 
-		<span class="sm:hidden">{heroTitle}</span>
+		<span class="lg:hidden" style="text-wrap: balance;">{heroTitleSM}</span>
 	</h1>
 
 	<article class="flex gap-8 items-center">
