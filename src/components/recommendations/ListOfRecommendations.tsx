@@ -9,9 +9,9 @@ interface Recommendation {
 	id: number;
 	name: string;
 	title: string;
-	comment: string;
+	message: string;
 	date: string;
-	avatar: string;
+	image: string;
 }
 
 export default function RecommendationsCarousel() {
@@ -50,17 +50,17 @@ export default function RecommendationsCarousel() {
 					<ul className="glide__slides">
 						{recommendations.map((recommendation: Recommendation) => (
 							<li
-								className="flex flex-col items-start gap-5 p-1.5 glide__slides"
+								className="flex flex-col items-start gap-5 p-1.5 glide__slides select-none"
 								key={recommendation.id}
 							>
 								<header className="max-w-screen sm:max-w-screen-xs">
 									<img
-										src={recommendation.avatar}
+										src={recommendation.image}
 										alt={recommendation.name}
 										className="w-12 sm:w-16 h-12 sm:h-16 rounded-full mb-4 select-none"
 									/>
-									<h3 className="text-lg select-none font-medium text-customBlack dark:text-customWhite">
-										{recommendation.name}
+									<h3 className="text-lg select-none font-medium text-customBlack dark:text-customWhite capitalize">
+										{recommendation.name.toLowerCase()}
 									</h3>
 									<h4 className="text-sm font-medium text-gray-500 truncate max-w-[420px] sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
 										{recommendation.title}
@@ -69,7 +69,7 @@ export default function RecommendationsCarousel() {
 
 								<section class="w-full mr-12 h-44 overflow-hidden hover:overflow-auto">
 									<p className="max-w-[80vw] sm:w-5/6 h-full text-base text-gray-500 whitespace-pre-wrap select-none">
-										{recommendation.comment}
+										{recommendation.message}
 									</p>
 								</section>
 
