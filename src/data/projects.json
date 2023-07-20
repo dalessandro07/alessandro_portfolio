@@ -1,7 +1,7 @@
 [
 	{
 		"name": "SkillSwap",
-		"description": "SkillSwap es una aplicación web que permite a los usuarios <strong class='dark:text-customWhite text-customBlack font-bold'>publicar proyectos, reaccionar y comentar.</strong> Además, en el formulario de nuevo proyecto se puede pasar una URL y captura los metadatos del sitio (title y description), ahorrando tiempo. <br/> <br/> Está desarrollado en NextJS, Tailwind y Supabase. Desplegado en Vercel. <br/> <br/> En desarrollo (fase beta)...",
+		"description": "SkillSwap es una aplicación web que permite a los usuarios <strong class='dark:text-customWhite text-customBlack font-bold'>publicar proyectos, reaccionar y comentar.</strong> Además, en el formulario de nuevo proyecto se puede pasar una URL y captura los metadatos del sitio (title y description), ahorrando tiempo. <br/> <br/> Está desarrollado en NextJS, Tailwind y Supabase. Desplegado en Vercel.",
 		"url": "https://skillswapp.vercel.app",
 		"src": [
 			"/images/skillswap/skillswap.webp",

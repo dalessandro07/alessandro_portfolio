@@ -16,7 +16,14 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 			class="flex flex-col lg:flex-row gap-20 w-full lg:max-h-screen"
 		>
 			<aside class="lg:w-1/3 flex flex-col justify-center gap-10">
-				<h3 class="text-4xl font-black">{name}</h3>
+				<a
+					target="_blank"
+					rel="noreferrer"
+					href={url}
+					class="text-4xl font-black hover:text-blue-600 hover:underline w-max"
+				>
+					{name}
+				</a>
 
 				<p
 					set:html={description}
@@ -24,14 +31,12 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 				/>
 
 				<a
-					target="_blank"
 					rel="noreferrer"
+					target="_blank"
 					href={url}
-					class="font-extrabold text-xl hover:text-blue-600 transition-all duration-200 flex items-end gap-2 w-max"
+					class="px-8 py-2 text-lg font-bold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800 flex items-end gap-2 w-max"
 				>
-					{url?.replace("https://", "").length > 20
-						? url?.replace("https://", "").slice(0, 20) + "..."
-						: url?.replace("https://", "")}
+					Ver {name}
 					<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
 				</a>
 			</aside>
@@ -41,7 +46,7 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 					<a
 						aria-label={name}
 						target="_blank"
-						class="w-full sm:w-auto lg:first:flex lg:first:items-center lg:w-full lg:h-full lg:first:row-span-2 lg:first:max-h-[90%]"
+						class="w-full sm:w-auto lg:first:flex lg:first:items-center lg:w-full lg:h-full lg:first:row-span-2 lg:first:max-h-[90%] hover:scale-105 transition-transform duration-300"
 						rel="noreferrer"
 						href={url}
 					>
