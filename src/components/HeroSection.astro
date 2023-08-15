@@ -14,6 +14,10 @@ const heroLetters = heroWords.map((word) => word.split(""));
 	html.sr .load-hidden {
 		visibility: hidden;
 	}
+
+	.specialLetter {
+		@apply hover:text-transparent bg-gradient-to-br bg-clip-text [-webkit-background-clip:text] from-blue-500 to-blue-800 transition-all duration-150;
+	}
 </style>
 
 <section
@@ -27,9 +31,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			heroLetters.map((word) => (
 				<span class="hidden lg:flex">
 					{word.map((letter) => (
-						<span class="letter hover:text-transparent bg-gradient-to-br bg-clip-text [-webkit-background-clip:text] from-blue-500 to-blue-800 transition-all duration-150">
-							{letter}
-						</span>
+						<span class="specialLetter">{letter}</span>
 					))}
 				</span>
 			))
