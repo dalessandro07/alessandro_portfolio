@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Strong from "./text/Strong.astro";
 ---
 
@@ -47,8 +48,8 @@ import Strong from "./text/Strong.astro";
 				<p class="ab-paragraph">
 					Como estudiante y compañero siempre estoy dispuesto a
 					<Strong>compartir</Strong> mis conocimientos y <Strong>ayudar</Strong>
-					a otros. Si tienes alguna duda con un proyecto y está en mis manos ayudarte,
-					no dudes en <a
+					 a otros. Si tienes alguna duda con un proyecto y está en mis manos
+					ayudarte, no dudes en <a
 						class="underline hover:text-blue-600 font-bold transition-all duration-200"
 						href="#contacto">contactarme</a
 					>.
@@ -70,11 +71,13 @@ import Strong from "./text/Strong.astro";
 			id="profile_img"
 			class="w-full md:w-2/5 h-screen/50 md:h-screen/90"
 		>
-			<img
+			<Image
 				class="w-full h-full object-cover rounded-lg object-top"
 				src="/images/perfil-completo.webp"
 				alt="Imagen de perfil de Alessandro Rios"
-				loading="lazy"
+				width="100"
+				height="100"
+				quality="max"
 			/>
 		</article>
 	</section>

@@ -1,6 +1,10 @@
 ---
-import ThemeToggle from "./buttons/ThemeToggle";
-import HeaderMobile from "./header/HeaderMobile";
+import "../css/hamburguer.css";
+
+import { Image } from "astro:assets";
+import ThemeToggle from "./buttons/ThemeToggle.astro";
+import MenuMobileToggle from "./buttons/MenuMobileToggle.astro";
+import NavigationMobile from "./header/NavigationMobile.astro";
 
 const navigation = [
 	{
@@ -30,47 +34,89 @@ const navigation = [
 ];
 ---
 
+<script>
+	const btnHamburger = document.getElementById("hamburger");
+	const mobileMenu = document.getElementById("mobile-menu");
+	const navLinks = document.querySelectorAll(".menu_link");
+
+	if (!btnHamburger || !mobileMenu) {
+		throw new Error("No se encontró el botón o el menú");
+	}
+
+	btnHamburger.addEventListener("click", () => {
+		document.documentElement.classList.toggle("overflow-hidden");
+		btnHamburger.classList.toggle("is-active");
+
+		const isActive = btnHamburger.classList.contains("is-active");
+		if (isActive) {
+			mobileMenu.classList.add("flex");
+			mobileMenu.classList.remove("hidden");
+		} else {
+			mobileMenu.classList.add("hidden");
+			mobileMenu.classList.remove("flex");
+		}
+	});
+
+	navLinks.forEach((link) => {
+		link.addEventListener("click", () => {
+			document.documentElement.classList.remove("overflow-hidden");
+			btnHamburger.classList.remove("is-active");
+			mobileMenu.classList.add("hidden");
+			mobileMenu.classList.remove("flex");
+		});
+	});
+</script>
+
 <div id="top"></div>
 
 <header
-	class="fixed hidden z-50 dark:bg-customBlack/70 bg-customWhite/70 transition-all duration-200 backdrop-blur-lg w-full px-16 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto lg:flex justify-between items-end py-4"
+	class="fixed z-10 dark:bg-customBlack/70 bg-customWhite/70 transition-all duration-200 backdrop-blur-lg w-full px-5 xs:px-8 sm:px-12 lg:px-16 top-0 right-0 left-0 xl:max-w-7xl xl:mx-auto flex justify-between items-end py-4"
 >
 	<nav
 		id="navigation"
-		class="flex gap-10 mb-1 lg:mb-2 items-end justify-between lg:justify-start"
+		class="flex gap-10 items-end justify-between w-full py-2"
 	>
-		<a
-			class="hover:scale-110 transition-all duraiton-200"
-			aria-label="Inicio"
-			title="Alessandro Rios"
-			href="/"
-		>
-			<img
-				class="w-10 h-10 object-cover"
-				width="40"
-				height="40"
-				src="/logo.webp"
-				alt="Logo"
-			/>
-		</a>
+		<div class="flex justify-start items-end gap-10">
+			<a
+				class="hover:scale-110 transition-all duraiton-200 z-20"
+				aria-label="Inicio"
+				title="Alessandro Rios"
+				href="/"
+			>
+				<Image
+					class="w-14 h-14 lg:w-10 lg:h-10 object-cover"
+					width="40"
+					height="40"
+					src="/logo.webp"
+					alt="Logo"
+				/>
+			</a>
 
-		<ul
-			class="flex gap-11 text-gray-600 dark:text-gray-400 text-nav 2xl:text-lg"
-		>
-			{
-				navigation.map(({ name, href }) => (
-					<a
-						class="hover:text-blue-600 font-extrabold transition-all duration-200"
-						href={href}
-					>
-						{name}
-					</a>
-				))
-			}
-		</ul>
+			<ul
+				class="hidden lg:flex gap-11 text-gray-600 dark:text-gray-400 text-nav 2xl:text-lg"
+			>
+				{
+					navigation.map(({ name, href }) => (
+						<li>
+							<a
+								class="hover:text-blue-600 font-extrabold transition-all duration-200"
+								href={href}
+							>
+								{name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+
+		<section class="flex gap-8 items-center">
+			<ThemeToggle />
+
+			<div class="lg:hidden">
+				<MenuMobileToggle />
+				<NavigationMobile />
+			</div>
+		</section>
 	</nav>
-
-	<ThemeToggle client:idle />
 </header>
-
-<HeaderMobile client:load />

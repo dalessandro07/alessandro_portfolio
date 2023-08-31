@@ -1,5 +1,6 @@
 ---
 import Icon from "astro-icon";
+import { Image } from "astro:assets";
 
 interface Props {
 	description: string;
@@ -15,12 +16,13 @@ const { description } = Astro.props as Props;
 		target="_blank"
 		href="https://linkedin.com/in/alessandro-rios"
 	>
-		<img
+		<Image
 			title="Alessandro Rios"
 			class="w-12 h-12 rounded-full object-cover"
 			src="/favicon.webp"
 			alt="Imagen de perfil de Alessandro Rios - Programador"
-			loading="lazy"
+			width="48"
+			height="48"
 		/>
 	</a>
 
@@ -33,6 +35,6 @@ const { description } = Astro.props as Props;
 		class="font-extrabold flex gap-2 items-center hover:text-blue-600 transition-all duration-200"
 	>
 		<Icon class="w-6 h-6 group-hover:text-blue-600" name="mail" />
-		dev.alessandro@outlook.com
+		 dev.alessandro@outlook.com
 	</a>
 </aside>

@@ -1,5 +1,5 @@
 ---
-import GoTopPage from "../components/buttons/GoTopPage";
+import GoTopPage from "../components/buttons/GoTopPage.astro";
 import Header from "../components/Header.astro";
 export interface Props {
 	title: string;
@@ -9,7 +9,7 @@ export interface Props {
 const { title, description } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html
 	class="scroll-smooth motion-reduce:scroll-auto sr overflow-x-hidden"
 	lang="es"
@@ -17,15 +17,19 @@ const { title, description } = Astro.props;
 	<head>
 		<script defer>
 			const theme = (() => {
-				if (
-					typeof localStorage !== "undefined" &&
-					localStorage.getItem("themeARPortfolio")
-				) {
-					return localStorage.getItem("themeARPortfolio");
+				function getCookie(name) {
+					const value = `; ${document.cookie}`;
+					const parts = value.split(`; ${name}=`);
+					if (parts.length === 2) return parts.pop().split(";").shift();
 				}
-				if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+
+				const cookieValue = getCookie("themeARPortfolio");
+
+				if (cookieValue) return cookieValue;
+
+				if (window.matchMedia("(prefers-color-scheme: dark)").matches)
 					return "dark";
-				}
+
 				return "light";
 			})();
 
@@ -37,7 +41,7 @@ const { title, description } = Astro.props;
 				document.documentElement.style.setProperty("color-scheme", "dark");
 			}
 
-			if (theme) window.localStorage.setItem("themeARPortfolio", theme);
+			document.cookie = `themeARPortfolio=${theme}; path=/; max-age=31536000`;
 		</script>
 
 		<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"
@@ -71,16 +75,26 @@ const { title, description } = Astro.props;
 
 		<slot />
 
-		<GoTopPage client:idle />
+		<GoTopPage />
 
 		<style>
 			html.sr .load-hidden {
 				visibility: hidden;
 			}
 			body {
-				font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont,
-					"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-					"Helvetica Neue", sans-serif;
+				font-family:
+					"Lato",
+					system-ui,
+					-apple-system,
+					BlinkMacSystemFont,
+					"Segoe UI",
+					Roboto,
+					Oxygen,
+					Ubuntu,
+					Cantarell,
+					"Open Sans",
+					"Helvetica Neue",
+					sans-serif;
 				overflow-x: hidden;
 			}
 		</style>

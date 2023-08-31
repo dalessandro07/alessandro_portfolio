@@ -1,0 +1,37 @@
+<script>
+	const topButton = document.getElementById("topButton");
+
+	if (!topButton) {
+		throw new Error('Element with id "topButton" not found');
+	}
+
+	window.addEventListener("scroll", () => {
+		if (window.scrollY >= 300) {
+			topButton.classList.remove("hidden");
+			topButton.classList.add("flex");
+		} else {
+			topButton.classList.add("hidden");
+			topButton.classList.remove("flex");
+		}
+	});
+</script>
+
+<a
+	id="topButton"
+	href="#top"
+	class="hidden items-center justify-center fixed w-12 h-12 m-5 dark:bg-customBlack/70 hover:scale-110 hover:bg-customBlack/40 backdrop-blur-lg right-0 bottom-0 transition-all duration-200 border border-gray-500 rounded-full"
+>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		stroke="currentColor"
+		class="w-6 h-6"
+	>
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"></path>
+	</svg>
+</a>

@@ -1,6 +1,7 @@
 ---
 import Icon from "astro-icon";
 import type { Project } from "../../env";
+import { Image } from "astro:assets";
 
 const { name, description, url, src, isVideo } = Astro.props as Project;
 ---
@@ -49,11 +50,12 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 							<source src={path} type="video/mp4" />
 						</video>
 					) : (
-						<img
+						<Image
 							class="w-full max-h-[60vh] lg:max-h-[40vh] object-contain lg:object-cover object-top lg:first:object-left-top rounded-xl border border-gray-300"
 							src={path}
 							alt={name}
-							loading="lazy"
+							width={500}
+							height={500}
 						/>
 					)}
 				</a>

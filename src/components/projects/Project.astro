@@ -2,6 +2,7 @@
 import Icon from "astro-icon";
 import type { Project } from "../../env";
 import SecondaryProject from "./SecondaryProject.astro";
+import { Image } from "astro:assets";
 
 const props = Astro.props as Project;
 const { name, description, url, src, isSecondary, isVideo } = props;
@@ -20,7 +21,7 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 					target="_blank"
 					rel="noreferrer"
 					href={url}
-					class="text-4xl font-black hover:text-blue-600 hover:underline w-max"
+					class="text-4xl font-black hover:text-blue-600 hover:underline w-full"
 				>
 					{name}
 				</a>
@@ -34,7 +35,7 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 					rel="noreferrer"
 					target="_blank"
 					href={url}
-					class="px-8 py-2 text-lg font-bold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800 flex items-end gap-2 w-max"
+					class="px-8 py-2 text-lg font-bold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800 flex gap-2 w-full items-center xs:items-end xs:w-max justify-between"
 				>
 					Ver {name}
 					<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
@@ -50,11 +51,13 @@ const { name, description, url, src, isSecondary, isVideo } = props;
 						rel="noreferrer"
 						href={url}
 					>
-						<img
+						<Image
 							class="w-full lg:w-full max-h-[50vh] lg:max-h-[80vh] 2xl:max-h-[60vh] lg:h-full object-cover sm:object-contain lg:object-cover object-top lg:first:object-left-top rounded-xl border border-gray-300"
 							src={path}
 							alt={name}
-							loading="lazy"
+							width={600}
+							height={600}
+							quality="max"
 						/>
 					</a>
 				))}
