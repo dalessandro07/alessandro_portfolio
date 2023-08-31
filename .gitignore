@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # CEJ Project
 cej.json
+
+# LinkedIn Profile Images Download
+downloadLinkedinProfileImages.js
