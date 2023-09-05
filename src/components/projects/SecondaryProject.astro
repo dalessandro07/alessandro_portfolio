@@ -13,7 +13,10 @@ const { name, description, url, src, isVideo } = Astro.props as Project;
 	<aside class="flex flex-col lg:justify-between gap-8 lg:gap-4 lg:h-1/2">
 		<h3 class="text-4xl font-black">{name}</h3>
 
-		<p set:html={description} class="text-gray-600 dark:text-gray-400" />
+		<p
+			set:html={description}
+			class="text-lg text-gray-600 dark:text-gray-400"
+		/>
 
 		<a
 			target="_blank"

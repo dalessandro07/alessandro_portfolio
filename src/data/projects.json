@@ -1,7 +1,7 @@
 [
 	{
 		"name": "SkillSwap",
-		"description": "SkillSwap es una aplicación web que permite a los usuarios <strong class='dark:text-customWhite text-customBlack font-bold'>publicar proyectos, reaccionar y comentar.</strong> Además, en el formulario de nuevo proyecto se puede pasar una URL y captura los metadatos del sitio (title y description), ahorrando tiempo. <br/> <br/> Está desarrollado en NextJS, Tailwind y Supabase. Desplegado en Vercel.",
+		"description": "SkillSwap es una aplicación web que permite a los usuarios <strong class='dark:text-customWhite text-customBlack font-bold'>publicar proyectos, reaccionar y comentar.</strong> Además, en el formulario de nuevo proyecto se puede ingresar una URL y captura un screenshot de la página y los metadatos del sitio (title y description) ahorrando tiempo. <br/> <br/> Está desarrollado en NextJS, Tailwind y Supabase. Desplegado en Vercel.",
 		"url": "https://skillswapp.vercel.app",
 		"src": [
 			"/images/skillswap/skillswap.webp",
@@ -11,7 +11,7 @@
 	},
 	{
 		"name": "DrCafe",
-		"description": "E-Commerce. Este fue el proyecto final del curso de ReactJs en Coderhouse, el cual aprobé con la máxima calificación y dentro del <strong class='dark:text-customWhite text-customBlack font-bold'>top 10</strong> de estudiantes. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='dark:text-customWhite text-customBlack font-bold'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos, firebase y rutas dinámicas.",
+		"description": "E-Commerce. Este es un simulador de tienda virtual de cafés y chocolates, moderno y <strong class='dark:text-customWhite text-customBlack font-bold'>estéticamente atractivo</strong>, con un excelente <strong class='dark:text-customWhite text-customBlack font-bold'>rendimiento</strong> y adaptable a dispositivos móviles. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='dark:text-customWhite text-customBlack font-bold'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos y rutas dinámicas.",
 		"url": "https://drcafe.netlify.app",
 		"src": [
 			"/images/drcafe/DRCAFE.webp",
@@ -21,7 +21,7 @@
 	},
 	{
 		"name": "AllExpenses",
-		"description": "Aplicación web (dispositivos móviles) para llevar el control de tus gastos, tiene gráficos y estadísticas para que puedas ver tus gastos de manera más visual. <br/> <br/> Fue un proyecto personal para aprender a trabajar con <strong class='dark:text-customWhite text-customBlack font-bold'>Autenticación de usuarios</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>Base de datos</strong> con Firebase.",
+		"description": "Aplicación web para dispositivos móviles (PWA). Esta app te permite llevar el control de tus gastos, tiene <strong class='dark:text-customWhite text-customBlack font-bold'>gráficos detallados</strong> y estadísticas para que puedas ver tus egresos de manera más visual. <br/> <br/> Con un excelente rendimiento y diseño atractivo, fue un reto implementar <strong class='dark:text-customWhite text-customBlack font-bold'>validaciones y animaciones</strong> usando tecnologías modernas como React JS y Tailwind CSS.",
 		"url": "https://allexpenses.netlify.app",
 		"src": [
 			"/images/allex/allexLogin.webp",
@@ -31,7 +31,7 @@
 	},
 	{
 		"name": "La Casa De Las Plantas",
-		"description": "E-Commerce. Este fue un proyecto para un emprendimiento familiar. Cuenta con 5 secciones/páginas y diseño responsive (adaptable a dispositivos móviles).<br/> <br/> Desde el diseño hasta el desarrollo fue un reto implementar <strong class='dark:text-customWhite text-customBlack font-bold'>interfaces adaptables y validaciones</strong> usando HTML/CSS y Javascript.",
+		"description": "E-Commerce. Esta tienda virtual de artículos de jardinería cuenta con 5 secciones/páginas y diseño responsive (adaptable a dispositivos móviles).<br/> <br/> Con un desarrollo enfocado para una <strong class='dark:text-customWhite text-customBlack font-bold'>carga rápida</strong> de productos y una interfaz <strong class='dark:text-customWhite text-customBlack font-bold'>amigable y minimalista</strong>, este e-commerce tiene incluida una sección de blog, servicios y carrito de compra.",
 		"url": "https://dalessandro07.github.io/e-commerce/",
 		"src": [
 			"/images/lcdp/lcdp-home.webp",
@@ -41,7 +41,7 @@
 	},
 	{
 		"name": "Space Tourism",
-		"description": "Este proyecto web, fue un reto de maquetación y <strong class='dark:text-customWhite text-customBlack font-bold'>animaciones</strong>, incluye transiciones realizadas con framer motion y carruseles con desplazamiento horizontal y vertical. <br/> <br/> Fue un proyecto personal para reforzar mis habilidades de <strong class='dark:text-customWhite text-customBlack font-bold'>maquetación web</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>diseño responsive</strong>.",
+		"description": "Este proyecto web destaca por su <strong class='dark:text-customWhite text-customBlack font-bold'>maquetación creativa</strong> y sus <strong class='dark:text-customWhite text-customBlack font-bold'>animaciones cautivadoras</strong>, además de ser adaptable a dispositivos móviles. <br><br> Incluye carruseles con desplazamiento horizontal y vertical, y ha sido una experiencia personal invaluable para fortalecer mis habilidades en <strong class='dark:text-customWhite text-customBlack font-bold'>maquetación web</strong> y <strong class='dark:text-customWhite text-customBlack font-bold'>diseño responsive</strong>.",
 		"url": "https://space-tourismweb.netlify.app",
 		"src": [
 			"/images/spaceT/space-tourism.webp",
@@ -51,7 +51,7 @@
 	},
 	{
 		"name": "Organízalo",
-		"description": "Aplicación de escritorio para organizar archivos en carpetas y sub-carpetas, por extensión y fecha de creación. Es muy útil para ordenar carpetas con muchos archivos. Este proyecto está desarrollado en <strong class='dark:text-customWhite text-customBlack font-bold'>Python</strong>.",
+		"description": "Aplicación de escritorio para organizar archivos en carpetas y sub-carpetas, por extensión y fecha de creación. Es muy útil para ordenar carpetas con muchos archivos de distintos tipos. Este proyecto está desarrollado en <strong class='dark:text-customWhite text-customBlack font-bold'>Python</strong>.",
 		"url": "https://1drv.ms/u/s!ArTaDJ7bM_jWeIUMcUUr-z-r-CE?e=EZPMtl",
 		"src": ["/images/organizalo/organizalo.webp"],
 		"isSecondary": true
