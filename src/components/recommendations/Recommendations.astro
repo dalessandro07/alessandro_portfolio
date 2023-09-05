@@ -4,10 +4,7 @@ import ListOfRecommendations from "./ListOfRecommendations";
 
 <div id="recomendaciones"></div>
 
-<section
-	class="flex flex-col gap-16 mb-20 md:mb-0"
-	id="container-recommendations"
->
+<section class="flex flex-col gap-16 mb-20 md:mb-0">
 	<header class="flex flex-col gap-4 md:gap-8 md:mt-14">
 		<h2 class="font-extrabold text-3xl sm:text-6xl lg:text-7xl">
 			Recomendaciones
@@ -23,10 +20,3 @@ import ListOfRecommendations from "./ListOfRecommendations";
 
 	<ListOfRecommendations client:visible />
 </section>
-
-<script>
-	window.ScrollReveal().reveal("#container-recommendations", {
-		delay: 200,
-		easing: "ease-in-out",
-	});
-</script>
