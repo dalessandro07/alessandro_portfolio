@@ -59,23 +59,23 @@ export default function RecommendationsCarousel() {
 										alt={recommendation.name}
 										className="w-12 sm:w-16 h-12 sm:h-16 rounded-full mb-4 select-none"
 									/>
-									<h3 className="text-lg select-none font-medium text-customBlack dark:text-customWhite capitalize">
+									<h3 className="text-lg select-none font-bold text-customBlack dark:text-customWhite capitalize">
 										{recommendation.name.toLowerCase()}
 									</h3>
-									<h4 className="text-sm font-medium text-gray-500 truncate max-w-[420px] sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
+									<h4 className="text-xs font-medium text-gray-600 dark:text-gray-500 truncate max-w-[420px] sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
 										{recommendation.title}
 									</h4>
 								</header>
 
 								<section class="w-full mr-12 h-44 overflow-hidden hover:overflow-auto">
-									<p className="max-w-[80vw] sm:w-5/6 h-full text-base text-gray-500 whitespace-pre-wrap select-none">
+									<p className="max-w-[80vw] sm:w-5/6 h-full text-base text-gray-700 dark:text-gray-400 whitespace-pre-wrap select-none">
 										{recommendation.message}
 									</p>
 								</section>
 
 								<footer>
-									<p className="text-xs font-medium text-gray-400 select-none">
-										{recommendation.date}
+									<p className="text-xs font-semibold text-gray-500 dark:text-gray-400 select-none">
+										Escrita el {recommendation.date}
 									</p>
 								</footer>
 							</li>
