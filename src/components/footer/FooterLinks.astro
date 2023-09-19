@@ -12,23 +12,26 @@ const links = [
 		title: "Twitter",
 		url: "https://twitter.com/alessandro___r",
 	},
-	{
-		title: "Telegram",
-		url: "https://t.me/dalessandro07",
-	},
 ];
 ---
 
-<article class="flex flex-col gap-4 w-2/6 md:pt-16">
-	<p class="text-xl text-gray-600 dark:text-gray-400 font-bold">Enlaces</p>
+<article class="flex flex-col gap-4 sm:w-2/6 md:pt-16">
+	<p class="text-xl text-gray-600 dark:text-gray-400 font-bold">
+		Enlaces de contacto
+	</p>
 
 	<ul
 		class="flex flex-col gap-2 text-lg text-customBlack dark:text-customWhite font-bold"
 	>
 		{
 			links.map(({ title, url }) => (
-				<li class="hover:text-blue-600 transition-all duration-200 w-max">
-					<a rel="noreferrer" target="_blank" href={url}>
+				<li class="w-max">
+					<a
+						class="hover:text-blue-600 hover:underline transition-all duration-200"
+						rel="noreferrer"
+						target="_blank"
+						href={url}
+					>
 						{title}
 					</a>
 				</li>
