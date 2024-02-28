@@ -22,7 +22,7 @@ const heroLetters = heroWords.map((word) => word.split(""));
 
 <section
 	id="hero"
-	class="flex flex-col gap-10 max-w-4xl 2xl:max-w-5xl justify-center load-hidden"
+	class="flex flex-col justify-center max-w-4xl gap-10 2xl:max-w-5xl load-hidden"
 >
 	<h1
 		class="flex flex-wrap gap-x-[18px] text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl 2xl:text-8xl font-bold font-inter !leading-min hover:cursor-default"
@@ -40,7 +40,35 @@ const heroLetters = heroWords.map((word) => word.split(""));
 		<span class="lg:hidden" style="text-wrap: balance;">{heroTitleSM}</span>
 	</h1>
 
-	<article class="flex gap-8 items-center">
+	<article class="flex items-center gap-8">
+		<a
+			rel="noreferrer"
+			target="_blank"
+			href="https://www.instagram.com/dev_alessandrorios/"
+			aria-label="Instagram"
+			aria-labelledby="Instagram"
+		>
+			<Icon
+				class="text-gray-600 hover:text-indigo-600 hover:rotate-[360deg] transition-all duration-500 w-6 h-6"
+				name="instagram"
+			/>
+			<span class="sr-only">Instagram</span>
+		</a>
+
+		<a
+			rel="noreferrer"
+			target="_blank"
+			href="https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto."
+			aria-label="WhatsApp"
+			arial-labelledby="WhatsApp"
+		>
+			<Icon
+				class="text-gray-600 hover:text-green-600 hover:rotate-[360deg] transition-all duration-500 w-6 h-6"
+				name="whatsapp"
+			/>
+			<span class="sr-only">WhatsApp</span>
+		</a>
+
 		<a
 			rel="noreferrer"
 			target="_blank"
@@ -63,24 +91,10 @@ const heroLetters = heroWords.map((word) => word.split(""));
 			arial-labelledby="Github"
 		>
 			<Icon
-				class="text-gray-600 hover:text-blue-600 hover:rotate-[360deg] transition-all duration-500 w-8 h-8"
+				class="text-gray-600 hover:text-zinc-200 hover:rotate-[360deg] transition-all duration-500 w-8 h-8"
 				name="github"
 			/>
 			<span class="sr-only">Github</span>
-		</a>
-
-		<a
-			rel="noreferrer"
-			target="_blank"
-			href="https://twitter.com/alessandro___r"
-			aria-label="Twitter"
-			arial-labelledby="Twitter"
-		>
-			<Icon
-				class="text-gray-600 hover:text-blue-600 hover:rotate-[360deg] transition-all duration-500 w-8 h-8"
-				name="twitter"
-			/>
-			<span class="sr-only">Twitter</span>
 		</a>
 	</article>
 </section>

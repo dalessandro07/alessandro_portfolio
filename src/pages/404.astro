@@ -1,10 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from "../layouts/Layout.astro";
+import { PAGE404DESCRIPTION, PAGE404TITLE } from "../utils/consts";
 ---
 
-<Layout title="Página no encontrada" description="404 esta página no existe.">
-	<section class="h-screen w-screen flex flex-col gap-6 justify-center items-center">
-		<h4 class="text-3xl sm:text-5xl font-bold text-center">404 | Página no encontrada</h4>
-		<a class="text-blue-600 text-lg font-extrabold hover:underline" href="/">Ir al inicio</a>
+<Layout title={PAGE404TITLE} description={PAGE404DESCRIPTION}>
+	<section
+		class="flex flex-col items-center justify-center w-screen h-screen gap-6"
+	>
+		<h4 class="text-3xl font-bold text-center sm:text-5xl">
+			404 | Página no encontrada
+		</h4>
+		<a class="text-lg font-extrabold text-blue-600 hover:underline" href="/"
+			>Ir al inicio</a
+		>
 	</section>
 </Layout>

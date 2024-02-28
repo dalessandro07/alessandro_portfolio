@@ -1,6 +1,14 @@
 ---
 const links = [
 	{
+		title: "Instagram",
+		url: "https://www.instagram.com/dev_alessandrorios/",
+	},
+	{
+		title: "WhatsApp",
+		url: "https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto.",
+	},
+	{
 		title: "LinkedIn",
 		url: "https://linkedin.com/in/alessandro-rios",
 	},
@@ -8,26 +16,22 @@ const links = [
 		title: "GitHub",
 		url: "https://github.com/dalessandro07",
 	},
-	{
-		title: "Twitter",
-		url: "https://twitter.com/alessandro___r",
-	},
 ];
 ---
 
 <article class="flex flex-col gap-4 sm:w-2/6 md:pt-16">
-	<p class="text-xl text-gray-600 dark:text-gray-400 font-bold">
+	<p class="text-xl font-bold text-gray-600 dark:text-gray-400">
 		Enlaces de contacto
 	</p>
 
 	<ul
-		class="flex flex-col gap-2 text-lg text-customBlack dark:text-customWhite font-bold"
+		class="flex flex-col gap-2 text-lg font-bold text-customBlack dark:text-customWhite"
 	>
 		{
 			links.map(({ title, url }) => (
 				<li class="w-max">
 					<a
-						class="hover:text-blue-600 hover:underline transition-all duration-200"
+						class="transition-all duration-200 hover:text-blue-600 hover:underline"
 						rel="noreferrer"
 						target="_blank"
 						href={url}

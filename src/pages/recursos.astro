@@ -5,14 +5,12 @@ import ResourceContainer from "../components/resources/ResourceContainer.astro";
 import Footer from "../components/Footer.astro";
 
 import data from "../data/resources.json";
+import { RESOURCES_DESCRIPTION, RESOURCES_TITLE } from "../utils/consts";
 ---
 
-<Layout
-	title="Recursos para desarrolladores - Alessandro Rios"
-	description="Recursos que he utilizado mucho a la hora de desarrollar software. Especialmente desarrollo web."
->
+<Layout title={RESOURCES_TITLE} description={RESOURCES_DESCRIPTION}>
 	<div
-		class="flex flex-col justify-center mt-28 mb-6 px-5 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto"
+		class="flex flex-col justify-center px-5 mb-6 mt-28 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto"
 	>
 		<ResourcesHeader />
 
@@ -26,7 +24,7 @@ import data from "../data/resources.json";
 								<a
 									rel="noreferrer"
 									target="_blank"
-									class="hover:text-blue-600 transition-all duration-200"
+									class="transition-all duration-200 hover:text-blue-600"
 									href="https://code.visualstudio.com/download"
 								>
 									VS Code

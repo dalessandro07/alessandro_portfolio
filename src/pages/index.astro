@@ -8,18 +8,14 @@ import Projects from "../components/projects/Projects.astro";
 
 import Footer from "../components/Footer.astro";
 import Recommendations from "../components/recommendations/Recommendations.astro";
-
-const title = "Alessandro Rios - Desarrollador Front-End";
-
-const description =
-	"Alessandro es desarrollador front end y estudiante de computación e informática, especializado en software y con certificaciones en desarrollo web. Disponible para proyectos freelance.";
+import { MAIN_TITLE, MAIN_DESCRIPTION } from "../utils/consts";
 ---
 
-<Layout title={title} description={description}>
+<Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION}>
 	<div
-		class="min-h-screen flex flex-col md:gap-32 px-5 xs:px-10 my-6 sm:px-14 xl:max-w-7xl xl:mx-auto"
+		class="flex flex-col min-h-screen px-5 my-6 md:gap-32 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto"
 	>
-		<main class="grow flex flex-col gap-24 mt-36">
+		<main class="flex flex-col gap-24 grow mt-36">
 			<HeroSection />
 			<About />
 			<Projects />
@@ -27,6 +23,6 @@ const description =
 			<Recommendations />
 		</main>
 
-		<Footer title={title} description={description} />
+		<Footer title={MAIN_TITLE} description={MAIN_DESCRIPTION} />
 	</div>
 </Layout>
