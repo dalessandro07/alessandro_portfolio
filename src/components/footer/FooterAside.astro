@@ -1,40 +1,38 @@
 ---
-import Icon from "astro-icon";
-import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 
 interface Props {
-	description: string;
+	description: string
 }
 
-const { description } = Astro.props as Props;
+const { description } = Astro.props as Props
 ---
 
-<aside class="flex flex-col gap-6">
+<aside class='flex flex-col gap-6'>
 	<a
-		aria-label="LinkedIn de Alessandro Rios"
-		rel="noreferrer"
-		target="_blank"
-		href="https://linkedin.com/in/alessandro-rios"
-	>
+		aria-label='LinkedIn de Alessandro Rios'
+		rel='noreferrer'
+		target='_blank'
+		href='https://linkedin.com/in/alessandro-rios'>
 		<Image
-			title="Alessandro Rios"
-			class="w-12 h-12 rounded-full object-cover"
-			src="/favicon.webp"
-			alt="Imagen de perfil de Alessandro Rios - Programador"
-			width="48"
-			height="48"
+			title='Alessandro Rios'
+			class='object-cover w-12 h-12 rounded-full'
+			src='/favicon.webp'
+			alt='Imagen de perfil de Alessandro Rios - Programador'
+			width='48'
+			height='48'
 		/>
 	</a>
 
-	<p class="text-gray-600 dark:text-gray-400 max-w-md">
+	<p class='max-w-md text-gray-600 dark:text-gray-400'>
 		{description}
 	</p>
 
 	<a
-		href="mailto:dev.alessandro@outlook.com?body=Hola%20Alessandro%2C"
-		class="font-extrabold flex gap-2 items-center hover:text-blue-600 transition-all duration-200"
-	>
-		<Icon class="w-6 h-6 group-hover:text-blue-600" name="mail" />
-		 dev.alessandro@outlook.com
+		href='mailto:dev.alessandro@outlook.com?body=Hola%20Alessandro%2C'
+		class='flex items-center gap-2 font-extrabold transition-all duration-200 hover:text-blue-600'>
+		<Icon class='w-6 h-6 group-hover:text-blue-600' name='mail' />
+		dev.alessandro@outlook.com
 	</a>
 </aside>

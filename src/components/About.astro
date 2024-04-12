@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import Strong from "./text/Strong.astro";
+import { Image } from 'astro:assets'
+import Strong from './text/Strong.astro'
 ---
 
 <style>
@@ -9,92 +9,72 @@ import Strong from "./text/Strong.astro";
 	}
 </style>
 
-<div id="sobre-mi"></div>
-<div id="about" class="flex flex-col gap-20 sm:gap-16 load-hidden">
-	<section class="flex flex-col md:flex-row gap-10 justify-between">
-		<article
-			class="w-full md:w-2/5 py-4 flex flex-col items-start justify-between gap-10"
-		>
+<div id='sobre-mi'></div>
+<div id='about' class='flex flex-col gap-20 sm:gap-16 load-hidden'>
+	<section class='flex flex-col md:flex-row gap-10 justify-between'>
+		<article class='w-full md:w-2/5 py-4 flex flex-col items-start justify-between gap-10'>
 			<div
-				class="flex flex-col gap-7 items-start text-gray-600 dark:text-gray-400 text-base sm:text-lg 2xl:text-xl"
-			>
-				<p class="ab-paragraph">
-					Apasionado por el aprendizaje, la tecnología y el mundo del desarrollo
-					de software. Desarrollo aplicaciones (web o desktop) como
+				class='flex flex-col gap-7 items-start text-gray-600 dark:text-gray-400 text-base sm:text-lg 2xl:text-xl'>
+				<p class='ab-paragraph'>
+					Apasionado por el aprendizaje, la tecnología y el mundo del desarrollo de software.
+					Desarrollo aplicaciones (web o desktop) como
 					<Strong>front-end.</Strong>
 				</p>
 
-				<p class="ab-paragraph">
-					Comunicativo, responsable, con iniciativa y sobre todo <Strong>
-						perseverante.
-					</Strong>
+				<p class='ab-paragraph'>
+					Comunicativo, responsable, con iniciativa y sobre todo <Strong> perseverante. </Strong>
 				</p>
 
-				<p class="ab-paragraph">
+				<p class='ab-paragraph'>
 					Me gusta aprender nuevas tecnologías y siempre estoy haciendo <a
-						class="hover:text-blue-600 font-bold transition-all duration-200"
-						href="#proyectos">proyectos</a
+						class='hover:text-blue-600 font-bold transition-all duration-200'
+						href='#proyectos'>proyectos</a
 					> para mejorar mis habilidades.
 				</p>
 
-				<p class="ab-paragraph">
-					Utilizo tecnologías web como HTML, CSS, JavaScript, <Strong>
-						React
-					</Strong> y <Strong>Next.js</Strong>. Además de Python y <Strong>
-						Java
-					</Strong> para aplicaciones de escritorio.
+				<p class='ab-paragraph'>
+					Utilizo tecnologías web como HTML, CSS, JavaScript, <Strong> React </Strong> y <Strong
+						>Next.js</Strong
+					>. Además de Python y <Strong> Java </Strong> para aplicaciones de escritorio.
 				</p>
 
-				<p class="ab-paragraph">
+				<p class='ab-paragraph'>
 					Como estudiante y compañero siempre estoy dispuesto a
 					<Strong>compartir</Strong> mis conocimientos y <Strong>ayudar</Strong>
-					 a otros. Si tienes alguna duda con un proyecto y está en mis manos
-					ayudarte, no dudes en <a
-						class="underline hover:text-blue-600 font-bold transition-all duration-200"
-						href="#contacto">contactarme</a
+					a otros. Si tienes alguna duda con un proyecto y está en mis manos ayudarte, no dudes en <a
+						class='underline hover:text-blue-600 font-bold transition-all duration-200'
+						href='#contacto'>contactarme</a
 					>.
 				</p>
 			</div>
 
 			<a
-				id="ab-more2"
-				rel="noreferrer"
-				target="_blank"
-				href="https://linkedin.com/in/alessandro-rios"
-				class="px-8 py-4 text-lg font-bold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800"
-			>
+				id='ab-more2'
+				rel='noreferrer'
+				target='_blank'
+				href='https://linkedin.com/in/alessandro-rios'
+				class='px-8 py-4 text-lg font-bold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800'>
 				Más sobre mí
 			</a>
 		</article>
 
-		<article
-			id="profile_img"
-			class="w-full md:w-2/5 h-screen/50 md:h-screen/90"
-		>
+		<article id='profile_img' class='w-full md:w-2/5 h-dvh/50 md:h-dvh/90'>
 			<Image
-				class="w-full h-full object-cover rounded-lg object-top"
-				src="/images/perfil-completo.webp"
-				alt="Imagen de perfil de Alessandro Rios"
-				width="100"
-				height="100"
-				quality="max"
+				class='w-full h-full object-cover rounded-lg object-top'
+				src='/images/perfil-completo.webp'
+				alt='Imagen de perfil de Alessandro Rios'
+				width='100'
+				height='100'
+				quality='max'
 			/>
 		</article>
 	</section>
 </div>
 
 <script>
-	window.ScrollReveal().reveal("#about", { delay: 200, easing: "ease-in-out" });
-	window
-		.ScrollReveal()
-		.reveal("#profile-img", { delay: 200, easing: "ease-in-out" });
-	window
-		.ScrollReveal()
-		.reveal(".ab-paragraph", { delay: 200, easing: "ease-in-out" });
-	window
-		.ScrollReveal()
-		.reveal("#ab-more1", { delay: 200, easing: "ease-in-out" });
-	window
-		.ScrollReveal()
-		.reveal("#ab-more2", { delay: 200, easing: "ease-in-out" });
+	window.ScrollReveal().reveal('#about', { delay: 200, easing: 'ease-in-out' })
+	window.ScrollReveal().reveal('#profile-img', { delay: 200, easing: 'ease-in-out' })
+	window.ScrollReveal().reveal('.ab-paragraph', { delay: 200, easing: 'ease-in-out' })
+	window.ScrollReveal().reveal('#ab-more1', { delay: 200, easing: 'ease-in-out' })
+	window.ScrollReveal().reveal('#ab-more2', { delay: 200, easing: 'ease-in-out' })
 </script>

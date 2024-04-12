@@ -1,60 +1,55 @@
 ---
-import Icon from "astro-icon";
-import type { Project } from "../../env";
-import SecondaryProject from "./SecondaryProject.astro";
-import { Image } from "astro:assets";
+import type { Project } from '../../env'
+import SecondaryProject from './SecondaryProject.astro'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 
-const props = Astro.props as Project;
-const { name, description, url, src, isSecondary, isVideo } = props;
+const props = Astro.props as Project
+const { name, description, url, src, isSecondary } = props
 ---
 
 {
 	isSecondary ? (
 		<SecondaryProject {...props} />
 	) : (
-		<article class="flex flex-col lg:flex-row gap-20 w-full lg:max-h-screen">
-			<aside class="lg:w-1/3 flex flex-col justify-center gap-10">
+		<article class='flex flex-col w-full gap-20 lg:flex-row lg:min-h-[90dvh] lg:max-h-dvh'>
+			<aside class='flex flex-col justify-center gap-10 lg:w-[38%]'>
 				<a
-					target="_blank"
-					rel="noreferrer"
+					target='_blank'
+					rel='noreferrer'
 					href={url}
-					class="text-4xl font-black hover:text-blue-600 hover:underline w-full"
-				>
+					class='text-4xl font-black lg:w-max hover:text-blue-600 hover:underline'>
 					{name}
 				</a>
 
-				<p
-					set:html={description}
-					class="text-lg text-gray-600 dark:text-gray-400"
-				/>
+				<p set:html={description} class='text-lg text-gray-600 dark:text-gray-400 text-balance' />
 
 				<a
-					rel="noreferrer"
-					target="_blank"
+					rel='noreferrer'
+					target='_blank'
 					href={url}
-					class="px-8 py-2 text-lg font-bold rounded-full text-customWhite bg-blue-600 transition-all duration-200 hover:bg-blue-800 flex gap-2 w-full items-center xs:items-end xs:w-max justify-between"
-				>
+					class='flex items-center justify-between w-full gap-2 px-8 py-2 text-lg font-bold transition-all duration-200 bg-blue-600 rounded-full text-customWhite hover:bg-blue-800 xs:items-end xs:w-max'>
 					Ver {name}
-					<Icon class="w-6 h-6 group-hover:text-blue-600" name="arrow-right" />
+					<Icon class='w-6 h-6 group-hover:text-blue-600' name='arrow-right' />
 				</a>
 			</aside>
 
-			<section class="lg:w-2/3 flex flex-wrap justify-center lg:grid lg:grid-cols-2 lg:grid-rows-2 items-center gap-6">
+			<section
+				class={`grid grid-cols-1 gap-6 sm:grid-cols-2 sm:grid-rows-2 lg:w-2/3 ${src.length <= 3 ? 'grid-rows-3' : 'grid-rows-4'}`}>
 				{src?.map((path) => (
 					<a
 						aria-label={name}
-						target="_blank"
-						class="w-full sm:w-auto lg:first:flex lg:first:items-center lg:w-full lg:h-full lg:first:row-span-2 lg:first:max-h-[90%] hover:scale-105 transition-transform duration-300"
-						rel="noreferrer"
-						href={url}
-					>
+						target='_blank'
+						class={`group ${src.length <= 3 ? 'lg:first-of-type:row-span-2' : ' '}`}
+						rel='noreferrer'
+						href={url}>
 						<Image
-							class="w-full lg:w-full max-h-[50vh] lg:max-h-[80vh] 2xl:max-h-[60vh] lg:h-full object-cover sm:object-contain lg:object-cover object-top lg:first:object-left-top rounded-xl border border-gray-300"
+							class='object-cover object-left-top w-full h-full border border-gray-400 dark:border-gray-700 rounded-2xl'
 							src={path}
 							alt={name}
 							width={600}
 							height={600}
-							quality="max"
+							quality='max'
 						/>
 					</a>
 				))}

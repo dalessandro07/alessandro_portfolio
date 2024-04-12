@@ -12,15 +12,15 @@
 	},
 	"dependencies": {
 		"@glidejs/glide": "^3.6.0",
-		"astro": "^3.0.3",
-		"astro-icon": "^0.8.1",
+		"astro": "^4.6.1",
+		"astro-icon": "^1.1.0",
 		"astro-seo": "^0.8.0",
-		"tailwindcss": "^3.3.3"
+		"tailwindcss": "^3.4.3"
 	},
 	"devDependencies": {
-		"@astrojs/preact": "^3.0.0",
-		"@astrojs/sitemap": "^3.0.0",
-		"@astrojs/tailwind": "^5.0.0",
+		"@astrojs/preact": "^3.2.0",
+		"@astrojs/sitemap": "^3.1.2",
+		"@astrojs/tailwind": "^5.1.0",
 		"@types/glidejs__glide": "^3.6.1",
 		"@typescript-eslint/parser": "^6.5.0",
 		"astro-robots-txt": "^0.5.0",

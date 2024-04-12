@@ -1,63 +1,66 @@
 ---
-import Icon from "astro-icon";
-import Project from "./Project.astro";
-import projects from "../../data/projects.json";
+import { Icon } from 'astro-icon/components'
+import Project from './Project.astro'
+import projects from '../../data/projects.json'
 
 const languages = [
 	{
-		name: "html-5",
-		url: "https://developer.mozilla.org/es/docs/Web/HTML",
+		name: 'html-5',
+		url: 'https://developer.mozilla.org/es/docs/Web/HTML'
 	},
 	{
-		name: "css-3",
-		url: "https://developer.mozilla.org/es/docs/Web/CSS",
+		name: 'css-3',
+		url: 'https://developer.mozilla.org/es/docs/Web/CSS'
 	},
 	{
-		name: "javascript",
-		url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+		name: 'javascript',
+		url: 'https://developer.mozilla.org/es/docs/Web/JavaScript'
 	},
 	{
-		name: "tailwindcss",
-		url: "https://tailwindcss.com/docs/installation",
+		name: 'tailwindcss',
+		url: 'https://tailwindcss.com/docs/installation'
 	},
 	{
-		name: "react",
-		url: "https://es.react.dev/learn",
+		name: 'react',
+		url: 'https://es.react.dev/learn'
 	},
 	{
-		name: "next",
-		url: "https://nextjs.org/docs",
+		name: 'next',
+		url: 'https://nextjs.org/docs'
 	},
 	{
-		name: "python",
-		url: "https://www.python.org/",
-	},
-];
+		name: 'python',
+		url: 'https://www.python.org/'
+	}
+]
 ---
 
-<div id="proyectos"></div>
-<section id="projects" class="flex flex-col gap-32">
-	<header class="flex flex-col gap-8 md:mt-14">
-		<h2 class="font-extrabold text-5xl sm:text-7xl">Proyectos</h2>
+<div id='proyectos'></div>
+<section id='projects' class='flex flex-col gap-32'>
+	<header class='flex flex-col gap-8 md:mt-14'>
+		<h2 class='text-5xl font-extrabold sm:text-7xl'>Proyectos</h2>
 
-		<section class="flex flex-wrap gap-4 pb-2 items-center">
+		<section class='flex flex-wrap items-center gap-4 pb-2'>
 			{
 				languages.map((lang) => (
-					<a href={lang.url} target="_blank" title={lang.name}>
-						<Icon class="w-4 h-4 sm:w-7 sm:h-7" name={lang.name} />
+					<a
+						aria-label={lang.name}
+						aria-labelledby={lang.name}
+						href={lang.url}
+						target='_blank'
+						title={lang.name}>
+						<Icon class='w-4 h-4 sm:w-7 sm:h-7' name={lang.name} />
 					</a>
 				))
 			}
 		</section>
 	</header>
 
-	<article class="flex flex-wrap gap-32 md:gap-40">
+	<article class='flex flex-wrap gap-32 md:gap-40'>
 		{projects.map((project) => <Project {...project} />)}
 	</article>
 </section>
 
 <script>
-	window
-		.ScrollReveal()
-		.reveal("#projects", { delay: 200, easing: "ease-in-out" });
+	window.ScrollReveal().reveal('#projects', { delay: 200, easing: 'ease-in-out' })
 </script>

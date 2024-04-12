@@ -1,39 +1,38 @@
 ---
 const navigation = [
 	{
-		name: "Sobre mí",
-		href: "/#sobre-mi",
+		name: 'Sobre mí',
+		href: '/#sobre-mi'
 	},
 	{
-		name: "Proyectos",
-		href: "/#proyectos",
+		name: 'Proyectos',
+		href: '/#proyectos'
 	},
 	{
-		name: "Estudios",
-		href: "/#estudios",
+		name: 'Estudios',
+		href: '/#estudios'
 	},
 	{
-		name: "Recursos",
-		href: "/recursos",
+		name: 'Recursos',
+		href: '/recursos'
 	},
 	{
-		name: "Recomendaciones",
-		href: "/#recomendaciones",
+		name: 'Recomendaciones',
+		href: '/#recomendaciones'
 	},
 	{
-		name: "Contacto",
-		href: "#contacto",
-	},
-];
+		name: 'Contacto',
+		href: '#contacto'
+	}
+]
 ---
 
 <ul
-	id="mobile-menu"
-	class="hidden flex-col h-screen fixed inset-0 p-8 bg-customWhite dark:bg-customBlack backdrop-blur-2xl items-center gap-12 grow justify-center pt-16 sm:pt-8"
->
+	id='mobile-menu'
+	class='hidden flex-col h-dvh fixed inset-0 p-8 bg-customWhite dark:bg-customBlack backdrop-blur-2xl items-center gap-12 grow justify-center pt-16 sm:pt-8'>
 	{
 		navigation.map(({ name, href }) => (
-			<li class="hover:text-blue-600 transition-all duration-200 text-xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link">
+			<li class='hover:text-blue-600 transition-all duration-200 text-xl xs:text-3xl sm:text-4xl text-current font-extrabold menu_link'>
 				<a href={href}>{name}</a>
 			</li>
 		))

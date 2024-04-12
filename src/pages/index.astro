@@ -1,21 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
 
-import HeroSection from "../components/HeroSection.astro";
-import About from "../components/About.astro";
-import Studies from "../components/studies/Studies.astro";
-import Projects from "../components/projects/Projects.astro";
+import HeroSection from '../components/HeroSection.astro'
+import About from '../components/About.astro'
+import Studies from '../components/studies/Studies.astro'
+import Projects from '../components/projects/Projects.astro'
 
-import Footer from "../components/Footer.astro";
-import Recommendations from "../components/recommendations/Recommendations.astro";
-import { MAIN_TITLE, MAIN_DESCRIPTION } from "../utils/consts";
+import Footer from '../components/Footer.astro'
+import Recommendations from '../components/recommendations/Recommendations.astro'
+import { MAIN_TITLE, MAIN_DESCRIPTION } from '../utils/consts'
 ---
 
 <Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION}>
 	<div
-		class="flex flex-col min-h-screen px-5 my-6 md:gap-32 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto"
-	>
-		<main class="flex flex-col gap-24 grow mt-36">
+		class='flex flex-col min-h-dvh px-5 my-6 md:gap-32 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto'>
+		<main class='flex flex-col gap-24 grow mt-36'>
 			<HeroSection />
 			<About />
 			<Projects />

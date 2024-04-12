@@ -1,13 +1,49 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from 'astro-icon/components'
 
-const heroTitle =
-	"Soy Alessandro Rios desarrollador front- end especializado en React.";
-const heroTitleSM =
-	"Soy Alessandro Rios desarrollador front-end especializado en React.";
+const heroTitle = 'Soy Alessandro Rios desarrollador front- end especializado en React.'
+const heroTitleSM = 'Soy Alessandro Rios desarrollador front-end especializado en React.'
 
-const heroWords = heroTitle.split(" ");
-const heroLetters = heroWords.map((word) => word.split(""));
+const heroWords = heroTitle.split(' ')
+const heroLetters = heroWords.map((word) => word.split(''))
+
+const socialIcons = [
+	{
+		href: 'https://www.instagram.com/dev_alessandrorios/',
+		label: 'Instagram',
+		icon: 'instagram',
+		color: 'text-gray-600 hover:text-indigo-600',
+		size: 'w-6 h-6'
+	},
+	{
+		href: 'https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto.',
+		label: 'WhatsApp',
+		icon: 'whatsapp',
+		color: 'text-gray-600 hover:text-green-600',
+		size: 'w-6 h-6'
+	},
+	{
+		href: 'https://linkedin.com/in/alessandro-rios',
+		label: 'LinkedIn',
+		icon: 'linkedin',
+		color: 'text-gray-600 hover:text-blue-600',
+		size: 'w-8 h-8'
+	},
+	{
+		href: 'https://github.com/dalessandro07',
+		label: 'Github',
+		icon: 'github',
+		color: 'text-gray-600 dark:hover:text-zinc-200 hover:text-black',
+		size: 'w-8 h-8'
+	},
+	{
+		href: 'https://mytarjeta.me/ale',
+		label: 'MiTarjeta',
+		icon: 'mitarjeta',
+		color: 'text-gray-500 hover:text-blue-500',
+		size: 'w-8 h-8'
+	}
+]
 ---
 
 <style>
@@ -20,90 +56,47 @@ const heroLetters = heroWords.map((word) => word.split(""));
 	}
 </style>
 
-<section
-	id="hero"
-	class="flex flex-col justify-center max-w-4xl gap-10 2xl:max-w-5xl load-hidden"
->
+<section id='hero' class='flex flex-col justify-center max-w-4xl gap-10 2xl:max-w-5xl load-hidden'>
 	<h1
-		class="flex flex-wrap gap-x-[18px] text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl 2xl:text-8xl font-bold font-inter !leading-min hover:cursor-default"
-	>
+		class='flex flex-wrap gap-x-[18px] text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-7.5xl 2xl:text-8xl font-bold font-inter !leading-min hover:cursor-default'>
 		{
 			heroLetters.map((word) => (
-				<span class="hidden lg:flex">
+				<span class='hidden lg:flex'>
 					{word.map((letter) => (
-						<span class="specialLetter">{letter}</span>
+						<span class='specialLetter'>{letter}</span>
 					))}
 				</span>
 			))
 		}
 
-		<span class="lg:hidden" style="text-wrap: balance;">{heroTitleSM}</span>
+		<span class='lg:hidden' style='text-wrap: balance;'>{heroTitleSM}</span>
 	</h1>
 
-	<article class="flex items-center gap-8">
-		<a
-			rel="noreferrer"
-			target="_blank"
-			href="https://www.instagram.com/dev_alessandrorios/"
-			aria-label="Instagram"
-			aria-labelledby="Instagram"
-		>
-			<Icon
-				class="text-gray-600 hover:text-indigo-600 hover:rotate-[360deg] transition-all duration-500 w-6 h-6"
-				name="instagram"
-			/>
-			<span class="sr-only">Instagram</span>
-		</a>
-
-		<a
-			rel="noreferrer"
-			target="_blank"
-			href="https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto."
-			aria-label="WhatsApp"
-			arial-labelledby="WhatsApp"
-		>
-			<Icon
-				class="text-gray-600 hover:text-green-600 hover:rotate-[360deg] transition-all duration-500 w-6 h-6"
-				name="whatsapp"
-			/>
-			<span class="sr-only">WhatsApp</span>
-		</a>
-
-		<a
-			rel="noreferrer"
-			target="_blank"
-			href="https://linkedin.com/in/alessandro-rios"
-			aria-label="LinkedIn"
-			aria-labelledby="LinkedIn"
-		>
-			<Icon
-				class="text-gray-600 hover:text-blue-600 hover:rotate-[360deg] transition-all duration-500 w-8 h-8"
-				name="linkedin"
-			/>
-			<span class="sr-only">LinkedIn</span>
-		</a>
-
-		<a
-			rel="noreferrer"
-			target="_blank"
-			href="https://github.com/dalessandro07"
-			arial-label="Github"
-			arial-labelledby="Github"
-		>
-			<Icon
-				class="text-gray-600 hover:text-zinc-200 hover:rotate-[360deg] transition-all duration-500 w-8 h-8"
-				name="github"
-			/>
-			<span class="sr-only">Github</span>
-		</a>
+	<article class='flex items-center gap-8'>
+		{
+			socialIcons.map((item) => (
+				<a
+					rel='noreferrer'
+					target='_blank'
+					href={item.href}
+					aria-label={item.label}
+					aria-labelledby={item.label}>
+					<Icon
+						class={` ${item.color} hover:rotate-[360deg] transition-all duration-500 ${item.size}`}
+						name={item.icon}
+					/>
+					<span class='sr-only'>{item.label}</span>
+				</a>
+			))
+		}
 	</article>
 </section>
 
 <script>
-	window.ScrollReveal().reveal("#hero", {
+	window.ScrollReveal().reveal('#hero', {
 		delay: 200,
-		easing: "ease-in-out",
+		easing: 'ease-in-out',
 		opacity: 0,
-		distance: "5px",
-	});
+		distance: '5px'
+	})
 </script>

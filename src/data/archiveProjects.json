@@ -1,0 +1,10 @@
+{
+  "name": "Space Tourism",
+  "description": "Este proyecto web destaca por su <strong class='font-bold dark:text-customWhite text-customBlack'>maquetación creativa</strong> y sus <strong class='font-bold dark:text-customWhite text-customBlack'>animaciones cautivadoras</strong>, además de ser adaptable a dispositivos móviles. <br><br> Incluye carruseles con desplazamiento horizontal y vertical, y ha sido una experiencia personal invaluable para fortalecer mis habilidades en <strong class='font-bold dark:text-customWhite text-customBlack'>maquetación web</strong> y <strong class='font-bold dark:text-customWhite text-customBlack'>diseño responsive</strong>.",
+  "url": "https://space-tourismweb.netlify.app",
+  "src": [
+    "/images/spaceT/space-tourism.webp",
+    "/images/spaceT/destination.webp",
+    "/images/spaceT/crew.webp"
+  ]
+}
