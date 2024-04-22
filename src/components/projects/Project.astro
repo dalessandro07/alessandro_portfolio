@@ -1,8 +1,10 @@
 ---
-import type { Project } from '../../env'
-import SecondaryProject from './SecondaryProject.astro'
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
+
+import SecondaryProject from './SecondaryProject.astro'
+
+import type { Project } from '@/env'
 
 const props = Astro.props as Project
 const { name, description, url, src, isSecondary } = props
@@ -47,10 +49,13 @@ const { name, description, url, src, isSecondary } = props
 							class='object-cover object-left-top w-full h-full border border-gray-400 dark:border-gray-700 rounded-2xl'
 							src={path}
 							alt={name}
-							width={600}
+							width={800}
 							height={600}
-							quality='max'
+							quality='high'
+							decoding='async'
+							loading='lazy'
 						/>
+						<span class='sr-only'>{name}</span>
 					</a>
 				))}
 			</section>

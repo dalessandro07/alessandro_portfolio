@@ -15,3 +15,12 @@ declare global {
 		ScrollReveal: any;
 	}
 }
+
+export interface IRecommendation {
+	id: number
+	name: string
+	title: string
+	message: string
+	date: string
+	image: Image
+}

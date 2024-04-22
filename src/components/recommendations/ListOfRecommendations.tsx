@@ -1,21 +1,14 @@
-import { recommendations } from "../../data/recommendations.json";
-import { useEffect, useRef } from "preact/hooks";
+import recommendations from "@/data/recommendations"
+import { useEffect, useRef } from "preact/hooks"
 
-import * as Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+import * as Glide from "@glidejs/glide"
+import "@glidejs/glide/dist/css/glide.core.min.css"
+import "@glidejs/glide/dist/css/glide.theme.min.css"
 
-interface Recommendation {
-	id: number;
-	name: string;
-	title: string;
-	message: string;
-	date: string;
-	image: string;
-}
+import type { IRecommendation } from '@/env'
 
-export default function RecommendationsCarousel() {
-	const sliderRef = useRef(null);
+export default function RecommendationsCarousel () {
+	const sliderRef = useRef(null)
 
 	useEffect(() => {
 		if (sliderRef.current) {
@@ -37,18 +30,18 @@ export default function RecommendationsCarousel() {
 						perView: 1,
 					},
 				},
-			});
+			})
 
-			glide.mount();
+			glide.mount()
 		}
-	}, []);
+	}, [])
 
 	return (
-		<div className="max-w-7xl mx-auto">
+		<div className="mx-auto max-w-7xl">
 			<div className="glide" ref={sliderRef}>
 				<div className="glide__track" data-glide-el="track">
 					<ul className="glide__slides">
-						{recommendations.map((recommendation: Recommendation) => (
+						{recommendations.map((recommendation: IRecommendation) => (
 							<li
 								className="flex flex-col items-start gap-5 p-1.5 glide__slides select-none"
 								key={recommendation.id}
@@ -57,9 +50,9 @@ export default function RecommendationsCarousel() {
 									<img
 										src={recommendation.image}
 										alt={recommendation.name}
-										className="w-12 sm:w-16 h-12 sm:h-16 rounded-full mb-4 select-none"
+										className="w-12 h-12 mb-4 rounded-full select-none sm:w-16 sm:h-16"
 									/>
-									<h3 className="text-lg select-none font-bold text-customBlack dark:text-customWhite capitalize">
+									<h3 className="text-lg font-bold capitalize select-none text-customBlack dark:text-customWhite">
 										{recommendation.name.toLowerCase()}
 									</h3>
 									<h4 className="text-xs font-medium text-gray-600 dark:text-gray-500 truncate max-w-[420px] sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl pr-36 select-none">
@@ -74,7 +67,7 @@ export default function RecommendationsCarousel() {
 								</section>
 
 								<footer>
-									<p className="text-xs font-semibold text-gray-500 dark:text-gray-400 select-none">
+									<p className="text-xs font-semibold text-gray-500 select-none dark:text-gray-400">
 										Escrita el {recommendation.date}
 									</p>
 								</footer>
@@ -84,5 +77,5 @@ export default function RecommendationsCarousel() {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }

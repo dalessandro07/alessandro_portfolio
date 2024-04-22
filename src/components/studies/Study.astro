@@ -1,35 +1,36 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
+
 interface Study {
-	institute: string;
-	country: string;
-	degree: string;
-	date: string;
-	description: string;
-	image: string;
-	url: string;
+	institute: string
+	country: string
+	degree: string
+	date: string
+	description: string
+	image: string
+	url: string
 }
 
-const { institute, country, degree, date, description, image, url } =
-	Astro.props as Study;
+const { institute, country, degree, date, description, image, url } = Astro.props as Study
 ---
 
-<article class="flex flex-col md:max-w-xs lg:max-w-md gap-5">
-	<header class="flex flex-col gap-4">
+<article class='flex flex-col gap-5 md:max-w-xs lg:max-w-md'>
+	<header class='flex flex-col gap-4'>
 		<a
-			target="_blank"
-			rel="noreferrer"
+			target='_blank'
+			rel='noreferrer'
 			href={url}
-			class="font-bold text-lg w-max hover:text-blue-600 transition-all duration-200 flex flex-wrap gap-6 items-center"
-		>
-			<h3 class="text-3xl sm:text-4xl font-black">{institute}</h3>
+			class='flex flex-wrap items-center gap-6 text-lg font-bold transition-all duration-200 w-max hover:text-blue-600'>
+			<h3 class='text-3xl font-black sm:text-4xl'>{institute}</h3>
 
 			<Image
-				class="w-9 h-9 rounded-full object-cover"
+				class='object-cover rounded-full w-9 h-9'
 				src={image}
 				alt={institute}
-				width={50}
-				height={50}
+				width={200}
+				height={200}
+				decoding='async'
+				loading='lazy'
 			/>
 		</a>
 
@@ -37,11 +38,11 @@ const { institute, country, degree, date, description, image, url } =
 	</header>
 
 	<section>
-		<p set:html={description} class="text-gray-600 dark:text-gray-400" />
+		<p set:html={description} class='text-gray-600 dark:text-gray-400' />
 	</section>
 
 	<footer>
-		<p class="text-sm">
+		<p class='text-sm'>
 			{date}
 		</p>
 	</footer>

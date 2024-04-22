@@ -1,16 +1,16 @@
 ---
-import studies from "../../data/studies.json";
-import Study from "./Study.astro";
+import studies from '../../data/studies'
+import Study from './Study.astro'
 ---
 
-<div id="estudios"></div>
+<div id='estudios'></div>
 
-<section class="flex flex-col gap-32">
-	<header class="flex flex-col gap-8 md:mt-14">
-		<h2 class="font-extrabold text-5xl sm:text-7xl">Estudios</h2>
+<section class='flex flex-col gap-32'>
+	<header class='flex flex-col gap-8 md:mt-14'>
+		<h2 class='text-5xl font-extrabold sm:text-7xl'>Estudios</h2>
 	</header>
 
-	<article class="flex flex-wrap justify-between gap-y-20">
+	<article class='flex flex-wrap justify-between gap-y-20'>
 		{studies.map((study) => <Study {...study} />)}
 	</article>
 </section>
