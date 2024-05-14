@@ -16,15 +16,21 @@ import drcafeSeguimiento from "@/assets/images/drcafe/drcafe-seguimiento.webp"
 import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
 import drcafeTablet from "@/assets/images/drcafe/drcafe-tablet.webp"
 
+/* Dubái Shawarma images */
+import shawarmaHeroDesktop from "@/assets/images/shawarmadubailima/shawarma-hero-desktop.webp"
+import shawarmaMobile from "@/assets/images/shawarmadubailima/shawarma-mobile.webp"
+import shawarmaCartOpenDesktop from "@/assets/images/shawarmadubailima/shawarma-cart-open-desktop.webp"
+import shawarmaAboutDesktop from "@/assets/images/shawarmadubailima/shawarma-about-desktop.webp"
+
 /* AllExpenses images */
 import allexLogin from "@/assets/images/allex/allexLogin.webp"
 import allexHome from "@/assets/images/allex/home_allexpenses.webp"
 import allexBalance from "@/assets/images/allex/balance.webp"
 
 /* LCDP images */
-import lcdpHome from "@/assets/images/lcdp/lcdp-home.webp"
+/* import lcdpHome from "@/assets/images/lcdp/lcdp-home.webp"
 import lcdpProducts from "@/assets/images/lcdp/lcdp-products.webp"
-import lcdpServices from "@/assets/images/lcdp/lcdp-services.webp"
+import lcdpServices from "@/assets/images/lcdp/lcdp-services.webp" */
 
 /* Organízalo images */
 import organizalo from "@/assets/images/organizalo/organizalo.webp"
@@ -55,6 +61,17 @@ export default [
 		]
 	},
 	{
+		"name": "Dubái Shawarma",
+		"description": "Esta página web ofrece una experiencia intuitiva y moderna, diseñada para facilitar la navegación y la realización de <strong class='font-bold dark:text-customWhite text-customBlack'>pedidos a través de WhatsApp</strong>.<br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla.<br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y moderna</strong>, asegurando una experiencia de usuario óptima y atractiva.",
+		"url": "https://shawarmadubailima.com",
+		"src": [
+			shawarmaHeroDesktop,
+			shawarmaMobile,
+			shawarmaCartOpenDesktop,
+			shawarmaAboutDesktop
+		]
+	},
+	{
 		"name": "DrCafe",
 		"description": "E-Commerce. Este es un simulador de tienda virtual de cafés y chocolates, moderno y <strong class='font-bold dark:text-customWhite text-customBlack'>estéticamente atractivo</strong>, con un excelente <strong class='font-bold dark:text-customWhite text-customBlack'>rendimiento</strong> y adaptable a dispositivos móviles. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='font-bold dark:text-customWhite text-customBlack'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos y rutas dinámicas.",
 		"url": "https://drcafe.netlify.app",
@@ -75,7 +92,7 @@ export default [
 			allexBalance
 		]
 	},
-	{
+	/* {
 		"name": "La Casa De Las Plantas",
 		"description": "E-Commerce. Esta tienda virtual de artículos de jardinería cuenta con 5 secciones/páginas y diseño responsive (adaptable a dispositivos móviles).<br/> <br/> Con un desarrollo enfocado para una <strong class='font-bold dark:text-customWhite text-customBlack'>carga rápida</strong> de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y minimalista</strong>, este e-commerce tiene incluida una sección de blog, servicios y carrito de compra.",
 		"url": "https://dalessandro07.github.io/e-commerce/",
@@ -84,7 +101,7 @@ export default [
 			lcdpProducts,
 			lcdpServices
 		]
-	},
+	}, */
 	{
 		"name": "Organízalo",
 		"description": "Aplicación de escritorio <strong class='font-bold dark:text-customWhite text-customBlack'>potente e innovadora</strong> que organizar archivos en carpetas y sub-carpetas, por extensión y fecha de creación. <br/><br/> Es muy útil para ordenar carpetas con muchos archivos de distintos tipos de <strong class='font-bold dark:text-customWhite text-customBlack'>manera eficiente y rápida (en milisegundos)</strong>. ¿Qué esperas para probarlo? ¡Es gratis y pesa menos de 10mb! <br/><br/> Este proyecto está desarrollado en <strong class='font-bold dark:text-customWhite text-customBlack'>Python</strong>.",
