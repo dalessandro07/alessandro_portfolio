@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets'
+import profileImage from '@/assets/images/profile.webp'
+
+import Layout from '@/layouts/Layout.astro'
+
+import { MAIN_TITLE, MAIN_DESCRIPTION } from '@/utils/consts'
+import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
+
+const enlaces = [
+	{
+		href: 'https://linkedin.com/in/alessandro-rios',
+		label: 'LinkedIn'
+	},
+	{
+		href: 'https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto.',
+		label: 'WhatsApp'
+	},
+	{
+		href: 'https://mytarjeta.me/ale',
+		label: 'MiTarjeta'
+	}
+]
+---
+
+<Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION} withHeader={false}>
+	<div
+		class='relative flex flex-col justify-center gap-10 p-10 mx-auto xs:gap-5 min-h-dvh xs:max-w-screen-xs sm:max-w-xl'>
+		<div class='absolute top-0 right-0 flex justify-end w-full m-5'>
+			<ThemeToggle />
+		</div>
+
+		<header class='flex flex-col gap-5'>
+			<Image
+				class='object-cover object-top w-10 h-10 rounded-full shadow'
+				src={profileImage}
+				alt='Imagen de perfil de Alessandro Rios'
+				quality='max'
+				loading='eager'
+			/>
+
+			<h1 class='font-bold'>Soy Alessandro Rios, desarrollador front-end</h1>
+		</header>
+
+		<main>
+			<section class='flex flex-col gap-5 text-gray-600 dark:text-gray-400 text-pretty max-w-prose'>
+				<p>
+					Apasionado del aprendizaje, la tecnología y el desarrollo de software. Mejorando
+					habilidades a través de proyectos constantes.
+				</p>
+
+				<p>
+					Especializado en aplicaciones web. Experiencia con HTML, CSS, JavaScript, React, Next.js,
+					Python y Java.
+				</p>
+			</section>
+		</main>
+
+		<footer>
+			<ul class='grid grid-cols-1 sm:grid-cols-3 gap-y-5'>
+				{
+					enlaces.map((enlace) => (
+						<li>
+							<a
+								class='text-center text-blue-700 transition-all duration-300 border-b-2 border-transparent dark:text-blue-500 hover:border-blue-600'
+								href={enlace.href}
+								target='_blank'
+								rel='noopener noreferrer'>
+								Ver {enlace.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</footer>
+	</div>
+</Layout>

@@ -9,7 +9,8 @@ module.exports = {
 		extend: {
 			colors: {
 				customBlack: '#121213',
-				customWhite: '#e8e8e8'
+				customWhite: '#e8e8e8',
+				muted: '#8c8c8c',
 			},
 			fontSize: {
 				nav: '15px',
