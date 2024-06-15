@@ -1,32 +1,30 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import ResourcesHeader from "../components/header/ResourcesHeader.astro";
-import ResourceContainer from "../components/resources/ResourceContainer.astro";
-import Footer from "../components/Footer.astro";
+import Layout from '../layouts/Layout.astro'
+import ResourcesHeader from '../components/header/ResourcesHeader.astro'
+import ResourceContainer from '../components/resources/ResourceContainer.astro'
+import Footer from '../components/Footer.astro'
 
-import data from "../data/resources.json";
-import { RESOURCES_DESCRIPTION, RESOURCES_TITLE } from "../utils/consts";
+import data from '../data/resources.json'
+import { RESOURCES_DESCRIPTION, RESOURCES_TITLE } from '../utils/consts'
 ---
 
 <Layout title={RESOURCES_TITLE} description={RESOURCES_DESCRIPTION}>
 	<div
-		class="flex flex-col justify-center px-5 mb-6 mt-28 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto"
-	>
+		class='flex flex-col justify-center px-5 mb-6 mt-28 xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto'>
 		<ResourcesHeader />
 
-		<section class="flex flex-col gap-24 mb-32">
+		<section class='flex flex-col gap-24 mb-32'>
 			{
 				Object.entries(data).map(([key, value]) => (
 					<ResourceContainer resourceList={value}>
-						{key.includes("VS Code") ? (
+						{key.includes('VS Code') ? (
 							<>
 								Extensiones de
 								<a
-									rel="noreferrer"
-									target="_blank"
-									class="transition-all duration-200 hover:text-blue-600"
-									href="https://code.visualstudio.com/download"
-								>
+									rel='noreferrer'
+									target='_blank'
+									class='transition-all duration-200 hover:text-blue-600'
+									href='https://code.visualstudio.com/download'>
 									VS Code
 								</a>
 							</>
@@ -39,8 +37,8 @@ import { RESOURCES_DESCRIPTION, RESOURCES_TITLE } from "../utils/consts";
 		</section>
 
 		<Footer
-			title="Recursos para desarrolladores"
-			description="Los canales y sitios web que he consultado desde que empecé a desarrollar aplicaciones."
+			title='Recursos para desarrolladores'
+			description='Los canales y sitios web que he consultado desde que empecé a desarrollar aplicaciones.'
 		/>
 	</div>
 </Layout>

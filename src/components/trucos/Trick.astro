@@ -1,0 +1,88 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { title, description, copyContent } = Astro.props
+---
+
+<style>
+	@keyframes copiedAnimation {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.copied-animation {
+		animation: copiedAnimation 1.5s ease-in-out;
+	}
+</style>
+
+<article
+	class='flex flex-col justify-between gap-3 p-4 bg-gray-300 rounded-md shadow-lg dark:bg-neutral-800'>
+	<header class='flex flex-col'>
+		<h3 class='text-sm text-gray-600 dark:text-gray-400'>{title}</h3>
+		<p class='text-xs text-gray-600 dark:text-gray-400'>
+			{description}
+		</p>
+	</header>
+
+	<astro-content
+		class='flex flex-col justify-between gap-5 grow'
+		id='content'
+		data-content={copyContent}>
+		<span class='px-2 py-4 border rounded border-muted grow min-h-20 sm:min-h-28' id='content'>
+			{copyContent}
+		</span>
+
+		<div class='grid grid-cols-1 gap-2 md:grid-cols-3'>
+			<a
+				class='flex justify-center items-center text-sm gap-3 bg-green-700 hover:bg-green-900 text-customWhite px-3 py-1.5 rounded md:col-span-2 transition-all duration-300'
+				href={`https://wa.me/?text=${copyContent}`}
+				target='_blank'
+				rel='noopener noreferrer'>
+				<Icon name='mdi:whatsapp' class='w-5 h-5' />
+				Probar en WhatsApp
+			</a>
+			<button
+				class='flex justify-center items-center text-sm gap-3 border border-muted hover:bg-customBlack hover:text-customWhite transition-all duration-300 px-3 py-1.5 rounded'
+				id='copyTrick'>
+				<Icon name='mdi:content-copy' class='w-5 h-5' />
+				Copiar
+			</button>
+		</div>
+	</astro-content>
+</article>
+
+<script>
+	class AstroContent extends HTMLElement {
+		constructor() {
+			super()
+
+			// Read the message from the data attribute.
+			const copyContent = this.dataset.content
+			const $btnCopyContent = this.querySelector('#copyTrick')
+			const $elmContent = this.querySelector('#content')
+
+			if (!copyContent || !$btnCopyContent || !$elmContent) return
+
+			$btnCopyContent.addEventListener('click', () => {
+				navigator.clipboard.writeText(copyContent).then(() => {
+					$elmContent.textContent = '¡Copiado! 🎉'
+					$elmContent.classList.add('copied-animation')
+
+					setTimeout(() => {
+						$elmContent.textContent = copyContent
+						$elmContent.classList.remove('copied-animation')
+					}, 1500)
+				})
+			})
+		}
+	}
+
+	customElements.define('astro-content', AstroContent)
+</script>

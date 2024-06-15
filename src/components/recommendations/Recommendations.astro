@@ -1,24 +1,22 @@
 ---
-import ListOfRecommendations from "./ListOfRecommendations";
+import { LINKEDIN_URL } from '@/utils/consts'
+import ListOfRecommendations from './ListOfRecommendations'
 ---
 
-<div id="recomendaciones"></div>
+<div id='recomendaciones'></div>
 
-<div class="flex flex-col gap-16 mb-20 md:mb-0">
-	<header class="flex flex-col gap-4 md:gap-8 md:mt-14">
-		<h2 class="font-extrabold text-3xl sm:text-6xl lg:text-7xl">
-			Recomendaciones
-		</h2>
+<div class='flex flex-col gap-16 mb-20 md:mb-0'>
+	<header class='flex flex-col gap-4 md:gap-8 md:mt-14'>
+		<h2 class='text-3xl font-extrabold sm:text-6xl lg:text-7xl'>Recomendaciones</h2>
 		<a
-			class="text-blue-500 hover:underline pl-1.5 w-max"
-			target="_blank"
-			href="https://www.linkedin.com/in/alessandro-rios/details/recommendations"
-		>
+			class='text-blue-500 hover:underline pl-1.5 w-max'
+			target='_blank'
+			href={`${LINKEDIN_URL}details/recommendations`}>
 			Ver en LinkedIn
 		</a>
 	</header>
 
-	<section class="min-h-[360px]">
+	<section class='min-h-[360px]'>
 		<ListOfRecommendations client:idle />
 	</section>
 </div>

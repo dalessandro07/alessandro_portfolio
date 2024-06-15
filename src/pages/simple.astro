@@ -4,21 +4,21 @@ import profileImage from '@/assets/images/profile.webp'
 
 import Layout from '@/layouts/Layout.astro'
 
-import { MAIN_TITLE, MAIN_DESCRIPTION } from '@/utils/consts'
+import { MAIN_TITLE, MAIN_DESCRIPTION, WHATSAPP_URL, LINKEDIN_URL } from '@/utils/consts'
 import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
 
 const enlaces = [
 	{
-		href: 'https://linkedin.com/in/alessandro-rios',
-		label: 'LinkedIn'
-	},
-	{
-		href: 'https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto.',
+		href: WHATSAPP_URL,
 		label: 'WhatsApp'
 	},
 	{
+		href: LINKEDIN_URL,
+		label: 'LinkedIn'
+	},
+	{
 		href: 'https://mytarjeta.me/ale',
-		label: 'MiTarjeta'
+		label: 'MyTarjeta'
 	}
 ]
 ---
@@ -31,13 +31,20 @@ const enlaces = [
 		</div>
 
 		<header class='flex flex-col gap-5'>
-			<Image
-				class='object-cover object-top w-10 h-10 rounded-full shadow'
-				src={profileImage}
-				alt='Imagen de perfil de Alessandro Rios'
-				quality='max'
-				loading='eager'
-			/>
+			<a
+				class='w-max'
+				title='Ir al inicio del portafolio de Alessandro Rios'
+				aria-label='Ir al inicio del portafolio de Alessandro Rios'
+				aria-labelledby='Ir al inicio del portafolio de Alessandro Rios'
+				href='/'>
+				<Image
+					class='object-cover object-top w-10 h-10 rounded-full shadow'
+					src={profileImage}
+					alt='Imagen de perfil de Alessandro Rios'
+					quality='max'
+					loading='eager'
+				/>
+			</a>
 
 			<h1 class='font-bold'>Soy Alessandro Rios, desarrollador front-end</h1>
 		</header>
@@ -66,7 +73,7 @@ const enlaces = [
 								href={enlace.href}
 								target='_blank'
 								rel='noopener noreferrer'>
-								Ver {enlace.label}
+								{enlace.label}
 							</a>
 						</li>
 					))

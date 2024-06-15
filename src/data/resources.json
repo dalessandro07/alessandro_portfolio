@@ -1,6 +1,16 @@
 {
 	"Sitios Web": [
 		{
+			"url": "https://mytarjeta.me",
+			"title": "Crea tu tarjeta de presentación digital.",
+			"desc": "Crea tu tarjeta de presentación digital de manera rápida y sencilla. Puedes personalizarla con tu información, contacto y enlaces. Es una excelente opción para compartir tus datos de contacto de manera digital."
+		},
+		{
+			"url": "https://shots.so",
+			"title": "Crea mockups de tus proyectos.",
+			"desc": "Crea mockups de tus proyectos de manera rápida y sencilla. Puedes personalizarlos con tu diseño y descargarlos en alta calidad. Es una excelente opción para mostrar tus proyectos de manera profesional."
+		},
+		{
 			"url": "https://heroicons.com/",
 			"title": "280 Iconos minimalistas personalizables con tailwind.",
 			"desc": "Estoy seguro de que todos mis proyectos tienen al menos 1 ícono de este sitio web. Son muy fáciles de usar y se pueden integrar con React y tailwind muy fácilmente."
@@ -61,9 +71,9 @@
 
 	"Extensiones de VS Code": [
 		{
-			"url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
-			"title": "Formatea tu código automáticamente.",
-			"desc": "Prettier es una herramienta que te permite formatear tu código automáticamente. Es muy útil para mantener un código limpio y ordenado. Puedes configurar las reglas de formateo para que se adapten a tus necesidades."
+			"url": "https://marketplace.visualstudio.com/items?itemName=heybourn.headwind",
+			"title": "Ordena tus clases de TailwindCSS.",
+			"desc": "Headwind. Te permite ordenar tus clases de TailwindCSS de manera automática. Es muy útil para mantener un orden en tus clases y evitar clases duplicadas."
 		},
 		{
 			"url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
@@ -84,6 +94,11 @@
 			"url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
 			"title": "Muestra los errores en línea.",
 			"desc": "Error Lens. Te permite ver los errores de tu código en tiempo real en la misma línea. Es muy útil y te ahorrará tiempo al momento de depurar tu código."
+		},
+		{
+			"url": "https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview",
+			"title": "Muestra una vista previa de la imagen en la línea de código.",
+			"desc": "Gutter Preview. Te permite ver una vista previa de la imagen en la línea de código. Es muy útil para proyectos con muchas imágenes."
 		}
 	],
 	"Paquetes NPM": [

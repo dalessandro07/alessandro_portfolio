@@ -4,8 +4,12 @@ import { PAGE404DESCRIPTION, PAGE404TITLE } from '../utils/consts'
 ---
 
 <Layout title={PAGE404TITLE} description={PAGE404DESCRIPTION}>
-	<section class='flex flex-col items-center justify-center w-screen h-dvh gap-6'>
-		<h4 class='text-3xl font-bold text-center sm:text-5xl'>404 | Página no encontrada</h4>
+	<section class='flex flex-col items-center justify-center w-screen gap-6 h-dvh'>
+		<h4 class='text-3xl font-bold text-center sm:text-5xl'>Oops... Página no encontrada</h4>
+
+		<p class='text-xs text-center text-gray-600 dark:text-gray-400'>
+			404 - La página que buscas no existe o ha sido movida.
+		</p>
 		<a class='text-lg font-extrabold text-blue-600 hover:underline' href='/'>Ir al inicio</a>
 	</section>
 </Layout>

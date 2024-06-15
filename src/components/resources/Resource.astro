@@ -1,12 +1,12 @@
 ---
 interface Props {
-	url: string;
-	title: string;
-	desc: string;
-	lang?: string;
+	url: string
+	title: string
+	desc: string
+	lang?: string
 }
 
-const { url, title, desc, lang } = Astro.props as Props;
+const { url, title, desc, lang } = Astro.props as Props
 ---
 
 <style>
@@ -16,29 +16,27 @@ const { url, title, desc, lang } = Astro.props as Props;
 </style>
 
 <div
-	id="resource-item"
-	class="flex break-words flex-col gap-3 w-ful sm:w-1/2 pl-1 sm:pr-12 load-hidden"
->
+	id='resource-item'
+	class='flex flex-col gap-3 pl-1 break-words w-ful sm:w-1/2 sm:pr-12 load-hidden'>
 	<a
 		href={url}
-		target="_blank"
-		rel="noreferrer"
-		class="text hover:text-blue-600 transition-all duration-200 font-bold"
-	>
+		target='_blank'
+		rel='noreferrer'
+		class='font-bold text-blue-500 transition-all duration-200 hover:underline hover:text-blue-700'>
 		{title}
 	</a>
 
-	<div class="flex gap-2 text-sm text-gray-600 dark:text-gray-400">
+	<div class='flex gap-2 text-sm text-gray-600 dark:text-gray-400'>
 		{lang && <p>({lang})</p>}
-		<p class="w-11/12 sm:w-4/5">{desc}</p>
+		<p class='w-11/12 sm:w-4/5'>{desc}</p>
 	</div>
 </div>
 
 <script>
-	window.ScrollReveal().reveal("#resource-item", {
+	window.ScrollReveal().reveal('#resource-item', {
 		duration: 1000,
 		delay: 200,
-		distance: "50px",
-		origin: "bottom",
-	});
+		distance: '50px',
+		origin: 'bottom'
+	})
 </script>

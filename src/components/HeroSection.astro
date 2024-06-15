@@ -1,4 +1,5 @@
 ---
+import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL, INSTAGRAM_URL } from '@/utils/consts'
 import { Icon } from 'astro-icon/components'
 
 const heroTitle = 'Soy Alessandro Rios desarrollador front- end especializado en React.'
@@ -9,28 +10,28 @@ const heroLetters = heroWords.map((word) => word.split(''))
 
 const socialIcons = [
 	{
-		href: 'https://www.instagram.com/dev_alessandrorios/',
+		href: INSTAGRAM_URL,
 		label: 'Instagram',
 		icon: 'instagram',
 		color: 'text-gray-600 hover:text-indigo-600',
 		size: 'w-6 h-6'
 	},
 	{
-		href: 'https://wa.me/51986307201?text=Hola%20Alessandro,%20vi%20tu%20portafolio%20y%20me%20encantaría%20hablar%20sobre%20un%20proyecto.',
+		href: WHATSAPP_URL,
 		label: 'WhatsApp',
 		icon: 'whatsapp',
 		color: 'text-gray-600 hover:text-green-600',
 		size: 'w-6 h-6'
 	},
 	{
-		href: 'https://linkedin.com/in/alessandro-rios',
+		href: LINKEDIN_URL,
 		label: 'LinkedIn',
 		icon: 'linkedin',
 		color: 'text-gray-600 hover:text-blue-600',
 		size: 'w-8 h-8'
 	},
 	{
-		href: 'https://github.com/dalessandro07',
+		href: GITHUB_URL,
 		label: 'Github',
 		icon: 'github',
 		color: 'text-gray-600 dark:hover:text-zinc-200 hover:text-black',
@@ -38,7 +39,7 @@ const socialIcons = [
 	},
 	{
 		href: 'https://mytarjeta.me/ale',
-		label: 'MiTarjeta',
+		label: 'MyTarjeta',
 		icon: 'mitarjeta',
 		color: 'text-gray-500 hover:text-blue-500',
 		size: 'w-8 h-8'

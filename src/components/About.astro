@@ -3,6 +3,7 @@ import { Image } from 'astro:assets'
 import Strong from './text/Strong.astro'
 
 import aboutImage from '@/assets/images/perfil-completo.webp'
+import { LINKEDIN_URL } from '@/utils/consts'
 ---
 
 <style>
@@ -53,7 +54,7 @@ import aboutImage from '@/assets/images/perfil-completo.webp'
 				id='ab-more2'
 				rel='noreferrer'
 				target='_blank'
-				href='https://linkedin.com/in/alessandro-rios'
+				href={LINKEDIN_URL}
 				class='px-8 py-4 text-lg font-bold transition-all duration-200 bg-blue-600 rounded-full text-customWhite hover:bg-blue-800'>
 				Más sobre mí
 			</a>

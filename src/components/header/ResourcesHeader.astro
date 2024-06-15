@@ -1,3 +1,7 @@
+---
+import { EMAIL_URL_RESOURCES } from '@/utils/consts'
+---
+
 <style>
 	html.sr .load-hidden {
 		visibility: hidden;
@@ -5,35 +9,28 @@
 </style>
 
 <header
-	id="resourcesHeader"
-	class="flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[90vh] 2xl:min-h-[70vh] justify-center load-hidden"
->
-	<h1
-		class="text-6xl xs:text-7xl md:text-9xl xl:text-11xl font-bold font-inter"
-	>
-		Recursos
-	</h1>
-	<p class="dark:text-gray-400 text-gray-600 text-lg xl:text-2xl text-center">
-		Recursos y herramientas que utilizo a menudo y que recomiendo a otros
-		desarrolladores.
+	id='resourcesHeader'
+	class='flex flex-col items-center gap-12 mx-auto max-w-2xl min-h-[90vh] 2xl:min-h-[70vh] justify-center load-hidden'>
+	<h1 class='text-6xl font-bold xs:text-7xl md:text-9xl xl:text-11xl font-inter'>Recursos</h1>
+	<p class='text-lg text-center text-gray-600 dark:text-gray-400 xl:text-2xl max-w-prose'>
+		Recursos y herramientas que utilizo a menudo y que recomiendo a otros desarrolladores.
 	</p>
 
-	<div class="flex flex-col items-center gap-2">
+	<div class='flex flex-col items-center gap-2'>
 		<a
-			href="mailto:dev.alessandro@outlook.com?subject=Quiero%20agregar%20este%20recurso%20a%20alessandrorios.com.&body=Enlace%3A%20%0A%0AT%C3%ADtulo%3A%0A%0ADescripci%C3%B3n%20o%20autor%3A"
-			class="px-8 py-4 text-customWhite rounded-full transition-all duration-500 bg-gradient-to-tl to-customBlack via-blue-600 from-blue-400 bg-size-200 bg-pos-0 hover:bg-pos-100"
-		>
+			href={EMAIL_URL_RESOURCES}
+			class='px-8 py-4 transition-all duration-500 rounded-full text-customWhite bg-gradient-to-tl to-customBlack via-blue-600 from-blue-400 bg-size-200 bg-pos-0 hover:bg-pos-100'>
 			¿Quieres agregar uno?
 		</a>
-		<p class="text-sm font-bold">dev.alessandro@hotmail.com</p>
+		<p class='text-sm font-bold'>dev.alessandro@hotmail.com</p>
 	</div>
 </header>
 
 <script>
-	window.ScrollReveal().reveal("#resourcesHeader", {
+	window.ScrollReveal().reveal('#resourcesHeader', {
 		delay: 200,
-		easing: "ease-in-out",
+		easing: 'ease-in-out',
 		opacity: 0,
-		distance: "5px",
-	});
+		distance: '5px'
+	})
 </script>

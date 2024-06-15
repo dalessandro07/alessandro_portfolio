@@ -1,0 +1,58 @@
+---
+import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
+import Trick from '@/components/trucos/Trick.astro'
+import Layout from '@/layouts/Layout.astro'
+
+import { MAIN_TITLE, MAIN_DESCRIPTION } from '@/utils/consts'
+
+// Datos de los trucos
+const dataTrucos = [
+	{
+		title: 'Caracter vacío',
+		content: '‎',
+		description: 'Un caracter vacío que puedes copiar y pegar.'
+	},
+	{
+		title: 'Mensaje de broma WhatsApp',
+		content:
+			'> ⓘ _Este usuario fue suspendido temporalmente en WhatsApp Inc. por incumplir los términos y condiciones._',
+		description: 'Un mensaje de broma que puedes enviar a tus amigos.'
+	}
+]
+---
+
+<Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION} withHeader={false}>
+	<div class='flex flex-col gap-20 p-4 sm:p-6 md:p-10 min-h-dvh'>
+		<div class='absolute top-0 right-0 flex justify-end w-full m-5'>
+			<ThemeToggle />
+		</div>
+
+		<header class='flex flex-col items-center gap-2 mt-20 md:mt-10'>
+			<h1 class='text-6xl font-bold xs:text-7xl md:text-9xl xl:text-11xl font-inter'>Trucos</h1>
+
+			<p class='text-center text-gray-600 dark:text-gray-400 max-w-prose'>
+				Encontraste la sección de trucos. Aquí encontrarás una lista de trucos que te ayudarán a ser
+				más eficiente en tu día a día. O hacer bromas 😜 (En construcción...)
+			</p>
+		</header>
+
+		<section class='flex flex-col gap-5 grow'>
+			<h3 class='pb-2 text-3xl font-bold border-b border-gray-300 dark:border-gray-600'>
+				Para copiar y pegar
+			</h3>
+
+			<article class='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+				{
+					dataTrucos.map((trick, index) => (
+						<Trick
+							key={index}
+							title={trick.title}
+							description={trick.description}
+							copyContent={trick.content}
+						/>
+					))
+				}
+			</article>
+		</section>
+	</div>
+</Layout>
