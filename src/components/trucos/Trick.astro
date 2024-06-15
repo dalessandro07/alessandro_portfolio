@@ -35,9 +35,10 @@ const { title, description, copyContent } = Astro.props
 		class='flex flex-col justify-between gap-5 grow'
 		id='content'
 		data-content={copyContent}>
-		<span class='px-2 py-4 border rounded border-muted grow min-h-20 sm:min-h-28' id='content'>
-			{copyContent}
-		</span>
+		<textarea
+			class='px-2 py-4 overflow-hidden bg-transparent border rounded border-muted grow min-h-20 sm:min-h-28'
+			id='content'>{copyContent.trim()}</textarea
+		>
 
 		<div class='grid grid-cols-1 gap-2 md:grid-cols-3'>
 			<a
@@ -71,9 +72,16 @@ const { title, description, copyContent } = Astro.props
 			if (!copyContent || !$btnCopyContent || !$elmContent) return
 
 			$btnCopyContent.addEventListener('click', () => {
+				if (navigator.clipboard === undefined) {
+					alert('¡Tu navegador no permite copiar al portapapeles!')
+					return
+				}
+
 				navigator.clipboard.writeText(copyContent).then(() => {
 					$elmContent.textContent = '¡Copiado! 🎉'
 					$elmContent.classList.add('copied-animation')
+
+					alert('¡Copiado! 🎉')
 
 					setTimeout(() => {
 						$elmContent.textContent = copyContent
