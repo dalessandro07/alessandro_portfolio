@@ -6,6 +6,7 @@ import Layout from '@/layouts/Layout.astro'
 
 import { MAIN_TITLE, MAIN_DESCRIPTION, WHATSAPP_URL, LINKEDIN_URL } from '@/utils/consts'
 import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
+import { Icon } from 'astro-icon/components'
 
 const enlaces = [
 	{
@@ -26,7 +27,15 @@ const enlaces = [
 <Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION} withHeader={false}>
 	<div
 		class='relative flex flex-col justify-center gap-10 p-10 mx-auto xs:gap-5 min-h-dvh xs:max-w-screen-xs sm:max-w-xl'>
-		<div class='absolute top-0 right-0 flex justify-end w-full m-5'>
+		<div class='absolute top-0 left-0 right-0 flex items-center justify-between m-5'>
+			<a
+				title='Ir a la página principal'
+				aria-label='Ir a la página principal'
+				aria-labelledby='Ir a la página principal'
+				href='/'>
+				<Icon name='mdi:arrow-left' class='w-6 h-6' />
+				<span class='sr-only'>Ir a la página principal</span>
+			</a>
 			<ThemeToggle />
 		</div>
 

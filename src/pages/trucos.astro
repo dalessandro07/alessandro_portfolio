@@ -1,29 +1,82 @@
 ---
 import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
-import Trick from '@/components/trucos/Trick.astro'
+import TrickCopyPaste from '@/components/trucos/TrickCopyPaste.astro'
 import Layout from '@/layouts/Layout.astro'
 
 import { MAIN_TITLE, MAIN_DESCRIPTION } from '@/utils/consts'
+import { Icon } from 'astro-icon/components'
 
 // Datos de los trucos
-const dataTrucos = [
+const trucosCopyPaste = [
 	{
-		title: 'Caracter vacío',
+		id: 1,
+		title: 'Texto invisible',
 		content: '‎',
 		description: 'Un caracter vacío que puedes copiar y pegar.'
 	},
 	{
+		id: 2,
 		title: 'Mensaje de broma WhatsApp',
 		content:
 			'> ⓘ _Este usuario fue suspendido temporalmente en WhatsApp Inc. por incumplir los términos y condiciones._',
 		description: 'Un mensaje de broma que puedes enviar a tus amigos.'
+	},
+	{
+		id: 3,
+		title: 'Texto invertido',
+		content: 'ɹǝʌᴉɹʇsǝ ʇxǝʇ',
+		description: 'Texto invertido para hacer mensajes más divertidos.'
+	},
+	{
+		id: 4,
+		title: 'Letra minúscula en círculo',
+		content: 'ⓐⓑⓒⓓⓔ',
+		description: 'Texto con letras minúsculas en círculos.'
+	},
+	{
+		id: 5,
+		title: 'Letra mayúscula en círculo',
+		content: 'ⒶⒷⒸⒹⒺ',
+		description: 'Texto con letras mayúsculas en círculos.'
+	},
+	{
+		id: 6,
+		title: 'Texto en negrita',
+		content: '*Este es un texto en negrita*',
+		description: 'Texto en negrita para enfatizar palabras o frases.'
+	},
+	{
+		id: 7,
+		title: 'Texto en cursiva',
+		content: '_Este es un texto en cursiva_',
+		description: 'Texto en cursiva para resaltar partes del mensaje.'
+	},
+	{
+		id: 8,
+		title: 'Texto tachado',
+		content: '~Este es un texto tachado~',
+		description: 'Texto tachado para indicar cambios o correcciones.'
+	},
+	{
+		id: 9,
+		title: 'Texto monospace',
+		content: '```Texto monospace```',
+		description: 'Texto en fuente monospace para resaltar código o comandos.'
 	}
 ]
 ---
 
 <Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION} withHeader={false}>
-	<div class='flex flex-col gap-20 p-4 sm:p-6 md:p-10 min-h-dvh'>
-		<div class='absolute top-0 right-0 flex justify-end w-full m-5'>
+	<div class='flex flex-col justify-between gap-20 p-4 sm:p-6 md:p-10 min-h-dvh'>
+		<div class='absolute top-0 left-0 right-0 flex items-center justify-between m-5'>
+			<a
+				title='Ir a la página principal'
+				aria-label='Ir a la página principal'
+				aria-labelledby='Ir a la página principal'
+				href='/'>
+				<Icon name='mdi:arrow-left' class='w-6 h-6' />
+				<span class='sr-only'>Ir a la página principal</span>
+			</a>
 			<ThemeToggle />
 		</div>
 
@@ -38,14 +91,14 @@ const dataTrucos = [
 
 		<section class='flex flex-col gap-5 grow'>
 			<h3 class='pb-2 text-3xl font-bold border-b border-gray-300 dark:border-gray-600'>
-				Para copiar y pegar
+				Para copiar y pegar ({trucosCopyPaste.length})
 			</h3>
 
 			<article class='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
 				{
-					dataTrucos.map((trick, index) => (
-						<Trick
-							key={index}
+					trucosCopyPaste.map((trick) => (
+						<TrickCopyPaste
+							key={trick.id}
 							title={trick.title}
 							description={trick.description}
 							copyContent={trick.content}
@@ -54,5 +107,31 @@ const dataTrucos = [
 				}
 			</article>
 		</section>
+
+		<footer>
+			<p class='text-xs text-center text-gray-600 dark:text-gray-400'>
+				© {new Date().getFullYear()}
+				<a
+					class='hover:text-blue-500 dark:hover:text-blue-400 hover:underline'
+					aria-label='Ir a la página principal'
+					aria-labelledby='Ir a la página principal'
+					title='Ir a la página principal'
+					href='/'>{MAIN_TITLE}</a
+				>.
+			</p>
+		</footer>
 	</div>
 </Layout>
+
+<script>
+	//@ts-ignore
+	import confetti from 'canvas-confetti'
+
+	window.onload = () => {
+		confetti({
+			particleCount: 150,
+			spread: 120,
+			origin: { y: 0.7 }
+		})
+	}
+</script>

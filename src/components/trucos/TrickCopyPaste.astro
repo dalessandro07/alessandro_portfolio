@@ -23,10 +23,10 @@ const { title, description, copyContent } = Astro.props
 </style>
 
 <article
-	class='flex flex-col justify-between gap-3 p-4 bg-gray-300 rounded-md shadow-lg dark:bg-neutral-800'>
+	class='flex flex-col justify-between gap-3 p-4 rounded shadow bg-gradient-to-b from-neutral-300 dark:from-neutral-800'>
 	<header class='flex flex-col'>
-		<h3 class='text-sm text-gray-600 dark:text-gray-400'>{title}</h3>
-		<p class='text-xs text-gray-600 dark:text-gray-400'>
+		<h3 class='text-sm text-neutral-600 dark:text-neutral-400'>{title}</h3>
+		<p class='text-xs text-neutral-600 dark:text-neutral-400'>
 			{description}
 		</p>
 	</header>
@@ -36,40 +36,55 @@ const { title, description, copyContent } = Astro.props
 		id='content'
 		data-content={copyContent}>
 		<textarea
-			class='px-2 py-4 overflow-hidden bg-transparent border rounded border-muted grow min-h-20 sm:min-h-28'
+			readonly
+			class='px-2 py-4 overflow-hidden bg-transparent border rounded resize-none border-muted boder-muted grow min-h-20 sm:min-h-28'
 			id='content'>{copyContent.trim()}</textarea
 		>
 
-		<div class='grid grid-cols-1 gap-2 md:grid-cols-3'>
+		<div class='grid grid-cols-1 gap-2 md:grid-cols-2'>
 			<a
-				class='flex justify-center items-center text-sm gap-3 bg-green-700 hover:bg-green-900 text-customWhite px-3 py-1.5 rounded md:col-span-2 transition-all duration-300'
+				title='Compartir en WhatsApp'
+				aria-label='Compartir en WhatsApp'
+				aria-labelledby='Compartir en WhatsApp'
+				class='flex justify-center items-center text-sm gap-3 border border-muted px-3 py-1.5 rounded transition-all duration-300 hover:bg-green-700 hover:text-customWhite hover:border-green-700'
 				href={`https://wa.me/?text=${copyContent}`}
 				target='_blank'
 				rel='noopener noreferrer'>
 				<Icon name='mdi:whatsapp' class='w-5 h-5' />
-				Probar en WhatsApp
+				WhatsApp
 			</a>
+
 			<button
-				class='flex justify-center items-center text-sm gap-3 border border-muted hover:bg-customBlack hover:text-customWhite transition-all duration-300 px-3 py-1.5 rounded'
+				type='button'
+				title='Copiar texto'
+				aria-label='Copiar texto'
+				aria-labelledby='Copiar texto'
+				data-confetti-button
+				class='flex justify-center items-center text-sm gap-3 border border-muted hover:bg-customBlack dark:hover:bg-customWhite dark:hover:text-customBlack hover:text-customWhite transition-all duration-300 px-3 py-1.5 rounded'
 				id='copyTrick'>
 				<Icon name='mdi:content-copy' class='w-5 h-5' />
-				Copiar
+				<span id='copyTrickText'>Copiar</span>
 			</button>
 		</div>
 	</astro-content>
 </article>
 
 <script>
+	//@ts-nocheck
+
 	class AstroContent extends HTMLElement {
 		constructor() {
 			super()
 
 			// Read the message from the data attribute.
 			const copyContent = this.dataset.content
+
+			// Get the button and the content element.
 			const $btnCopyContent = this.querySelector('#copyTrick')
+			const $btnCopyText = this.querySelector('#copyTrickText')
 			const $elmContent = this.querySelector('#content')
 
-			if (!copyContent || !$btnCopyContent || !$elmContent) return
+			if (!copyContent || !$btnCopyContent || !$elmContent || !$btnCopyText) return
 
 			$btnCopyContent.addEventListener('click', () => {
 				if (navigator.clipboard === undefined) {
@@ -78,14 +93,18 @@ const { title, description, copyContent } = Astro.props
 				}
 
 				navigator.clipboard.writeText(copyContent).then(() => {
-					$elmContent.textContent = '¡Copiado! 🎉'
+					$elmContent.value = '¡Copiado! 🎉'
 					$elmContent.classList.add('copied-animation')
 
-					alert('¡Copiado! 🎉')
+					$btnCopyContent.disabled = true
+					$btnCopyText.textContent = '¡Copiado!'
 
 					setTimeout(() => {
-						$elmContent.textContent = copyContent
+						$elmContent.value = copyContent
 						$elmContent.classList.remove('copied-animation')
+
+						$btnCopyContent.disabled = false
+						$btnCopyText.textContent = 'Copiar'
 					}, 1500)
 				})
 			})

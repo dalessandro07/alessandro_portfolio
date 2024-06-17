@@ -39,32 +39,30 @@ const navigation = [
 	const mobileMenu = document.getElementById('mobile-menu')
 	const navLinks = document.querySelectorAll('.menu_link')
 
-	if (!btnHamburger || !mobileMenu) {
-		throw new Error('No se encontró el botón o el menú')
-	}
+	if (btnHamburger && mobileMenu) {
+		btnHamburger.addEventListener('click', () => {
+			document.documentElement.classList.toggle('overflow-hidden')
+			btnHamburger.classList.toggle('is-active')
 
-	btnHamburger.addEventListener('click', () => {
-		document.documentElement.classList.toggle('overflow-hidden')
-		btnHamburger.classList.toggle('is-active')
-
-		const isActive = btnHamburger.classList.contains('is-active')
-		if (isActive) {
-			mobileMenu.classList.add('flex')
-			mobileMenu.classList.remove('hidden')
-		} else {
-			mobileMenu.classList.add('hidden')
-			mobileMenu.classList.remove('flex')
-		}
-	})
-
-	navLinks.forEach((link) => {
-		link.addEventListener('click', () => {
-			document.documentElement.classList.remove('overflow-hidden')
-			btnHamburger.classList.remove('is-active')
-			mobileMenu.classList.add('hidden')
-			mobileMenu.classList.remove('flex')
+			const isActive = btnHamburger.classList.contains('is-active')
+			if (isActive) {
+				mobileMenu.classList.add('flex')
+				mobileMenu.classList.remove('hidden')
+			} else {
+				mobileMenu.classList.add('hidden')
+				mobileMenu.classList.remove('flex')
+			}
 		})
-	})
+
+		navLinks.forEach((link) => {
+			link.addEventListener('click', () => {
+				document.documentElement.classList.remove('overflow-hidden')
+				btnHamburger.classList.remove('is-active')
+				mobileMenu.classList.add('hidden')
+				mobileMenu.classList.remove('flex')
+			})
+		})
+	}
 </script>
 
 <div id='top'></div>

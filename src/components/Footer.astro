@@ -1,34 +1,36 @@
 ---
-import FooterAside from "./footer/FooterAside.astro";
-import FooterLinks from "./footer/FooterLinks.astro";
-import WriteMe from "./WriteMe.astro";
+import FooterAside from './footer/FooterAside.astro'
+import FooterLinks from './footer/FooterLinks.astro'
+import WriteMe from './WriteMe.astro'
 
 interface Props {
-	title: string;
-	description: string;
+	title: string
+	description: string
 }
 
-const { title, description } = Astro.props as Props;
+const { title, description } = Astro.props as Props
 
-const actualYear = new Date().getFullYear();
+const actualYear = new Date().getFullYear()
 ---
 
-<footer id="footer" class="flex flex-col justify-between gap-32">
-	<div class="hidden sm:flex mb-52">
-		<WriteMe />
+<footer id='footer' class='flex flex-col justify-between gap-32'>
+	<div class='flex flex-col'>
+		<div class='hidden sm:flex mb-52'>
+			<WriteMe />
+		</div>
+		<div class='flex justify-end'>
+			<a class='text-xs underline w-max hover:text-blue-500' href='/trucos'>trucos</a>
+		</div>
 	</div>
 
-	<section
-		id="contacto"
-		class="flex flex-col justify-between gap-16 md:flex-row md:gap-0"
-	>
+	<section id='contacto' class='flex flex-col justify-between gap-16 md:flex-row md:gap-0'>
 		<FooterAside description={description} />
 
 		<FooterLinks />
 	</section>
 
-	<div class="flex justify-center">
-		<p class="text-center text-gray-400">
+	<div class='flex justify-center'>
+		<p class='text-center text-gray-400'>
 			&copy; {actualYear} - {title}
 		</p>
 	</div>
