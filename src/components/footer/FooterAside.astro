@@ -26,43 +26,32 @@ const { description } = Astro.props as Props
 		{description}
 	</p>
 
-	<!-- <a
+	<a
 		href={EMAIL_URL}
-		class='flex items-center gap-2 font-extrabold transition-all duration-200 hover:text-blue-600'>
+		class='flex items-center gap-2 font-extrabold transition-all duration-200 hover:text-blue-600 w-max'>
 		<Icon class='w-6 h-6 group-hover:text-blue-600' name='mail' />
 		dev.alessandro@outlook.com
-	</a> -->
+	</a>
 
-	<form class='flex flex-col gap-4' name='contact' method='POST' data-netlify='true'>
-		<input type='hidden' name='subject' value='Mensaje desde alessandrorios.com' />
-
+	<form
+		id='message-form'
+		class='flex flex-col gap-4'
+		name='contact'
+		method='POST'
+		data-netlify='true'>
 		<div class='flex flex-col gap-1'>
 			<label for='name' class='text-sm text-gray-600 dark:text-gray-400'>
 				<span>Tu nombre: </span>
 			</label>
 			<input
 				required
-				placeholder='John Doe'
+				placeholder='Diego Rios'
 				type='text'
 				name='name'
 				id='name'
 				class='p-2 border border-gray-300 rounded-md dark:border-gray-700'
 			/>
 		</div>
-
-		<!-- <div class='flex flex-col gap-1'>
-			<label for='email' class='text-sm text-gray-600 dark:text-gray-400'>
-				<span>Tu correo: </span>
-			</label>
-			<input
-				required
-				placeholder='example@gmail.com'
-				type='email'
-				name='email'
-				id='email'
-				class='p-2 border border-gray-300 rounded-md dark:border-gray-700'
-			/>
-		</div> -->
 
 		<div class='flex flex-col gap-1'>
 			<label for='message' class='text-sm text-gray-600 dark:text-gray-400'>
@@ -71,7 +60,7 @@ const { description } = Astro.props as Props
 
 			<textarea
 				required
-				placeholder='Hola Alessandro...'
+				placeholder='Deja un correo o teléfono para poder responderte. 😉'
 				name='message'
 				id='message'
 				class='p-2 border border-gray-300 rounded-md resize-y max-h-48 dark:border-gray-700'
@@ -81,7 +70,40 @@ const { description } = Astro.props as Props
 		<button
 			type='submit'
 			class='px-4 py-2 font-bold text-white transition-colors bg-blue-600 rounded hover:bg-blue-800'>
-			Enviar
+			Enviar mensaje 🚀
 		</button>
 	</form>
 </aside>
+
+<script is:inline>
+	const $form = document.getElementById('message-form')
+
+	$form?.addEventListener('submit', async (event) => {
+		event.preventDefault()
+
+		if (!event.currentTarget) return
+
+		const formData = new FormData(event.currentTarget)
+
+		const name = formData.get('name')
+		const message = formData.get('message')
+
+		if (!name || !message) {
+			alert('Por favor, llena todos los campos.')
+			return
+		}
+
+		function isValidMessage(message) {
+			const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/
+			const phoneRegex =
+				/(\d{3}[-.\s]??\d{3}[-.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-.\s]??\d{4}|\d{3}[-.\s]??\d{4})/
+
+			return emailRegex.test(message) || phoneRegex.test(message)
+		}
+
+		if (!isValidMessage(message)) {
+			alert('Por favor, deja un correo o teléfono para poder responderte.')
+			return
+		}
+	})
+</script>
