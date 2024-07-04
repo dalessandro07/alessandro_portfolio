@@ -5,10 +5,10 @@ import miTarjetaCelular from "@/assets/images/mitarjetaapp/mitarjeta-celular.web
 import miTarjetaLaptop from "@/assets/images/mitarjetaapp/mitarjeta-laptop.webp"
 
 /* Skillswapp images */
-import skillswapIndex from "@/assets/images/skillswap/skillswap-index.webp"
+/* import skillswapIndex from "@/assets/images/skillswap/skillswap-index.webp"
 import skillswapIndex2 from "@/assets/images/skillswap/skillswap-index2.webp"
 import skillswapCelular from "@/assets/images/skillswap/skillswap-celular.webp"
-import skillswapLaptop from "@/assets/images/skillswap/skillswap-laptop.webp"
+import skillswapLaptop from "@/assets/images/skillswap/skillswap-laptop.webp" */
 
 /* DrCafe images */
 import drcafeIndex from "@/assets/images/drcafe/drcafe-index.webp"
@@ -49,7 +49,7 @@ export default [
 			miTarjetaLaptop
 		]
 	},
-	{
+	/* {
 		"name": "SkillSwap",
 		"description": "SkillSwap es una aplicación web que permite a los usuarios <strong class='font-bold dark:text-customWhite text-customBlack'>publicar proyectos, reaccionar y comentar.</strong> Además, en el formulario de nuevo proyecto se puede ingresar una URL y captura un screenshot de la página y los metadatos del sitio (title y description) ahorrando tiempo. <br/> <br/> Está desarrollado en NextJS, Tailwind y Supabase. Desplegado en Vercel.",
 		"url": "https://skillswapp.vercel.app",
@@ -59,7 +59,7 @@ export default [
 			skillswapCelular,
 			skillswapLaptop
 		]
-	},
+	}, */
 	{
 		"name": "Dubái Shawarma",
 		"description": "Esta página web ofrece una experiencia intuitiva y moderna, diseñada para facilitar la navegación y la realización de <strong class='font-bold dark:text-customWhite text-customBlack'>pedidos a través de WhatsApp</strong>.<br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla.<br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y moderna</strong>, asegurando una experiencia de usuario óptima y atractiva.",
