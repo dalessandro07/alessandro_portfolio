@@ -26,10 +26,62 @@ const { description } = Astro.props as Props
 		{description}
 	</p>
 
-	<a
+	<!-- <a
 		href={EMAIL_URL}
 		class='flex items-center gap-2 font-extrabold transition-all duration-200 hover:text-blue-600'>
 		<Icon class='w-6 h-6 group-hover:text-blue-600' name='mail' />
 		dev.alessandro@outlook.com
-	</a>
+	</a> -->
+
+	<form class='flex flex-col gap-4' name='contact' method='POST' data-netlify='true'>
+		<input type='hidden' name='subject' value='Mensaje desde alessandrorios.com' />
+
+		<div class='flex flex-col gap-1'>
+			<label for='name' class='text-sm text-gray-600 dark:text-gray-400'>
+				<span>Tu nombre: </span>
+			</label>
+			<input
+				required
+				placeholder='John Doe'
+				type='text'
+				name='name'
+				id='name'
+				class='p-2 border border-gray-300 rounded-md dark:border-gray-700'
+			/>
+		</div>
+
+		<!-- <div class='flex flex-col gap-1'>
+			<label for='email' class='text-sm text-gray-600 dark:text-gray-400'>
+				<span>Tu correo: </span>
+			</label>
+			<input
+				required
+				placeholder='example@gmail.com'
+				type='email'
+				name='email'
+				id='email'
+				class='p-2 border border-gray-300 rounded-md dark:border-gray-700'
+			/>
+		</div> -->
+
+		<div class='flex flex-col gap-1'>
+			<label for='message' class='text-sm text-gray-600 dark:text-gray-400'>
+				<span>Escribe un mensaje:</span>
+			</label>
+
+			<textarea
+				required
+				placeholder='Hola Alessandro...'
+				name='message'
+				id='message'
+				class='p-2 border border-gray-300 rounded-md resize-y max-h-48 dark:border-gray-700'
+			></textarea>
+		</div>
+
+		<button
+			type='submit'
+			class='px-4 py-2 font-bold text-white transition-colors bg-blue-600 rounded hover:bg-blue-800'>
+			Enviar
+		</button>
+	</form>
 </aside>
