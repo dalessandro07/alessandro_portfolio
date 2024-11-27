@@ -1,8 +1,14 @@
+/* Darmaes images */
+import darmaesCartPage from "@/assets/images/darmaes/darmaes-cart-page.webp"
+import darmaesIndexDesktop from "@/assets/images/darmaes/darmaes-index-page.webp"
+import darmaesIndexCelular from "@/assets/images/darmaes/darmaes-mobile-products.webp"
+import darmaesProductosPage from "@/assets/images/darmaes/darmaes-productos-page.webp"
+
 /* Mi tarjeta images */
-import miTarjetaIndex from "@/assets/images/mitarjetaapp/mitarjeta-index.webp"
-import miTarjetaNueva from "@/assets/images/mitarjetaapp/mitarjeta-nueva.webp"
 import miTarjetaCelular from "@/assets/images/mitarjetaapp/mitarjeta-celular.webp"
+import miTarjetaIndex from "@/assets/images/mitarjetaapp/mitarjeta-index.webp"
 import miTarjetaLaptop from "@/assets/images/mitarjetaapp/mitarjeta-laptop.webp"
+import miTarjetaNueva from "@/assets/images/mitarjetaapp/mitarjeta-nueva.webp"
 
 /* Skillswapp images */
 /* import skillswapIndex from "@/assets/images/skillswap/skillswap-index.webp"
@@ -11,21 +17,21 @@ import skillswapCelular from "@/assets/images/skillswap/skillswap-celular.webp"
 import skillswapLaptop from "@/assets/images/skillswap/skillswap-laptop.webp" */
 
 /* DrCafe images */
+import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
 import drcafeIndex from "@/assets/images/drcafe/drcafe-index.webp"
 import drcafeSeguimiento from "@/assets/images/drcafe/drcafe-seguimiento.webp"
-import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
 import drcafeTablet from "@/assets/images/drcafe/drcafe-tablet.webp"
 
 /* Dubái Shawarma images */
+import shawarmaAboutDesktop from "@/assets/images/shawarmadubailima/shawarma-about-desktop.webp"
+import shawarmaCartOpenDesktop from "@/assets/images/shawarmadubailima/shawarma-cart-open-desktop.webp"
 import shawarmaHeroDesktop from "@/assets/images/shawarmadubailima/shawarma-hero-desktop.webp"
 import shawarmaMobile from "@/assets/images/shawarmadubailima/shawarma-mobile.webp"
-import shawarmaCartOpenDesktop from "@/assets/images/shawarmadubailima/shawarma-cart-open-desktop.webp"
-import shawarmaAboutDesktop from "@/assets/images/shawarmadubailima/shawarma-about-desktop.webp"
 
 /* AllExpenses images */
 import allexLogin from "@/assets/images/allex/allexLogin.webp"
-import allexHome from "@/assets/images/allex/home_allexpenses.webp"
 import allexBalance from "@/assets/images/allex/balance.webp"
+import allexHome from "@/assets/images/allex/home_allexpenses.webp"
 
 /* LCDP images */
 /* import lcdpHome from "@/assets/images/lcdp/lcdp-home.webp"
@@ -33,11 +39,22 @@ import lcdpProducts from "@/assets/images/lcdp/lcdp-products.webp"
 import lcdpServices from "@/assets/images/lcdp/lcdp-services.webp" */
 
 /* Organízalo images */
-import organizalo from "@/assets/images/organizalo/organizalo.webp"
 import organizaloAntes from "@/assets/images/organizalo/organizalo-antes.webp"
 import organizaloDespues from "@/assets/images/organizalo/organizalo-despues.webp"
+import organizalo from "@/assets/images/organizalo/organizalo.webp"
 
 export default [
+	{
+		"name": "Darmaes",
+		"description": 'Darmaes es una plataforma web para emprendedores que facilita la venta de productos mediante un catálogo interactivo y pedidos por WhatsApp. <br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla. <br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz minimalista, amigable y moderna, asegurando una experiencia de usuario óptima y atractiva. <br/><br/> Desarrollado con Next.js, Tailwind CSS v4 y Turso.',
+		"url": "https://darmaes.vercel.app",
+		"src": [
+			darmaesIndexDesktop,
+			darmaesProductosPage,
+			darmaesIndexCelular,
+			darmaesCartPage
+		]
+	},
 	{
 		"name": "MyTarjeta App",
 		"description": "¡Crea tu tarjeta virtual única y atractiva con MyTarjeta App! <br/><br/> Personaliza tu identidad en línea con una breve descripción de<strong> quién eres</strong>, <strong>qué haces</strong> y <strong>qué te hace especial</strong>. <br/> Agrega tu información de contacto, enlaces a tus redes sociales y portafolio. <br/><br/> ¡Obtén tu enlace personalizado ahora!. <br/> Desarrollado con Next.js, Tailwind CSS y Supabase.",
