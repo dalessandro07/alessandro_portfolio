@@ -1,12 +1,19 @@
 ---
 import { Icon } from 'astro-icon/components'
-import type { Project } from '../../env'
 import { Image } from 'astro:assets'
+import type { Project } from '../../env'
 
 const { name, description, url, src, isVideo } = Astro.props as Project
+
+const slugName = name
+	.toLowerCase()
+	.replace(/\s/g, '-')
+	.normalize('NFD')
+	.replace(/[^a-z0-9-]/g, '')
+	.replace(/[\u0300-\u036f]/g, '')
 ---
 
-<article class='flex flex-col gap-12 lg:flex-col-reverse lg:w-1/3'>
+<article id={slugName} class='flex flex-col gap-12 lg:flex-col-reverse lg:w-1/3'>
 	<aside class='flex flex-col gap-8 lg:justify-between lg:gap-4 lg:h-1/2'>
 		<h3 class='text-4xl font-black'>{name}</h3>
 

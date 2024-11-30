@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 
 import SecondaryProject from './SecondaryProject.astro'
 
@@ -8,13 +8,22 @@ import type { Project } from '@/env'
 
 const props = Astro.props as Project
 const { name, description, url, src, isSecondary } = props
+
+const slugName = name
+	.toLowerCase()
+	.replace(/\s/g, '-')
+	.normalize('NFD')
+	.replace(/[^a-z0-9-]/g, '')
+	.replace(/[\u0300-\u036f]/g, '')
 ---
 
 {
 	isSecondary ? (
 		<SecondaryProject {...props} />
 	) : (
-		<article class='flex flex-col w-full gap-20 lg:flex-row lg:min-h-[90dvh] lg:max-h-dvh'>
+		<article
+			id={slugName}
+			class='flex flex-col w-full gap-20 lg:flex-row lg:min-h-[90dvh] lg:max-h-dvh'>
 			<aside class='flex flex-col justify-center gap-10 lg:w-[38%]'>
 				<a
 					target='_blank'
