@@ -1,7 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components'
 import videoBg from '@/assets/videos/bg.mp4'
-import { EMAIL_URL, WHATSAPP_URL } from '@/utils/consts'
+import { EMAIL_ADDRESS, EMAIL_URL, WHATSAPP_URL } from '@/utils/consts'
+import { Icon } from 'astro-icon/components'
 ---
 
 <div class='absolute left-0 right-0 overflow-hidden h-1/3 md:h-52'>
@@ -19,7 +19,7 @@ import { EMAIL_URL, WHATSAPP_URL } from '@/utils/consts'
 			href={EMAIL_URL}
 			class='flex items-center gap-2 px-8 py-4 text-lg font-extrabold transition-all duration-200 bg-blue-700 hover:bg-blue-800 rounded-2xl'>
 			<Icon class='w-6 h-6 group-hover:text-blue-600' name='mail' />
-			<span> dev.alessandro@outlook.com</span>
+			<span>{EMAIL_ADDRESS}</span>
 		</a>
 
 		<a

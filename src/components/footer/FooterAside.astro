@@ -1,5 +1,5 @@
 ---
-import { EMAIL_URL, LINKEDIN_URL } from '@/utils/consts'
+import { EMAIL_ADDRESS, EMAIL_URL, LINKEDIN_URL } from '@/utils/consts'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 
@@ -30,7 +30,7 @@ const { description } = Astro.props as Props
 		href={EMAIL_URL}
 		class='flex items-center gap-2 font-extrabold transition-all duration-200 hover:text-blue-600 w-max'>
 		<Icon class='w-6 h-6 group-hover:text-blue-600' name='mail' />
-		dev.alessandro@outlook.com
+		{EMAIL_ADDRESS}
 	</a>
 
 	<form

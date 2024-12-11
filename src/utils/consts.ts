@@ -24,7 +24,7 @@ export const WHATSAPP_URL = `https://wa.me/51986307201?text=${encodeURIComponent
 export const EMAIL_MESSAGE = 'Hola Alessandro, vi tu portafolio y me gustaría contactarte para un proyecto.'
 export const EMAIL_MESSAGE_RESOURCES = 'Hola Alessandro, vi tu portafolio y me gustaría agregar un recurso web a tu página.'
 export const EMAIL_SUBJECT = 'Contacto desde tu portafolio'
-export const EMAIL_ADDRESS = 'dev.alessandro@outlook.com'
+export const EMAIL_ADDRESS = 'contacto@alessandrorios.com'
 
 export const EMAIL_URL = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(EMAIL_SUBJECT)}&body=${encodeURIComponent(EMAIL_MESSAGE)}`
 export const EMAIL_URL_RESOURCES = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(EMAIL_SUBJECT)}&body=${encodeURIComponent(EMAIL_MESSAGE_RESOURCES)}`
