@@ -1,6 +1,11 @@
 {
 	"Sitios Web": [
 		{
+			"url": "https://darmaes.vercel.app",
+			"title": "Crea tu tienda virtual de manera rápida y sencilla. Gratis.",
+			"desc": "Darmaes es una plataforma web para emprendedores que facilita la venta de productos mediante un catálogo interactivo y pedidos por WhatsApp."
+		},
+		{
 			"url": "https://mytarjeta.me",
 			"title": "Crea tu tarjeta de presentación digital.",
 			"desc": "Crea tu tarjeta de presentación digital de manera rápida y sencilla. Puedes personalizarla con tu información, contacto y enlaces. Es una excelente opción para compartir tus datos de contacto de manera digital."
@@ -68,7 +73,6 @@
 			"lang": "inglés"
 		}
 	],
-
 	"Extensiones de VS Code": [
 		{
 			"url": "https://marketplace.visualstudio.com/items?itemName=heybourn.headwind",

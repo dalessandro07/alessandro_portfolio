@@ -1,11 +1,10 @@
-import image2 from "@/assets/recommendations/image2.jpg";
-import image3 from "@/assets/recommendations/image3.jpg";
-import image4 from "@/assets/recommendations/image4.jpg";
-import image5 from "@/assets/recommendations/image5.jpg";
-import image6 from "@/assets/recommendations/image6.jpg";
-import image7 from "@/assets/recommendations/image7.jpg";
-import image8 from "@/assets/recommendations/image8.jpg";
-import image9 from "@/assets/recommendations/image9.jpg";
+import image2 from "@/assets/recommendations/image2.jpg"
+import image3 from "@/assets/recommendations/image3.jpg"
+import image4 from "@/assets/recommendations/image4.jpg"
+import image5 from "@/assets/recommendations/image5.jpg"
+import image6 from "@/assets/recommendations/image6.jpg"
+import image7 from "@/assets/recommendations/image7.jpg"
+import image8 from "@/assets/recommendations/image8.jpg"
 
 import type { IRecommendation } from '@/env'
 
@@ -65,13 +64,5 @@ export default [
 		"date": "El 27 de septiembre de 2021",
 		"title": "Senior Engineer QA",
 		"message": "Diego supo entender la de idea de mí proyecto web. Me ha asesorado y se involucró en cada etapa hasta el envío a producción. \nEs empático y resulta que Ale es una parte muy valiosa para los proyectos en equipo."
-	},
-	{
-		"id": 8,
-		"image": image9.src,
-		"name": "Christian Fernandez Juncal",
-		"date": "20 de septiembre de 2021",
-		"title": "Front End Dev & Digital Designer / Tutor en Coderhouse",
-		"message": "Diego se destaca por su búsqueda constante de aprendizaje, facilidad de resolución y adaptación a la incesante evolución educativa que implica estar en el mundo IT. A su vez una de sus principales cualidades es el compañerismo y respeto hacia sus pares a la hora de poder colaborar con las herramientas adquiridas. Ha sido un placer acompañarlo en la cursada de Desarrollo Web en CoderHouse y estoy seguro que va a llegar muy lejos en este camino. Ojalá nos volvamos a cruzar Diego!"
 	}
 ] as IRecommendation[]
