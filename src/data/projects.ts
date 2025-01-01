@@ -33,6 +33,12 @@ import allexLogin from "@/assets/images/allex/allexLogin.webp"
 import allexBalance from "@/assets/images/allex/balance.webp"
 import allexHome from "@/assets/images/allex/home_allexpenses.webp"
 
+/* CRH Abogados */
+import crhContact from "@/assets/images/crhabogados/contact.webp"
+import crhHero from "@/assets/images/crhabogados/hero.webp"
+import crhMobile from "@/assets/images/crhabogados/mobile.webp"
+import crhNosotros from "@/assets/images/crhabogados/nosotros.webp"
+
 /* LCDP images */
 /* import lcdpHome from "@/assets/images/lcdp/lcdp-home.webp"
 import lcdpProducts from "@/assets/images/lcdp/lcdp-products.webp"
@@ -77,6 +83,17 @@ export default [
 			skillswapLaptop
 		]
 	}, */
+	{
+		"name": "CRH Abogados",
+		"description": "Una página web super rápida, moderna y atractiva para CRH Abogados, con un diseño que se adapta perfectamente a dispositivos móviles, garantizando una experiencia fluida en cualquier pantalla. <br/><br/> Con un enfoque en la rapidez de carga y una interfaz estética, asegura una experiencia de usuario óptima y atractiva. <br/><br/>Además, un formulario doble para enviar correos electrónicos y mensajes de WhatsApp.",
+		"url": "https://crhabogados.com.pe",
+		"src": [
+			crhHero,
+			crhMobile,
+			crhNosotros,
+			crhContact
+		]
+	},
 	{
 		"name": "Dubái Shawarma",
 		"description": "Esta página web ofrece una experiencia intuitiva y moderna, diseñada para facilitar la navegación y la realización de <strong class='font-bold dark:text-customWhite text-customBlack'>pedidos a través de WhatsApp</strong>.<br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla.<br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y moderna</strong>, asegurando una experiencia de usuario óptima y atractiva.",
