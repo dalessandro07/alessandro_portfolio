@@ -1,6 +1,5 @@
 ---
 import '../css/lato-v1.0.css'
-import GoTopPage from '../components/buttons/GoTopPage.astro'
 import Header from '../components/Header.astro'
 
 export interface Props {
@@ -45,6 +44,40 @@ const { title, description, withHeader = true } = Astro.props
 			document.cookie = `themeARPortfolio=${theme}; path=/; max-age=31536000`
 		</script>
 
+		<!-- Chat en vivo de Crisp Chat -->
+		<!-- <script type='text/javascript'>
+			window.$crisp = []
+			window.CRISP_WEBSITE_ID = 'dc46eddd-abe3-4b0f-852a-f54f47ee4f2c'
+			;(function () {
+				// eslint-disable-next-line no-undef
+				d = document
+				// eslint-disable-next-line no-undef
+				s = d.createElement('script')
+				// eslint-disable-next-line no-undef
+				s.src = 'https://client.crisp.chat/l.js'
+				// eslint-disable-next-line no-undef
+				s.async = 1
+				// eslint-disable-next-line no-undef
+				d.getElementsByTagName('head')[0].appendChild(s)
+			})()
+		</script> -->
+
+		<!-- Chat en vivo de Tawk.to -->
+		<script type='text/javascript'>
+			var Tawk_API = Tawk_API || {},
+				// eslint-disable-next-line no-unused-vars
+				Tawk_LoadStart = new Date()
+			;(function () {
+				var s1 = document.createElement('script'),
+					s0 = document.getElementsByTagName('script')[0]
+				s1.async = true
+				s1.src = 'https://embed.tawk.to/677c11c8af5bfec1dbe76bb3/1iguaaue0'
+				s1.charset = 'UTF-8'
+				s1.setAttribute('crossorigin', '*')
+				s0.parentNode.insertBefore(s1, s0)
+			})()
+		</script>
+
 		<script src='https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js'></script>
 
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -69,8 +102,6 @@ const { title, description, withHeader = true } = Astro.props
 		{withHeader && <Header />}
 
 		<slot />
-
-		<GoTopPage />
 
 		<style>
 			html.sr .load-hidden {
