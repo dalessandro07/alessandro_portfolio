@@ -1,5 +1,5 @@
 import recommendations from "@/data/recommendations"
-import { useEffect, useRef } from "preact/hooks"
+import { useEffect, useRef } from "react"
 
 import * as Glide from "@glidejs/glide"
 import "@glidejs/glide/dist/css/glide.core.min.css"
@@ -60,7 +60,7 @@ export default function RecommendationsCarousel () {
 									</h4>
 								</header>
 
-								<section class="w-full mr-12 h-44 overflow-hidden hover:overflow-auto">
+								<section className="w-full mr-12 overflow-hidden h-44 hover:overflow-auto">
 									<p className="max-w-[80vw] sm:w-5/6 h-full text-base text-gray-700 dark:text-gray-400 whitespace-pre-wrap select-none">
 										{recommendation.message}
 									</p>
