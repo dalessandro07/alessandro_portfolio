@@ -10,12 +10,6 @@ import miTarjetaIndex from "@/assets/images/mitarjetaapp/mitarjeta-index.webp"
 import miTarjetaLaptop from "@/assets/images/mitarjetaapp/mitarjeta-laptop.webp"
 import miTarjetaNueva from "@/assets/images/mitarjetaapp/mitarjeta-nueva.webp"
 
-/* Skillswapp images */
-/* import skillswapIndex from "@/assets/images/skillswap/skillswap-index.webp"
-import skillswapIndex2 from "@/assets/images/skillswap/skillswap-index2.webp"
-import skillswapCelular from "@/assets/images/skillswap/skillswap-celular.webp"
-import skillswapLaptop from "@/assets/images/skillswap/skillswap-laptop.webp" */
-
 /* DrCafe images */
 import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
 import drcafeIndex from "@/assets/images/drcafe/drcafe-index.webp"
@@ -49,7 +43,49 @@ import organizaloAntes from "@/assets/images/organizalo/organizalo-antes.webp"
 import organizaloDespues from "@/assets/images/organizalo/organizalo-despues.webp"
 import organizalo from "@/assets/images/organizalo/organizalo.webp"
 
-export default [
+/* Goleman School images */
+import golemanContact from "@/assets/images/goleman/goleman-contact.webp"
+import golemanHero from "@/assets/images/goleman/goleman-hero.webp"
+import golemanMobile from "@/assets/images/goleman/goleman-mobile.webp"
+import golemanNosotros from "@/assets/images/goleman/goleman-nosotros.webp"
+
+export const CLIENT_PROJECTS = [
+	{
+		"name": "Dubái Shawarma",
+		"description": "Esta página web ofrece una experiencia intuitiva y moderna, diseñada para facilitar la navegación y la realización de <strong class='font-bold dark:text-customWhite text-customBlack'>pedidos a través de WhatsApp</strong>.<br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla.<br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y moderna</strong>, asegurando una experiencia de usuario óptima y atractiva.",
+		"url": "https://shawarmadubailima.com",
+		"src": [
+			shawarmaHeroDesktop,
+			shawarmaMobile,
+			shawarmaCartOpenDesktop,
+			shawarmaAboutDesktop
+		]
+	},
+	{
+		"name": "Goleman School",
+		"description": "Una página web integral para el colegio IEP. Goleman School, diseñada especialmente para esta institución. Ofrece una interfaz ultra-rápida y auto-gestionable mediante integraciones con Google Sheets y Google Drive, facilitando la actualización de contenidos sin complicaciones. <br/><br/> Además, cuenta con un blog online para compartir noticias y eventos, todo en un diseño moderno y estético que garantiza una experiencia de usuario intuitiva y atractiva en cualquier dispositivo. <br/><br/> Además, incluye un formulario doble para enviar correos electrónicos y mensajes de WhatsApp, así como un mapa interactivo para ubicar la institución.",
+		"url": "https://golemanschool.com",
+		"src": [
+			golemanHero,
+			golemanMobile,
+			golemanNosotros,
+			golemanContact
+		]
+	},
+	{
+		"name": "CRH Abogados",
+		"description": "Una página web super rápida, moderna y atractiva para CRH Abogados, con un diseño que se adapta perfectamente a dispositivos móviles, garantizando una experiencia fluida en cualquier pantalla. <br/><br/> Con un enfoque en la rapidez de carga y una interfaz estética, asegura una experiencia de usuario óptima y atractiva. <br/><br/>Además, un formulario doble para enviar correos electrónicos y mensajes de WhatsApp.",
+		"url": "https://crhabogados.com.pe",
+		"src": [
+			crhHero,
+			crhMobile,
+			crhNosotros,
+			crhContact
+		]
+	},
+]
+
+export const PERSONAL_PROJECTS = [
 	{
 		"name": "Darmaes",
 		"description": 'Darmaes es una plataforma web para emprendedores que facilita la venta de productos mediante un catálogo interactivo y pedidos por WhatsApp. <br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla. <br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz minimalista, amigable y moderna, asegurando una experiencia de usuario óptima y atractiva. <br/><br/> Desarrollado con Next.js, Tailwind CSS v4 y Turso.',
@@ -83,28 +119,6 @@ export default [
 			skillswapLaptop
 		]
 	}, */
-	{
-		"name": "CRH Abogados",
-		"description": "Una página web super rápida, moderna y atractiva para CRH Abogados, con un diseño que se adapta perfectamente a dispositivos móviles, garantizando una experiencia fluida en cualquier pantalla. <br/><br/> Con un enfoque en la rapidez de carga y una interfaz estética, asegura una experiencia de usuario óptima y atractiva. <br/><br/>Además, un formulario doble para enviar correos electrónicos y mensajes de WhatsApp.",
-		"url": "https://crhabogados.com.pe",
-		"src": [
-			crhHero,
-			crhMobile,
-			crhNosotros,
-			crhContact
-		]
-	},
-	{
-		"name": "Dubái Shawarma",
-		"description": "Esta página web ofrece una experiencia intuitiva y moderna, diseñada para facilitar la navegación y la realización de <strong class='font-bold dark:text-customWhite text-customBlack'>pedidos a través de WhatsApp</strong>.<br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla.<br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y moderna</strong>, asegurando una experiencia de usuario óptima y atractiva.",
-		"url": "https://shawarmadubailima.com",
-		"src": [
-			shawarmaHeroDesktop,
-			shawarmaMobile,
-			shawarmaCartOpenDesktop,
-			shawarmaAboutDesktop
-		]
-	},
 	{
 		"name": "DrCafe",
 		"description": "E-Commerce. Este es un simulador de tienda virtual de cafés y chocolates, moderno y <strong class='font-bold dark:text-customWhite text-customBlack'>estéticamente atractivo</strong>, con un excelente <strong class='font-bold dark:text-customWhite text-customBlack'>rendimiento</strong> y adaptable a dispositivos móviles. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='font-bold dark:text-customWhite text-customBlack'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos y rutas dinámicas.",

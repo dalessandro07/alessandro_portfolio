@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 import Project from './Project.astro'
-import projects from '@/data/projects'
+import { PERSONAL_PROJECTS, CLIENT_PROJECTS } from '@/data/projects'
 
 const languages = [
 	{
@@ -36,9 +36,12 @@ const languages = [
 ---
 
 <div id='proyectos'></div>
-<section id='projects' class='flex flex-col gap-32'>
+<section id='projects' class='flex flex-col gap-16'>
 	<header class='flex flex-col gap-8 md:mt-14'>
-		<h2 class='text-5xl font-extrabold sm:text-7xl'>Proyectos</h2>
+		<div>
+			<h2 class='text-5xl font-extrabold sm:text-7xl'>Proyectos</h2>
+			<span class='text-sm'>destacados 😉</span>
+		</div>
 
 		<section class='flex flex-wrap items-center gap-4 pb-2'>
 			{
@@ -56,8 +59,36 @@ const languages = [
 		</section>
 	</header>
 
-	<article class='flex flex-wrap gap-32 md:gap-40'>
-		{projects.map((project) => <Project {...project} />)}
+	<article>
+		<div role="tablist" class="grid w-full grid-cols-2 tabs tabs-bordered">
+			<input
+			type="radio"
+			checked="checked"
+			name="projects"
+			role="tab"
+			class="w-full text-xl font-bold tab"
+			aria-label="Personales" />
+
+			<div role="tabpanel" class="w-full p-10 mt-5 tab-content">
+				<section class='flex flex-wrap gap-32'>
+				{PERSONAL_PROJECTS.map((project) => <Project {...project} />)}
+				</section>
+			</div>
+
+			<input
+				type="radio"
+				name="projects"
+				role="tab"
+				class="w-full text-xl font-bold tab"
+				aria-label="Para Clientes" />
+
+			<div role="tabpanel" class="w-full p-10 mt-5 tab-content">
+				<section class='flex flex-wrap gap-32'>
+					{CLIENT_PROJECTS.map((project) => <Project {...project} />)}
+				</section>
+			</div>
+		</div>
+
 	</article>
 </section>
 
