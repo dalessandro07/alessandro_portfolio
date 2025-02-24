@@ -64,7 +64,7 @@ export const CLIENT_PROJECTS = [
 	{
 		"name": "Goleman School",
 		"description": "Una página web integral para el colegio IEP. Goleman School, diseñada especialmente para esta institución. Ofrece una interfaz ultra-rápida y auto-gestionable mediante integraciones con Google Sheets y Google Drive, facilitando la actualización de contenidos sin complicaciones. <br/><br/> Además, cuenta con un blog online para compartir noticias y eventos, todo en un diseño moderno y estético que garantiza una experiencia de usuario intuitiva y atractiva en cualquier dispositivo. <br/><br/> Además, incluye un formulario doble para enviar correos electrónicos y mensajes de WhatsApp, así como un mapa interactivo para ubicar la institución.",
-		"url": "https://golemanschool.com",
+		"url": "https://www.iepgolemanschool.com",
 		"src": [
 			golemanHero,
 			golemanMobile,
