@@ -6,7 +6,7 @@ import Layout from '@/layouts/Layout.astro'
 import { MAIN_TITLE, MAIN_DESCRIPTION } from '@/utils/consts'
 import { Icon } from 'astro-icon/components'
 
-// Datos de los trucos
+// Datos de los trucos para copiar y pegar
 const trucosCopyPaste = [
 	{
 		id: 1,
@@ -64,6 +64,220 @@ const trucosCopyPaste = [
 		description: 'Texto en fuente monospace para resaltar código o comandos.'
 	}
 ]
+
+// Datos de los comandos de terminal Windows
+const cmdCommands = [
+	{
+		id: 1,
+		title: 'ASSOC',
+		content: 'assoc',
+		description: 'Muestra o modifica las asociaciones de extensiones de archivo.'
+	},
+	{
+		id: 2,
+		title: 'CD/CHDIR',
+		content: 'cd [ruta]',
+		description: 'Muestra o cambia la carpeta actual.'
+	},
+	{
+		id: 3,
+		title: 'CLS',
+		content: 'cls',
+		description: 'Borra la pantalla.'
+	},
+	{
+		id: 4,
+		title: 'CMD',
+		content: 'cmd',
+		description: 'Inicia una nueva instancia del intérprete de comandos de Windows.'
+	},
+	{
+		id: 5,
+		title: 'COLOR',
+		content: 'color [attr]',
+		description: 'Cambia los colores de primer plano y fondo de la consola.'
+	},
+	{
+		id: 6,
+		title: 'COPY',
+		content: 'copy [origen] [destino]',
+		description: 'Copia uno o más archivos en otra ubicación.'
+	},
+	{
+		id: 7,
+		title: 'DATE',
+		content: 'date',
+		description: 'Muestra o establece la fecha.'
+	},
+	{
+		id: 8,
+		title: 'DEL/ERASE',
+		content: 'del [archivo]',
+		description: 'Elimina uno o más archivos.'
+	},
+	{
+		id: 9,
+		title: 'DIR',
+		content: 'dir',
+		description: 'Muestra una lista de archivos y subcarpetas en una carpeta.'
+	},
+	{
+		id: 10,
+		title: 'ECHO',
+		content: 'echo [mensaje]',
+		description: 'Muestra mensajes o activa/desactiva el eco de comandos.'
+	},
+	{
+		id: 11,
+		title: 'EXIT',
+		content: 'exit',
+		description: 'Sale del programa CMD.EXE o del script por lotes actual.'
+	},
+	{
+		id: 12,
+		title: 'FIND',
+		content: 'find "cadena" [archivo]',
+		description: 'Busca una cadena de texto en un archivo o archivos.'
+	},
+	{
+		id: 13,
+		title: 'HELP',
+		content: 'help [comando]',
+		description: 'Proporciona información de ayuda para los comandos de Windows.'
+	},
+	{
+		id: 14,
+		title: 'IPCONFIG',
+		content: 'ipconfig',
+		description: 'Muestra la configuración IP de todas las conexiones.'
+	},
+	{
+		id: 15,
+		title: 'MD/MKDIR',
+		content: 'mkdir [carpeta]',
+		description: 'Crea un directorio o carpeta.'
+	},
+	{
+		id: 16,
+		title: 'MOVE',
+		content: 'move [origen] [destino]',
+		description: 'Mueve uno o más archivos de una carpeta a otra.'
+	},
+	{
+		id: 17,
+		title: 'PATH',
+		content: 'path',
+		description: 'Muestra o establece el PATH de búsqueda para archivos ejecutables.'
+	},
+	{
+		id: 18,
+		title: 'PAUSE',
+		content: 'pause',
+		description: 'Suspende el procesamiento de un archivo por lotes y muestra un mensaje.'
+	},
+	{
+		id: 19,
+		title: 'PING',
+		content: 'ping [host]',
+		description: 'Comprueba la conectividad de red con un host específico.'
+	},
+	{
+		id: 20,
+		title: 'POWERCFG',
+		content: 'powercfg',
+		description: 'Controla la configuración de energía y genera informes de eficiencia energética.'
+	},
+	{
+		id: 21,
+		title: 'PROMPT',
+		content: 'prompt [texto]',
+		description: 'Cambia el símbolo del sistema de comandos de Windows.'
+	},
+	{
+		id: 22,
+		title: 'RD/RMDIR',
+		content: 'rd [carpeta]',
+		description: 'Elimina un directorio (carpeta).'
+	},
+	{
+		id: 23,
+		title: 'SHUTDOWN',
+		content: 'shutdown /s /t 0',
+		description: 'Permite apagar o reiniciar el equipo localmente o remotamente.'
+	},
+	{
+		id: 24,
+		title: 'SYSTEMINFO',
+		content: 'systeminfo',
+		description: 'Muestra información completa sobre la configuración del equipo.'
+	},
+	{
+		id: 25,
+		title: 'TASKLIST',
+		content: 'tasklist',
+		description: 'Muestra todas las aplicaciones y servicios en ejecución con sus PID.'
+	},
+	{
+		id: 26,
+		title: 'TASKKILL',
+		content: 'taskkill /pid [número] /f',
+		description: 'Finaliza uno o más procesos o aplicaciones en ejecución.'
+	},
+	{
+		id: 27,
+		title: 'TIME',
+		content: 'time',
+		description: 'Muestra o establece la hora del sistema.'
+	},
+	{
+		id: 28,
+		title: 'TITLE',
+		content: 'title [texto]',
+		description: 'Establece el título de la ventana para la sesión de CMD.EXE.'
+	},
+	{
+		id: 29,
+		title: 'TREE',
+		content: 'tree',
+		description: 'Muestra la estructura de directorios de una unidad o ruta gráficamente.'
+	},
+	{
+		id: 30,
+		title: 'TYPE',
+		content: 'type [archivo]',
+		description: 'Muestra el contenido de uno o más archivos de texto.'
+	},
+	{
+		id: 31,
+		title: 'VER',
+		content: 'ver',
+		description: 'Muestra la versión de Windows.'
+	},
+	{
+		id: 32,
+		title: 'VOL',
+		content: 'vol',
+		description: 'Muestra la etiqueta del volumen y el número de serie de un disco.'
+	},
+	{
+		id: 33,
+		title: 'XCOPY',
+		content: 'xcopy [origen] [destino]',
+		description: 'Copia archivos y árboles de directorios con más opciones que COPY.'
+	},
+	{
+		id: 34,
+		title: 'FC',
+		content: 'fc [archivo1] [archivo2]',
+		description: 'Compara dos archivos o conjuntos de archivos y muestra las diferencias.'
+	},
+	{
+		id: 35,
+		title: 'NETSTAT',
+		content: 'netstat',
+		description: 'Muestra estadísticas de protocolo y conexiones de red actuales.'
+	}
+]
 ---
 
 <Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION} withHeader={false}>
@@ -102,6 +316,25 @@ const trucosCopyPaste = [
 							title={trick.title}
 							description={trick.description}
 							copyContent={trick.content}
+						/>
+					))
+				}
+			</article>
+		</section>
+
+		<section class='flex flex-col gap-5 grow'>
+			<h3 class='pb-2 text-3xl font-bold border-b border-gray-300 dark:border-gray-600'>
+				Comandos de terminal (CMD) ({cmdCommands.length})
+			</h3>
+
+			<article class='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+				{
+					cmdCommands.map((command) => (
+						<TrickCopyPaste
+							key={command.id}
+							title={command.title}
+							description={command.description}
+							copyContent={command.content}
 						/>
 					))
 				}

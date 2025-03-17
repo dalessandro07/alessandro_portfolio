@@ -11,12 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.0",
+    "@astrojs/react": "4.2.1",
     "@glidejs/glide": "^3.6.1",
     "@iconify-json/mdi": "^1.1.66",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "astro": "^5.2.5",
+    "astro": "5.5.2",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.4",
     "canvas-confetti": "^1.9.3",
