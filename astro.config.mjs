@@ -12,6 +12,7 @@ import react from '@astrojs/react'
 export default defineConfig({
   site: 'https://alessandrorios.com/',
   integrations: [tailwind(), sitemap(), robotsTxt(), icon(), react()],
+  prefetch: true,
   vite: {
     ssr: {
       external: ['svgo']

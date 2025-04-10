@@ -19,24 +19,53 @@ const links = [
 		url: GITHUB_URL
 	}
 ]
+
+const gameLinks = [
+	{
+		title: 'Torre de Hanoi',
+		url: '/hanoi'
+	}
+]
 ---
 
-<article class='flex flex-col gap-4 sm:w-2/6 md:pt-16'>
-	<p class='text-xl font-bold text-gray-600 dark:text-gray-400'>Enlaces de contacto</p>
+<div class='grid w-full gap-y-10 md:grid-cols-2 md:col-span-2'>
+	<article class='flex flex-col gap-4 md:pt-16'>
+		<p class='text-xl font-bold text-gray-600 dark:text-gray-400'>Enlaces de contacto</p>
 
-	<ul class='flex flex-col gap-2 text-lg font-bold text-customBlack dark:text-customWhite'>
-		{
-			links.map(({ title, url }) => (
-				<li class='w-max'>
-					<a
-						class='transition-all duration-200 hover:text-blue-600 hover:underline'
-						rel='noreferrer'
-						target='_blank'
-						href={url}>
-						{title}
-					</a>
-				</li>
-			))
-		}
-	</ul>
-</article>
+		<ul class='flex flex-col gap-2 text-lg font-bold text-customBlack dark:text-customWhite'>
+			{
+				links.map(({ title, url }) => (
+					<li class='w-max'>
+						<a
+							class='transition-all duration-200 hover:text-blue-600 hover:underline'
+							rel='noreferrer'
+							target='_blank'
+							href={url}>
+							{title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</article>
+
+	<article class='flex flex-col gap-4 md:pt-16'>
+		<p class='text-xl font-bold text-gray-600 dark:text-gray-400'>Juegos</p>
+
+		<ul class='flex flex-col gap-2 text-lg font-bold text-customBlack dark:text-customWhite'>
+			{
+				gameLinks.map(({ title, url }) => (
+					<li class='w-max'>
+						<a
+							class='transition-all duration-200 hover:text-blue-600 hover:underline'
+							rel='noreferrer'
+							target='_blank'
+							href={url}>
+							{title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</article>
+</div>
