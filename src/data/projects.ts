@@ -100,7 +100,7 @@ export const PERSONAL_PROJECTS = [
 	{
 		"name": "MyTarjeta App",
 		"description": "¡Crea tu tarjeta virtual única y atractiva con MyTarjeta App! <br/><br/> Personaliza tu identidad en línea con una breve descripción de<strong> quién eres</strong>, <strong>qué haces</strong> y <strong>qué te hace especial</strong>. <br/> Agrega tu información de contacto, enlaces a tus redes sociales y portafolio. <br/><br/> ¡Obtén tu enlace personalizado ahora!. <br/> Desarrollado con Next.js, Tailwind CSS y Supabase.",
-		"url": "https://mytarjeta.me",
+		"url": "https://mytarjeta.vercel.app",
 		"src": [
 			miTarjetaIndex,
 			miTarjetaNueva,

@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets'
 import profileImage from '@/assets/images/profile.webp'
+import { Image } from 'astro:assets'
 
 import Layout from '@/layouts/Layout.astro'
 
-import { MAIN_TITLE, MAIN_DESCRIPTION, WHATSAPP_URL, LINKEDIN_URL } from '@/utils/consts'
 import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
+import { LINKEDIN_URL, MAIN_DESCRIPTION, MAIN_TITLE, WHATSAPP_URL } from '@/utils/consts'
 import { Icon } from 'astro-icon/components'
 
 const enlaces = [
@@ -18,7 +18,7 @@ const enlaces = [
 		label: 'LinkedIn'
 	},
 	{
-		href: 'https://mytarjeta.me/ale',
+		href: 'https://mytarjeta.vercel.app/ale',
 		label: 'MyTarjeta'
 	}
 ]
