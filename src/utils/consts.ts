@@ -17,11 +17,11 @@ export const PAGE404DESCRIPTION = "404 esta página no existe."
 // SOCIAL LINKS
 
 // Whatsapp
-export const WHATSAPP_MESSAGE = 'Hola Alessandro, vi tu portafolio y me gustaría contactarte para un proyecto.'
+export const WHATSAPP_MESSAGE = 'Hola Alessandro'
 export const WHATSAPP_URL = `https://wa.me/51986307201?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
 // Email
-export const EMAIL_MESSAGE = 'Hola Alessandro, vi tu portafolio y me gustaría contactarte para un proyecto.'
+export const EMAIL_MESSAGE = 'Hola Alessandro'
 export const EMAIL_MESSAGE_RESOURCES = 'Hola Alessandro, vi tu portafolio y me gustaría agregar un recurso web a tu página.'
 export const EMAIL_SUBJECT = 'Contacto desde tu portafolio'
 export const EMAIL_ADDRESS = 'contacto@alessandrorios.com'

@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import { WHATSAPP_URL } from '@/utils/consts'
+import { Icon } from 'astro-icon/components'
+import Footer from '../components/Footer.astro'
+import { MAIN_DESCRIPTION, MAIN_TITLE } from '../utils/consts'
+
+import videoCEJBOT from '@/assets/videos/demo-cejbot.mp4'
+import videoFuncionalidadCEJBOT from '@/assets/videos/nueva-funcionalidad-cejbot.mp4'
+
+const CEJ_URL =
+  'https://1drv.ms/f/c/d6f833db9e0cdab4/ErTaDJ7bM_gggNYNAQAAAAABN40n-00fu4Ob6JPvwMlcmQ?e=yP0bY5'
+---
+
+<Layout title={MAIN_TITLE} description={MAIN_DESCRIPTION}>
+  <div class='flex flex-col px-5 my-6 min-h-dvh xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto'>
+    <header
+      id='resourcesHeader'
+      class='flex flex-col items-center gap-12 mx-auto max-w-4xl min-h-[90vh] 2xl:min-h-[70vh] justify-center load-hidden'>
+      <h1 class='text-6xl font-bold xs:text-7xl md:text-9xl font-inter'>CEJBOT</h1>
+      <p
+        class='text-xl leading-relaxed text-center text-gray-600 dark:text-gray-400 xl:text-3xl max-w-prose'>
+        Automatiza tu búsqueda judicial. Gana tiempo, gana control.
+      </p>
+
+      <div class='flex flex-wrap items-center justify-center gap-5'>
+        <a
+          href={CEJ_URL}
+          target='_blank'
+          class='flex items-center text-white gap-2 px-8 py-4 text-lg font-extrabold transition-all duration-200 bg-[#9a1413] hover:bg-[#660d0c] rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1'>
+          <Icon class='w-6 h-6' name='mdi:folder-download' />
+          <span>Descárgala ahora</span>
+        </a>
+        <a
+          href={WHATSAPP_URL}
+          target='_blank'
+          class='flex items-center gap-2 px-8 py-4 text-lg font-extrabold text-white transition-all duration-200 transform bg-green-600 shadow-lg hover:bg-green-700 rounded-2xl hover:shadow-xl hover:-translate-y-1'>
+          <Icon class='w-6 h-6' name='whatsapp' />
+          <span>Más información</span>
+        </a>
+      </div>
+    </header>
+
+    <section class='flex flex-col gap-32 mb-32'>
+      <div class='flex flex-col max-w-5xl gap-12 mx-auto'>
+        <div class='text-center'>
+          <h2 class='mb-6 text-3xl font-bold text-gray-800 xs:text-4xl dark:text-gray-200'>
+            ¿Cansado de buscar expedientes en el CEJ?
+          </h2>
+          <p class='max-w-4xl mx-auto leading-relaxed text-gray-600 xs:text-xl dark:text-gray-400'>
+            Muchos abogados ya lo han dicho: buscar expedientes en la plataforma actual es más
+            complicado que nunca. CAPTCHAs ilegibles, campos obligatorios innecesarios y resultados
+            que no cargan ni con los datos correctos.
+          </p>
+        </div>
+
+        <div
+          class='p-8 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl xs:p-12'>
+          <h3
+            class='mb-8 text-2xl font-bold text-center text-gray-800 xs:text-3xl dark:text-gray-200'>
+            💡 Por eso creé CEJBOT
+          </h3>
+          <p
+            class='mb-10 text-lg leading-relaxed text-center text-gray-600 xs:text-xl dark:text-gray-400'>
+            Una extensión para navegadores que automatiza todo el proceso:
+          </p>
+
+          <div class='grid max-w-4xl grid-cols-1 gap-6 mx-auto md:grid-cols-2'>
+            <div class='flex items-start gap-4 p-6 bg-white shadow-md dark:bg-gray-800 rounded-xl'>
+              <div class='text-2xl font-bold text-green-500'>✅</div>
+              <div>
+                <h4 class='mb-2 font-semibold text-gray-800 dark:text-gray-200'>
+                  Formulario automático
+                </h4>
+                <p class='text-gray-600 dark:text-gray-400'>
+                  Completa el formulario automáticamente sin errores
+                </p>
+              </div>
+            </div>
+
+            <div class='flex items-start gap-4 p-6 bg-white shadow-md dark:bg-gray-800 rounded-xl'>
+              <div class='text-2xl font-bold text-green-500'>✅</div>
+              <div>
+                <h4 class='mb-2 font-semibold text-gray-800 dark:text-gray-200'>
+                  CAPTCHA resuelto
+                </h4>
+                <p class='text-gray-600 dark:text-gray-400'>
+                  Resuelve el CAPTCHA por ti, sin complicaciones
+                </p>
+              </div>
+            </div>
+
+            <div class='flex items-start gap-4 p-6 bg-white shadow-md dark:bg-gray-800 rounded-xl'>
+              <div class='text-2xl font-bold text-green-500'>✅</div>
+              <div>
+                <h4 class='mb-2 font-semibold text-gray-800 dark:text-gray-200'>
+                  Gestión inteligente
+                </h4>
+                <p class='text-gray-600 dark:text-gray-400'>
+                  Guarda tus expedientes y los busca con un solo clic
+                </p>
+              </div>
+            </div>
+
+            <div class='flex items-start gap-4 p-6 bg-white shadow-md dark:bg-gray-800 rounded-xl'>
+              <div class='text-2xl font-bold text-green-500'>✅</div>
+              <div>
+                <h4 class='mb-2 font-semibold text-gray-800 dark:text-gray-200'>
+                  Trabajo en segundo plano
+                </h4>
+                <p class='text-gray-600 dark:text-gray-400'>
+                  Funciona sin interrupciones mientras trabajas
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href={CEJ_URL}
+        target='_blank'
+        class='flex items-center justify-center text-white gap-2 px-8 py-4 text-lg font-extrabold transition-all duration-200 bg-[#9a1413] hover:bg-[#660d0c] rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1'>
+        <Icon class='w-6 h-6' name='mdi:folder-download' />
+        <span>Descárgala ahora</span>
+      </a>
+
+      <div class='flex flex-col gap-8'>
+        <h2 class='text-3xl font-bold text-center text-gray-800 xs:text-4xl dark:text-gray-200'>
+          ¿Cómo funciona CEJBOT?
+        </h2>
+        <video
+          controls
+          autoplay
+          muted
+          loop
+          preload='none'
+          class='object-cover border border-gray-300 shadow-lg dark:border-gray-600 h-dvh/40 rounded-2xl'>
+          <source src={videoCEJBOT} type='video/mp4' />
+        </video>
+      </div>
+
+      <div class='flex flex-col gap-8'>
+        <h2 class='text-3xl font-bold text-center text-gray-800 xs:text-4xl dark:text-gray-200'>
+          ¿Y si tus expedientes se buscaran solos?
+        </h2>
+        <video
+          controls
+          autoplay
+          muted
+          loop
+          preload='none'
+          class='object-cover border border-gray-300 shadow-lg dark:border-gray-600 h-dvh/40 rounded-2xl'>
+          <source src={videoFuncionalidadCEJBOT} type='video/mp4' />
+        </video>
+      </div>
+
+      <a
+        href={CEJ_URL}
+        target='_blank'
+        class='flex items-center justify-center text-white gap-2 px-8 py-4 text-lg font-extrabold transition-all duration-200 bg-[#9a1413] hover:bg-[#660d0c] rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1'>
+        <Icon class='w-6 h-6' name='mdi:folder-download' />
+        <span>Descárgala ahora</span>
+      </a>
+    </section>
+
+    <Footer title={MAIN_TITLE} description={MAIN_DESCRIPTION} />
+  </div>
+</Layout>
