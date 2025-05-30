@@ -1,0 +1,214 @@
+---
+import Footer from '../../components/Footer.astro'
+import Layout from '../../layouts/Layout.astro'
+import { MAIN_DESCRIPTION, MAIN_TITLE } from '../../utils/consts'
+
+const LAST_UPDATE = 'Mayo 2025'
+---
+
+<Layout
+  title='Política de Privacidad - CEJBOT'
+  description='Política de privacidad de la extensión CEJBOT para navegadores'>
+  <div class='flex flex-col gap-16 px-5 my-6 min-h-dvh xs:px-10 sm:px-14 xl:max-w-7xl xl:mx-auto'>
+    <header
+      class='flex flex-col items-center justify-center max-w-4xl gap-5 mx-auto mt-32 load-hidden'>
+      <h1 class='text-4xl font-bold text-gray-800 dark:text-gray-200'>Política de Privacidad</h1>
+      <p class='text-xl text-gray-600 dark:text-gray-400'>Extensión CEJBOT</p>
+      <p class='text-sm text-gray-500 dark:text-gray-500'>
+        Última actualización: {LAST_UPDATE}
+      </p>
+    </header>
+
+    <main class='mb-32 prose prose-lg max-w-none dark:prose-invert'>
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          1. Información General
+        </h2>
+        <p class='leading-relaxed text-gray-600 dark:text-gray-400'>
+          La extensión CEJBOT ("nosotros", "nuestro" o "la extensión") respeta su privacidad y se
+          compromete a proteger su información personal. Esta política de privacidad explica cómo
+          recopilamos, usamos y protegemos su información cuando utiliza nuestra extensión de
+          navegador.
+        </p>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          2. Información que Recopilamos
+        </h2>
+
+        <h3 class='mb-3 text-xl font-medium text-gray-800 dark:text-gray-200'>
+          2.1 Datos de Expedientes
+        </h3>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>
+          La extensión almacena la información de expedientes judiciales que usted ingresa,
+          incluyendo códigos de expediente y datos de las partes, para facilitar la búsqueda. Esta
+          información no se utiliza para ningún otro propósito.
+        </p>
+
+        <h3 class='mb-3 text-xl font-medium text-gray-800 dark:text-gray-200'>2.2 Datos de Uso</h3>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>
+          Recopilamos información personal brindada por usted y datos de uso de la extensión para
+          mejorar su funcionamiento y solucionar problemas técnicos. Esta información incluye, pero
+          no se limita a:
+        </p>
+        <ul class='pl-6 mb-4 text-gray-600 list-disc dark:text-gray-400'>
+          <li>Datos personales del usuario (Sólo nombre y teléfono)</li>
+          <li>Identificador del navegador y sistema operativo para evitar usos indebidos</li>
+          <li>Información de uso de la extensión (frecuencia de uso, errores, etc.)</li>
+        </ul>
+
+        <h3 class='mb-3 text-xl font-medium text-gray-800 dark:text-gray-200'>
+          2.3 Información que NO Recopilamos
+        </h3>
+        <ul class='pl-6 text-gray-600 list-disc dark:text-gray-400'>
+          <li>Otros datos personales identificables (como dirección, correo electrónico, etc.)</li>
+          <li>Contenido de documentos judiciales</li>
+          <li>Historial de navegación fuera del sitio CEJ</li>
+          <li>Información financiera o de pagos</li>
+        </ul>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          3. Cómo Usamos su Información
+        </h2>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>
+          Utilizamos la información recopilada únicamente para:
+        </p>
+        <ul class='pl-6 text-gray-600 list-disc dark:text-gray-400'>
+          <li>Identificar y autenticar a los usuarios de la extensión</li>
+          <li>No permitir que alguien extraño use la extensión con sus datos</li>
+          <li>Proporcionar y mantener la funcionalidad de la extensión</li>
+          <li>Automatizar la búsqueda de expedientes en el sitio web del CEJ</li>
+          <li>Guardar sus expedientes</li>
+          <li>Mejorar la experiencia del usuario</li>
+          <li>Resolver problemas técnicos</li>
+        </ul>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          4. Almacenamiento y Seguridad de Datos
+        </h2>
+
+        <h3 class='mb-3 text-xl font-medium text-gray-800 dark:text-gray-200'>
+          4.1 Almacenamiento en la nube
+        </h3>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>
+          Todos los datos de expedientes se almacenan en la nube utilizando servicios de
+          almacenamiento seguro. Esta información no se transmite a servidores externos.
+        </p>
+
+        <h3 class='mb-3 text-xl font-medium text-gray-800 dark:text-gray-200'>4.2 Seguridad</h3>
+        <p class='leading-relaxed text-gray-600 dark:text-gray-400'>
+          Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su
+          información contra acceso no autorizado, alteración, divulgación o destrucción.
+        </p>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          5. Permisos de la Extensión
+        </h2>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>
+          La extensión requiere los siguientes permisos:
+        </p>
+        <ul class='pl-6 text-gray-600 list-disc dark:text-gray-400'>
+          <li><strong>activeTab:</strong> Para interactuar con la pestaña activa del sitio CEJ</li>
+          <li><strong>tabs:</strong> Para gestionar pestañas relacionadas con búsquedas</li>
+          <li><strong>storage:</strong> Para guardar sus expedientes</li>
+          <li>
+            <strong>notifications:</strong> Para mostrar notificaciones sobre el estado de las búsquedas
+          </li>
+          <li>
+            <strong>Acceso a cej.pj.gob.pe:</strong> Para automatizar la búsqueda en el sitio oficial
+            del CEJ
+          </li>
+        </ul>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          6. Compartir Información
+        </h2>
+        <p class='leading-relaxed text-gray-600 dark:text-gray-400'>
+          No vendemos, comercializamos o transferimos su información personal a terceros. Los datos
+          de expedientes permanecen exclusivamente en su cuenta en la nube y no se comparten con
+          ningún tercero sin su consentimiento explícito.
+        </p>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          7. Sus Derechos
+        </h2>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>Usted tiene derecho a:</p>
+        <ul class='pl-6 text-gray-600 list-disc dark:text-gray-400'>
+          <li>Acceder a los datos almacenados por la extensión</li>
+          <li>Solicitar la eliminación de sus datos</li>
+          <li>Controlar qué expedientes se guardan</li>
+          <li>Deshabilitar la extensión en cualquier momento</li>
+        </ul>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          8. Actualizaciones de la Política
+        </h2>
+        <p class='leading-relaxed text-gray-600 dark:text-gray-400'>
+          Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento.
+          Los cambios significativos se comunicarán a través de actualizaciones de la extensión.
+        </p>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>9. Contacto</h2>
+        <p class='mb-4 leading-relaxed text-gray-600 dark:text-gray-400'>
+          Si tiene preguntas sobre esta política de privacidad o el manejo de sus datos, puede
+          contactarnos a través de:
+        </p>
+        <ul class='pl-6 text-gray-600 list-disc dark:text-gray-400'>
+          <li>
+            Email: <a
+              href='mailto:dev.alessandro@outlook.com'
+              class='text-blue-600 dark:text-blue-400 hover:underline'>dev.alessandro@outlook.com</a
+            >
+          </li>
+          <li>
+            Sitio web: <a
+              href='https://alessandrorios.com'
+              class='text-blue-600 dark:text-blue-400 hover:underline'
+              >https://alessandrorios.com/cejbot</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class='mb-8'>
+        <h2 class='mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200'>
+          10. Jurisdicción
+        </h2>
+        <p class='leading-relaxed text-gray-600 dark:text-gray-400'>
+          Esta política de privacidad se rige por las leyes de la República del Perú. La extensión
+          está diseñada específicamente para su uso con el sistema judicial peruano.
+        </p>
+      </section>
+
+      <div
+        class='p-6 mt-12 border border-blue-200 rounded-lg bg-blue-50 dark:bg-blue-900/20 dark:border-blue-800'>
+        <h3 class='mb-2 text-lg font-semibold text-blue-800 dark:text-blue-200'>
+          Resumen de Privacidad
+        </h3>
+        <p class='text-sm text-blue-700 dark:text-blue-300'>
+          CEJBOT mantiene toda su información de expedientes almacenada de forma segura en la nube,
+          sin compartirla con terceros. No recopilamos información personal sensible ni almacenamos
+          datos de identificación personal. Su privacidad y la confidencialidad de sus casos legales
+          son nuestra prioridad.
+        </p>
+      </div>
+    </main>
+
+    <Footer title={MAIN_TITLE} description={MAIN_DESCRIPTION} />
+  </div>
+</Layout>
