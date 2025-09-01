@@ -49,7 +49,24 @@ import golemanHero from "@/assets/images/goleman/goleman-hero.webp"
 import golemanMobile from "@/assets/images/goleman/goleman-mobile.webp"
 import golemanNosotros from "@/assets/images/goleman/goleman-nosotros.webp"
 
+/* Konecta Terapias images */
+import konectaHeroDesktop from "@/assets/images/konectaterapias/konecta-hero-desktop.webp"
+import konectaMobile from "@/assets/images/konectaterapias/konecta-mobile.webp"
+import konectaPerfilDesktop from "@/assets/images/konectaterapias/konecta-perfil-desktop.webp"
+import konectaProfesionalesDesktop from "@/assets/images/konectaterapias/konecta-profesionales-desktop.webp"
+
 export const CLIENT_PROJECTS = [
+	{
+		"name": "Konecta Terapias",
+		"description": "Sitio web profesional diseñado para <strong class='font-bold dark:text-customWhite text-customBlack'>conectar a personas con terapeutas especializados</strong> de manera simple y rápida.<br/><br/> Incluye un <strong class='font-bold dark:text-customWhite text-customBlack'>directorio de profesionales</strong> con filtros por zona, especialidad y disponibilidad horaria, además de perfiles detallados con información clave y acceso directo a WhatsApp o Email.<br/><br/> El proyecto fue desarrollado con un enfoque <strong class='font-bold dark:text-customWhite text-customBlack'>en la experiencia de usuario</strong>, garantizando fluidez en cualquier dispositivo y optimizando la velocidad de carga.<br/><br/> Su diseño moderno, limpio y accesible refuerza la confianza de los usuarios y facilita la interacción con los profesionales.",
+		"url": "https://konectaterapias.com",
+		"src": [
+			konectaHeroDesktop,
+			konectaMobile,
+			konectaProfesionalesDesktop,
+			konectaPerfilDesktop
+		]
+	},
 	{
 		"name": "Dubái Shawarma",
 		"description": "Esta página web ofrece una experiencia intuitiva y moderna, diseñada para facilitar la navegación y la realización de <strong class='font-bold dark:text-customWhite text-customBlack'>pedidos a través de WhatsApp</strong>.<br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla.<br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y moderna</strong>, asegurando una experiencia de usuario óptima y atractiva.",
