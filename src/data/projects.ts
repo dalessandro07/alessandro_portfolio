@@ -55,6 +55,12 @@ import konectaMobile from "@/assets/images/konectaterapias/konecta-mobile.webp"
 import konectaPerfilDesktop from "@/assets/images/konectaterapias/konecta-perfil-desktop.webp"
 import konectaProfesionalesDesktop from "@/assets/images/konectaterapias/konecta-profesionales-desktop.webp"
 
+/* MC Tech Consultores images */
+import mctechHeroDesktop from "@/assets/images/mctechconsultores/mctech-hero-desktop.webp"
+import mctechMobile from "@/assets/images/mctechconsultores/mctech-mobile.webp"
+import mctechNosotrosDesktop from "@/assets/images/mctechconsultores/mctech-nosotros-desktop.webp"
+import mctechServiciosDesktop from "@/assets/images/mctechconsultores/mctech-servicios-desktop.webp"
+
 export const CLIENT_PROJECTS = [
 	{
 		"name": "Konecta Terapias",
@@ -87,6 +93,17 @@ export const CLIENT_PROJECTS = [
 			golemanMobile,
 			golemanNosotros,
 			golemanContact
+		]
+	},
+	{
+		"name": "MC Tech Consultores",
+		"description": "Una página web super rápida, moderna y atractiva para MC Tech Consultores, con un diseño que se adapta perfectamente a dispositivos móviles, garantizando una experiencia fluida en cualquier pantalla. <br/><br/> Dando un toque tecnológico al sitio web con un diseño moderno y atractivo. <br/><br/> Con un enfoque en la rapidez de carga y una interfaz estética, asegura una experiencia de usuario óptima y atractiva. <br/><br/>Además, un formulario doble para enviar correos electrónicos y mensajes de WhatsApp.",
+		"url": "https://mctechconsultores.com",
+		"src": [
+			mctechHeroDesktop,
+			mctechMobile,
+			mctechNosotrosDesktop,
+			mctechServiciosDesktop
 		]
 	},
 	{
