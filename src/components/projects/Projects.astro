@@ -43,7 +43,7 @@ const languages = [
 			<span class='text-sm'>destacados 😉</span>
 		</div>
 
-		<section class='flex flex-wrap items-center gap-4 pb-2'>
+		<section class='flex flex-wrap gap-4 items-center pb-2'>
 			{
 				languages.map((lang) => (
 					<a
@@ -60,35 +60,36 @@ const languages = [
 	</header>
 
 	<article>
-		<div role="tablist" class="grid w-full grid-cols-2 tabs tabs-bordered">
+		<div role='tablist' class='grid grid-cols-2 w-full tabs tabs-bordered'>
 			<input
-			type="radio"
-			checked="checked"
-			name="projects"
-			role="tab"
-			class="w-full text-xl font-bold tab"
-			aria-label="Personales" />
+				type='radio'
+				name='projects'
+				role='tab'
+				class='w-full text-xl font-bold tab'
+				aria-label='Personales'
+			/>
 
-			<div role="tabpanel" class="w-full p-10 mt-5 tab-content">
+			<div role='tabpanel' class='p-10 mt-5 w-full tab-content'>
 				<section class='flex flex-wrap gap-32'>
-				{PERSONAL_PROJECTS.map((project) => <Project {...project} />)}
+					{PERSONAL_PROJECTS.map((project) => <Project {...project} />)}
 				</section>
 			</div>
 
 			<input
-				type="radio"
-				name="projects"
-				role="tab"
-				class="w-full text-xl font-bold tab"
-				aria-label="Para Clientes" />
+				type='radio'
+				checked='checked'
+				name='projects'
+				role='tab'
+				class='w-full text-xl font-bold tab'
+				aria-label='Para Clientes'
+			/>
 
-			<div role="tabpanel" class="w-full p-10 mt-5 tab-content">
+			<div role='tabpanel' class='p-10 mt-5 w-full tab-content'>
 				<section class='flex flex-wrap gap-32'>
 					{CLIENT_PROJECTS.map((project) => <Project {...project} />)}
 				</section>
 			</div>
 		</div>
-
 	</article>
 </section>
 
