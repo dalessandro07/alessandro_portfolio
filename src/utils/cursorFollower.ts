@@ -159,36 +159,34 @@ export class CursorFollower {
 
   private resetAnimation (): void {
     if (this.originalLogo && this.cursorFollower) {
-      // Restaurar el logo original
-      this.originalLogo.style.opacity = '1'
+      // Cancelar el seguimiento del cursor
+      this.isInitialized = false
+      if (this.animationId) {
+        cancelAnimationFrame(this.animationId)
+        this.animationId = null
+      }
 
-      // Ocultar el cursor follower
-      this.cursorFollower.style.opacity = '0'
+      // Obtener la posición del logo original en el header
+      const logoRect = this.originalLogo.getBoundingClientRect()
+      const targetX = logoRect.left + logoRect.width / 2
+      const targetY = logoRect.top + logoRect.height / 2
 
-      // Reiniciar después de un delay
+      // Agregar clase de animación de retorno
+      this.cursorFollower.classList.add('initial-animation')
+
+      // Animar el regreso a la posición original
+      this.cursorFollower.style.left = targetX + 'px'
+      this.cursorFollower.style.top = targetY + 'px'
+
+      // Después de la animación, restaurar el logo original y ocultar completamente el seguidor
       setTimeout(() => {
-        this.isInitialized = false
-        setTimeout(() => {
-          if (this.cursorFollower && this.originalLogo) {
-            const logoRect = this.originalLogo.getBoundingClientRect()
-            const initialX = logoRect.left + logoRect.width / 2
-            const initialY = logoRect.top + logoRect.height / 2
-
-            this.followerX = initialX
-            this.followerY = initialY
-            this.cursorFollower.style.left = initialX + 'px'
-            this.cursorFollower.style.top = initialY + 'px'
-
-            setTimeout(() => {
-              if (this.cursorFollower && this.originalLogo) {
-                this.cursorFollower.classList.add('active')
-                this.originalLogo.style.opacity = '0'
-                this.isInitialized = true
-              }
-            }, 500)
-          }
-        }, 1000)
-      }, 500)
+        if (this.originalLogo && this.cursorFollower) {
+          this.originalLogo.style.opacity = '1'
+          this.cursorFollower.style.opacity = '0'
+          this.cursorFollower.style.display = 'none' // Ocultar completamente para no bloquear clics
+          this.cursorFollower.style.pointerEvents = 'none' // Desactivar eventos de puntero
+        }
+      }, 1500) // Duración de la animación CSS (1.5s)
     }
   }
 
