@@ -1,6 +1,7 @@
 ---
 import '../css/lato-v1.0.css'
 import Header from '../components/Header.astro'
+import CursorFollower from '../components/CursorFollower.astro'
 
 export interface Props {
 	title: string
@@ -102,6 +103,8 @@ const { title, description, withHeader = true } = Astro.props
 		{withHeader && <Header />}
 
 		<slot />
+
+		<CursorFollower />
 
 		<style>
 			html.sr .load-hidden {

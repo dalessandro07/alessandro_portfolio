@@ -70,7 +70,7 @@ import rentalCarMobile from "@/assets/images/rentalacar/rentalCarMobile.webp"
 export const CLIENT_PROJECTS = [
 	{
 		"name": "3D Rental Car",
-		"description": "Sitio web profesional para 3D Rental Car — portal elegante, moderno y premium que inspira confianza desde el primer vistazo.<br/><br/>Diseño sofisticado, lujo visual y experiencia de usuario fluida: navegar entre autos, fotos y servicios es intuitivo y placentero.<br/><br/>Incluye formulario de contacto y enlace directo a WhatsApp para consultas rápidas, reservaciones o atención personalizada.<br/><br/>Optimizado para máxima velocidad y rendimiento, asegurando tiempos de carga mínimos y experiencia impecable en cualquier dispositivo.",
+		"description": "Sitio web profesional para <strong class='font-bold dark:text-customWhite text-customBlack'>3D Rental Car — sitio web de alquiler de autos</strong>, portal elegante, moderno y premium que inspira confianza desde el primer vistazo.<br/><br/><strong class='font-bold dark:text-customWhite text-customBlack'>Diseño sofisticado, lujo visual</strong> y experiencia de usuario fluida: navegar entre autos, fotos y servicios es intuitivo y placentero.<br/><br/>Incluye formulario de contacto y enlace directo a WhatsApp para consultas rápidas, reservaciones o atención personalizada.<br/><br/>Optimizado para máxima velocidad y rendimiento, asegurando tiempos de carga mínimos y experiencia impecable en cualquier dispositivo.",
 		"url": "https://3drentalacar.com",
 		"src": [
 			rentalCarHeroDesktop,

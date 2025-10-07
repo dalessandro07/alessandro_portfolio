@@ -1,0 +1,84 @@
+---
+// Componente para crear una animación que sigue al cursor usando el logo
+---
+
+<div id='cursor-follower' class='cursor-follower'>
+  <img src='/logo.webp' alt='Logo siguiendo cursor' class='logo-cursor' />
+</div>
+
+<style>
+  .cursor-follower {
+    position: fixed;
+    width: 56px;
+    height: 56px;
+    pointer-events: auto;
+    z-index: 9999;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition:
+      opacity 0.5s ease,
+      transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .logo-cursor {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+  }
+
+  /* Ocultar en dispositivos táctiles */
+  @media (hover: none) and (pointer: coarse) {
+    .cursor-follower {
+      display: none;
+    }
+  }
+
+  /* Animación de entrada suave */
+  .cursor-follower.active {
+    opacity: 0.9;
+  }
+
+  /* Efecto hover sobre elementos interactivos */
+  .cursor-follower.hover-effect {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+
+  .cursor-follower.hover-effect .logo-cursor {
+    filter: drop-shadow(0 6px 20px rgba(59, 130, 246, 0.5));
+  }
+
+  /* Animación de desplazamiento inicial */
+  .cursor-follower.initial-animation {
+    transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Efecto de rotación suave */
+  .logo-cursor {
+    animation: gentle-rotate 10s linear infinite;
+  }
+
+  @keyframes gentle-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Pausa la rotación cuando está sobre elementos interactivos */
+  .cursor-follower.hover-effect .logo-cursor {
+    animation-play-state: paused;
+  }
+</style>
+
+<script>
+  import { CursorFollower } from '../utils/cursorFollower.ts'
+
+  // Inicializar el cursor follower
+  new CursorFollower()
+</script>
