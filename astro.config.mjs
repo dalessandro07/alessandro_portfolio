@@ -6,19 +6,17 @@ import { defineConfig } from 'astro/config'
 
 import react from '@astrojs/react'
 
-import cloudflare from '@astrojs/cloudflare';
+import cloudflare from '@astrojs/cloudflare'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alessandrorios.com/',
   integrations: [tailwind(), sitemap(), robotsTxt(), icon(), react()],
   prefetch: true,
-
   vite: {
     ssr: {
       external: ['svgo']
     }
   },
-
   adapter: cloudflare()
 })
