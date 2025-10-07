@@ -10,17 +10,13 @@ import cloudflare from '@astrojs/cloudflare'
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
   site: 'https://alessandrorios.com/',
   integrations: [tailwind(), sitemap(), robotsTxt(), icon(), react()],
   prefetch: true,
   vite: {
     ssr: {
       external: ['svgo']
-    },
-    build: {
-      rollupOptions: {
-        external: ['/src/assets/images/rentalacar']
-      }
     }
   },
   adapter: cloudflare({
