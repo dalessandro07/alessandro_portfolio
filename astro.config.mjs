@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config'
 
 import react from '@astrojs/react'
 
-import cloudflare from '@astrojs/cloudflare'
+import vercel from '@astrojs/vercel'
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,12 +14,11 @@ export default defineConfig({
   site: 'https://alessandrorios.com/',
   integrations: [tailwind(), sitemap(), robotsTxt(), icon(), react()],
   prefetch: true,
+
   vite: {
     ssr: {
       external: ['svgo']
     }
   },
-  adapter: cloudflare({
-    imageService: 'compile'
-  })
+  adapter: vercel()
 })
