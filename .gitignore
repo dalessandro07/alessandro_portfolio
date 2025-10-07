@@ -1,6 +1,3 @@
-# astro build
-.astro/
-
 # build output
 dist/
 .output/
