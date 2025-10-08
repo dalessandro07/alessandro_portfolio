@@ -1,71 +1,71 @@
 /* Darmaes images */
-import darmaesCartPage from "@/assets/images/darmaes/darmaes-cart-page.webp"
-import darmaesIndexDesktop from "@/assets/images/darmaes/darmaes-index-page.webp"
-import darmaesIndexCelular from "@/assets/images/darmaes/darmaes-mobile-products.webp"
-import darmaesProductosPage from "@/assets/images/darmaes/darmaes-productos-page.webp"
+import darmaesCartPage from "../assets/images/darmaes/darmaes-cart-page.webp"
+import darmaesIndexDesktop from "../assets/images/darmaes/darmaes-index-page.webp"
+import darmaesIndexCelular from "../assets/images/darmaes/darmaes-mobile-products.webp"
+import darmaesProductosPage from "../assets/images/darmaes/darmaes-productos-page.webp"
 
 /* Mi tarjeta images */
-import miTarjetaCelular from "@/assets/images/mitarjetaapp/mitarjeta-celular.webp"
-import miTarjetaIndex from "@/assets/images/mitarjetaapp/mitarjeta-index.webp"
-import miTarjetaLaptop from "@/assets/images/mitarjetaapp/mitarjeta-laptop.webp"
-import miTarjetaNueva from "@/assets/images/mitarjetaapp/mitarjeta-nueva.webp"
+import miTarjetaCelular from "../assets/images/mitarjetaapp/mitarjeta-celular.webp"
+import miTarjetaIndex from "../assets/images/mitarjetaapp/mitarjeta-index.webp"
+import miTarjetaLaptop from "../assets/images/mitarjetaapp/mitarjeta-laptop.webp"
+import miTarjetaNueva from "../assets/images/mitarjetaapp/mitarjeta-nueva.webp"
 
 /* DrCafe images */
-import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
-import drcafeIndex from "@/assets/images/drcafe/drcafe-index.webp"
-import drcafeSeguimiento from "@/assets/images/drcafe/drcafe-seguimiento.webp"
-import drcafeTablet from "@/assets/images/drcafe/drcafe-tablet.webp"
+import drcafeCelular from "../assets/images/drcafe/drcafe-celular.webp"
+import drcafeIndex from "../assets/images/drcafe/drcafe-index.webp"
+import drcafeSeguimiento from "../assets/images/drcafe/drcafe-seguimiento.webp"
+import drcafeTablet from "../assets/images/drcafe/drcafe-tablet.webp"
 
 /* Dubái Shawarma images */
-import shawarmaAboutDesktop from "@/assets/images/shawarmadubailima/shawarma-about-desktop.webp"
-import shawarmaCartOpenDesktop from "@/assets/images/shawarmadubailima/shawarma-cart-open-desktop.webp"
-import shawarmaHeroDesktop from "@/assets/images/shawarmadubailima/shawarma-hero-desktop.webp"
-import shawarmaMobile from "@/assets/images/shawarmadubailima/shawarma-mobile.webp"
+import shawarmaAboutDesktop from "../assets/images/shawarmadubailima/shawarma-about-desktop.webp"
+import shawarmaCartOpenDesktop from "../assets/images/shawarmadubailima/shawarma-cart-open-desktop.webp"
+import shawarmaHeroDesktop from "../assets/images/shawarmadubailima/shawarma-hero-desktop.webp"
+import shawarmaMobile from "../assets/images/shawarmadubailima/shawarma-mobile.webp"
 
 /* AllExpenses images */
-import allexLogin from "@/assets/images/allex/allexLogin.webp"
-import allexBalance from "@/assets/images/allex/balance.webp"
-import allexHome from "@/assets/images/allex/home_allexpenses.webp"
+import allexLogin from "../assets/images/allex/allexLogin.webp"
+import allexBalance from "../assets/images/allex/balance.webp"
+import allexHome from "../assets/images/allex/home_allexpenses.webp"
 
 /* CRH Abogados */
-import crhContact from "@/assets/images/crhabogados/contact.webp"
-import crhHero from "@/assets/images/crhabogados/hero.webp"
-import crhMobile from "@/assets/images/crhabogados/mobile.webp"
-import crhNosotros from "@/assets/images/crhabogados/nosotros.webp"
+import crhContact from "../assets/images/crhabogados/contact.webp"
+import crhHero from "../assets/images/crhabogados/hero.webp"
+import crhMobile from "../assets/images/crhabogados/mobile.webp"
+import crhNosotros from "../assets/images/crhabogados/nosotros.webp"
 
 /* LCDP images */
-/* import lcdpHome from "@/assets/images/lcdp/lcdp-home.webp"
-import lcdpProducts from "@/assets/images/lcdp/lcdp-products.webp"
-import lcdpServices from "@/assets/images/lcdp/lcdp-services.webp" */
+/* import lcdpHome from "../assets/images/lcdp/lcdp-home.webp"
+import lcdpProducts from "../assets/images/lcdp/lcdp-products.webp"
+import lcdpServices from "../assets/images/lcdp/lcdp-services.webp" */
 
 /* Organízalo images */
-import organizaloAntes from "@/assets/images/organizalo/organizalo-antes.webp"
-import organizaloDespues from "@/assets/images/organizalo/organizalo-despues.webp"
-import organizalo from "@/assets/images/organizalo/organizalo.webp"
+import organizaloAntes from "../assets/images/organizalo/organizalo-antes.webp"
+import organizaloDespues from "../assets/images/organizalo/organizalo-despues.webp"
+import organizalo from "../assets/images/organizalo/organizalo.webp"
 
 /* Goleman School images */
-import golemanContact from "@/assets/images/goleman/goleman-contact.webp"
-import golemanHero from "@/assets/images/goleman/goleman-hero.webp"
-import golemanMobile from "@/assets/images/goleman/goleman-mobile.webp"
-import golemanNosotros from "@/assets/images/goleman/goleman-nosotros.webp"
+import golemanContact from "../assets/images/goleman/goleman-contact.webp"
+import golemanHero from "../assets/images/goleman/goleman-hero.webp"
+import golemanMobile from "../assets/images/goleman/goleman-mobile.webp"
+import golemanNosotros from "../assets/images/goleman/goleman-nosotros.webp"
 
 /* Konecta Terapias images */
-import konectaHeroDesktop from "@/assets/images/konectaterapias/konecta-hero-desktop.webp"
-import konectaMobile from "@/assets/images/konectaterapias/konecta-mobile.webp"
-import konectaPerfilDesktop from "@/assets/images/konectaterapias/konecta-perfil-desktop.webp"
-import konectaProfesionalesDesktop from "@/assets/images/konectaterapias/konecta-profesionales-desktop.webp"
+import konectaHeroDesktop from "../assets/images/konectaterapias/konecta-hero-desktop.webp"
+import konectaMobile from "../assets/images/konectaterapias/konecta-mobile.webp"
+import konectaPerfilDesktop from "../assets/images/konectaterapias/konecta-perfil-desktop.webp"
+import konectaProfesionalesDesktop from "../assets/images/konectaterapias/konecta-profesionales-desktop.webp"
 
 /* MC Tech Consultores images */
-import mctechHeroDesktop from "@/assets/images/mctechconsultores/mctech-hero-desktop.webp"
-import mctechMobile from "@/assets/images/mctechconsultores/mctech-mobile.webp"
-import mctechNosotrosDesktop from "@/assets/images/mctechconsultores/mctech-nosotros-desktop.webp"
-import mctechServiciosDesktop from "@/assets/images/mctechconsultores/mctech-servicios-desktop.webp"
+import mctechHeroDesktop from "../assets/images/mctechconsultores/mctech-hero-desktop.webp"
+import mctechMobile from "../assets/images/mctechconsultores/mctech-mobile.webp"
+import mctechNosotrosDesktop from "../assets/images/mctechconsultores/mctech-nosotros-desktop.webp"
+import mctechServiciosDesktop from "../assets/images/mctechconsultores/mctech-servicios-desktop.webp"
 
 /* 3D Rental Car */
-import rentalCarHeroDesktop from "@/assets/images/rentalacar/rentalcarHeroDesktop.webp"
-import rentalCarHero2Desktop from "@/assets/images/rentalacar/rentalcarHeroDesktop2.webp"
-import rentalCarHeroDesktop3 from "@/assets/images/rentalacar/rentalCarHeroDesktop3.webp"
-import rentalCarMobile from "@/assets/images/rentalacar/rentalCarMobile.webp"
+import rentalCarHeroDesktop from "../assets/images/rentalacar/rentalcarHeroDesktop.webp"
+import rentalCarHero2Desktop from "../assets/images/rentalacar/rentalcarHeroDesktop2.webp"
+import rentalCarHeroDesktop3 from "../assets/images/rentalacar/rentalCarHeroDesktop3.webp"
+import rentalCarMobile from "../assets/images/rentalacar/rentalCarMobile.webp"
 
 export const CLIENT_PROJECTS = [
 	{
