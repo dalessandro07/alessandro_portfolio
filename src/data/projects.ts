@@ -62,13 +62,13 @@ import mctechNosotrosDesktop from "@/assets/images/mctechconsultores/mctech-noso
 import mctechServiciosDesktop from "@/assets/images/mctechconsultores/mctech-servicios-desktop.webp"
 
 /* 3D Rental Car */
-/* import rentalCarHeroDesktop from "@/assets/images/rentalacar/rentalcarHeroDesktop.webp"
-import rentalCarHero2Desktop from "@/assets/images/rentalacar/rentalcarHeroDesktop2.webp"
-import rentalCarHeroDesktop3 from "@/assets/images/rentalacar/rentalCarHeroDesktop3.webp"
-import rentalCarMobile from "@/assets/images/rentalacar/rentalCarMobile.webp" */
+import rentalCarHero2Desktop from "@/assets/images/rentalacar/rentalcar-hero-desktop-2.webp"
+import rentalCarHeroDesktop3 from "@/assets/images/rentalacar/rentalcar-hero-desktop-3.webp"
+import rentalCarHeroDesktop from "@/assets/images/rentalacar/rentalcar-hero-desktop.webp"
+import rentalCarMobile from "@/assets/images/rentalacar/rentalcar-mobile.webp"
 
 export const CLIENT_PROJECTS = [
-	/* {
+	{
 		"name": "3D Rental Car",
 		"description": "Sitio web profesional para <strong class='font-bold dark:text-customWhite text-customBlack'>3D Rental Car — sitio web de alquiler de autos</strong>, portal elegante, moderno y premium que inspira confianza desde el primer vistazo.<br/><br/><strong class='font-bold dark:text-customWhite text-customBlack'>Diseño sofisticado, lujo visual</strong> y experiencia de usuario fluida: navegar entre autos, fotos y servicios es intuitivo y placentero.<br/><br/>Incluye formulario de contacto y enlace directo a WhatsApp para consultas rápidas, reservaciones o atención personalizada.<br/><br/>Optimizado para máxima velocidad y rendimiento, asegurando tiempos de carga mínimos y experiencia impecable en cualquier dispositivo.",
 		"url": "https://3drentalacar.com",
@@ -78,7 +78,7 @@ export const CLIENT_PROJECTS = [
 			rentalCarHeroDesktop3,
 			rentalCarHero2Desktop
 		]
-	}, */
+	},
 	{
 		"name": "Konecta Terapias",
 		"description": "Sitio web profesional diseñado para <strong class='font-bold dark:text-customWhite text-customBlack'>conectar a personas con terapeutas especializados</strong> de manera simple y rápida.<br/><br/> Incluye un <strong class='font-bold dark:text-customWhite text-customBlack'>directorio de profesionales</strong> con filtros por zona, especialidad y disponibilidad horaria, además de perfiles detallados con información clave y acceso directo a WhatsApp o Email.<br/><br/> El proyecto fue desarrollado con un enfoque <strong class='font-bold dark:text-customWhite text-customBlack'>en la experiencia de usuario</strong>, garantizando fluidez en cualquier dispositivo y optimizando la velocidad de carga.<br/><br/> Su diseño moderno, limpio y accesible refuerza la confianza de los usuarios y facilita la interacción con los profesionales.",
