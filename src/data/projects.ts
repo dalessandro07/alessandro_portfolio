@@ -44,10 +44,10 @@ import organizaloDespues from "@/assets/images/organizalo/organizalo-despues.web
 import organizalo from "@/assets/images/organizalo/organizalo.webp"
 
 /* Goleman School images */
-import golemanContact from "@/assets/images/goleman/goleman-contact.webp"
+/* import golemanContact from "@/assets/images/goleman/goleman-contact.webp"
 import golemanHero from "@/assets/images/goleman/goleman-hero.webp"
 import golemanMobile from "@/assets/images/goleman/goleman-mobile.webp"
-import golemanNosotros from "@/assets/images/goleman/goleman-nosotros.webp"
+import golemanNosotros from "@/assets/images/goleman/goleman-nosotros.webp" */
 
 /* Konecta Terapias images */
 import konectaHeroDesktop from "@/assets/images/konectaterapias/konecta-hero-desktop.webp"
@@ -101,7 +101,7 @@ export const CLIENT_PROJECTS = [
 			shawarmaAboutDesktop
 		]
 	},
-	{
+	/* {
 		"name": "Goleman School",
 		"description": "Una página web integral para el colegio IEP. Goleman School, diseñada especialmente para esta institución. Ofrece una interfaz ultra-rápida y auto-gestionable mediante integraciones con Google Sheets y Google Drive, facilitando la actualización de contenidos sin complicaciones. <br/><br/> Además, cuenta con un blog online para compartir noticias y eventos, todo en un diseño moderno y estético que garantiza una experiencia de usuario intuitiva y atractiva en cualquier dispositivo. <br/><br/> Además, incluye un formulario doble para enviar correos electrónicos y mensajes de WhatsApp, así como un mapa interactivo para ubicar la institución.",
 		"url": "https://www.iepgolemanschool.com",
@@ -111,7 +111,7 @@ export const CLIENT_PROJECTS = [
 			golemanNosotros,
 			golemanContact
 		]
-	},
+	}, */
 	{
 		"name": "MC Tech Consultores",
 		"description": "Una página web super rápida, moderna y atractiva para MC Tech Consultores, con un diseño que se adapta perfectamente a dispositivos móviles, garantizando una experiencia fluida en cualquier pantalla. <br/><br/> Dando un toque tecnológico al sitio web con un diseño moderno y atractivo. <br/><br/> Con un enfoque en la rapidez de carga y una interfaz estética, asegura una experiencia de usuario óptima y atractiva. <br/><br/>Además, un formulario doble para enviar correos electrónicos y mensajes de WhatsApp.",
