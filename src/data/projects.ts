@@ -11,10 +11,10 @@ import miTarjetaLaptop from "@/assets/images/mitarjetaapp/mitarjeta-laptop.webp"
 import miTarjetaNueva from "@/assets/images/mitarjetaapp/mitarjeta-nueva.webp"
 
 /* DrCafe images */
-import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
+/* import drcafeCelular from "@/assets/images/drcafe/drcafe-celular.webp"
 import drcafeIndex from "@/assets/images/drcafe/drcafe-index.webp"
 import drcafeSeguimiento from "@/assets/images/drcafe/drcafe-seguimiento.webp"
-import drcafeTablet from "@/assets/images/drcafe/drcafe-tablet.webp"
+import drcafeTablet from "@/assets/images/drcafe/drcafe-tablet.webp" */
 
 /* Dubái Shawarma images */
 import shawarmaAboutDesktop from "@/assets/images/shawarmadubailima/shawarma-about-desktop.webp"
@@ -23,9 +23,9 @@ import shawarmaHeroDesktop from "@/assets/images/shawarmadubailima/shawarma-hero
 import shawarmaMobile from "@/assets/images/shawarmadubailima/shawarma-mobile.webp"
 
 /* AllExpenses images */
-import allexLogin from "@/assets/images/allex/allexLogin.webp"
+/* import allexLogin from "@/assets/images/allex/allexLogin.webp"
 import allexBalance from "@/assets/images/allex/balance.webp"
-import allexHome from "@/assets/images/allex/home_allexpenses.webp"
+import allexHome from "@/assets/images/allex/home_allexpenses.webp" */
 
 /* CRH Abogados */
 import crhContact from "@/assets/images/crhabogados/contact.webp"
@@ -170,7 +170,7 @@ export const PERSONAL_PROJECTS = [
 			skillswapLaptop
 		]
 	}, */
-	{
+	/* {
 		"name": "DrCafe",
 		"description": "E-Commerce. Este es un simulador de tienda virtual de cafés y chocolates, moderno y <strong class='font-bold dark:text-customWhite text-customBlack'>estéticamente atractivo</strong>, con un excelente <strong class='font-bold dark:text-customWhite text-customBlack'>rendimiento</strong> y adaptable a dispositivos móviles. <br/> <br/> Fue un reto implementar interfaces de usuario <strong class='font-bold dark:text-customWhite text-customBlack'>complejas y dinámicas</strong>, además de aprender a trabajar con gestión de datos y rutas dinámicas.",
 		"url": "https://drcafe.netlify.app",
@@ -190,7 +190,7 @@ export const PERSONAL_PROJECTS = [
 			allexHome,
 			allexBalance
 		]
-	},
+	}, */
 	/* {
 		"name": "La Casa De Las Plantas",
 		"description": "E-Commerce. Esta tienda virtual de artículos de jardinería cuenta con 5 secciones/páginas y diseño responsive (adaptable a dispositivos móviles).<br/> <br/> Con un desarrollo enfocado para una <strong class='font-bold dark:text-customWhite text-customBlack'>carga rápida</strong> de productos y una interfaz <strong class='font-bold dark:text-customWhite text-customBlack'>amigable y minimalista</strong>, este e-commerce tiene incluida una sección de blog, servicios y carrito de compra.",
