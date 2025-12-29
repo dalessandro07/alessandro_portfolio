@@ -67,6 +67,12 @@ import rentalCarHeroDesktop3 from "@/assets/images/rentalacar/rentalcar-hero-des
 import rentalCarHeroDesktop from "@/assets/images/rentalacar/rentalcar-hero-desktop.webp"
 import rentalCarMobile from "@/assets/images/rentalacar/rentalcar-mobile.webp"
 
+/* Multisoll SAC */
+import multisollHeroDesktop from "@/assets/images/multisoll/multisoll-hero-desktop.webp"
+import multisollMobile from "@/assets/images/multisoll/multisoll-mobile.webp"
+import multisollNosotrosDesktop from "@/assets/images/multisoll/multisoll-nosotros-desktop.webp"
+import multisollProductosDesktop from "@/assets/images/multisoll/multisoll-productos-desktop.webp"
+
 export const CLIENT_PROJECTS = [
 	{
 		"name": "3D Rental Car",
@@ -77,6 +83,17 @@ export const CLIENT_PROJECTS = [
 			rentalCarMobile,
 			rentalCarHeroDesktop3,
 			rentalCarHero2Desktop
+		]
+	},
+	{
+		"name": "Multisoll",
+		"description": "Sitio web corporativo de <strong class='font-bold dark:text-customWhite text-customBlack'>Inversiones Multisoll</strong>, proveedor líder de repuestos y pantallas de alta calidad para las principales marcas del mercado (Xiaomi, Samsung, entre otras).<br/><br/> Incluye un catálogo de productos con precios claros, sección 'Sobre Nosotros' que refuerza valores como constancia, confianza y garantía, además de un formulario de contacto, dirección física, teléfono, correo electrónico y acceso a redes sociales.<br/><br/> Optimizado para brindar una experiencia rápida y fluida en cualquier dispositivo, asegurando tiempos de carga mínimos y navegación impecable.",
+		"url": "https://multisoll.com",
+		"src": [
+			multisollHeroDesktop,
+			multisollMobile,
+			multisollNosotrosDesktop,
+			multisollProductosDesktop
 		]
 	},
 	{

@@ -1,0 +1,103 @@
+---
+import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro'
+import { EMAIL_ADDRESS, EMAIL_URL, MAIN_DESCRIPTION, MAIN_TITLE } from '../utils/consts'
+
+const LAST_UPDATE = '29 de diciembre de 2025'
+---
+
+<Layout
+	title='Términos y Condiciones - Alessandro Rios'
+	description='Términos y condiciones de uso del portafolio de Alessandro Rios.'>
+	<div
+		class='flex flex-col justify-center px-5 mt-28 mb-6 xs:px-10 sm:px-14 xl:max-w-4xl xl:mx-auto'>
+		<header class='mb-16'>
+			<h1 class='text-4xl font-bold text-customBlack dark:text-customWhite md:text-5xl'>
+				Términos y Condiciones
+			</h1>
+			<p class='mt-4 text-lg text-gray-600 dark:text-gray-400'>
+				Última actualización: {LAST_UPDATE}
+			</p>
+		</header>
+
+		<main
+			class='flex flex-col gap-8 mb-32 text-lg leading-relaxed text-gray-700 dark:text-gray-300'>
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					1. Aceptación de los Términos
+				</h2>
+				<p>
+					Al acceder y utilizar este sitio web, usted acepta cumplir con estos términos y
+					condiciones de uso. Si no está de acuerdo con alguna parte de estos términos, no debe
+					utilizar este sitio web.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					2. Uso del Sitio Web
+				</h2>
+				<p>
+					Este sitio web es un portafolio personal que muestra información sobre mi trabajo,
+					proyectos y experiencia profesional. El contenido está destinado únicamente para fines
+					informativos y de presentación.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					3. Propiedad Intelectual
+				</h2>
+				<p>
+					Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos,
+					logotipos, iconos, imágenes, clips de audio, descargas digitales y compilaciones de datos,
+					es propiedad de Alessandro Rios o de sus proveedores de contenido y está protegido por las
+					leyes de propiedad intelectual.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					4. Limitación de Responsabilidad
+				</h2>
+				<p>
+					Este sitio web se proporciona "tal cual" sin garantías de ningún tipo, expresas o
+					implícitas. No me hago responsable de ningún daño que pueda ocurrir al utilizar este sitio
+					web.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					5. Enlaces a Sitios de Terceros
+				</h2>
+				<p>
+					Este sitio web puede contener enlaces a sitios web de terceros. No tengo control sobre el
+					contenido de estos sitios y no asumo responsabilidad por ellos. La inclusión de cualquier
+					enlace no implica mi respaldo del contenido de estos sitios.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>6. Modificaciones</h2>
+				<p>
+					Me reservo el derecho de modificar estos términos y condiciones en cualquier momento. Las
+					modificaciones entrarán en vigor inmediatamente después de su publicación en este sitio
+					web. Es su responsabilidad revisar periódicamente estos términos.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>7. Contacto</h2>
+				<p>
+					Si tiene alguna pregunta sobre estos términos y condiciones, puede contactarme a través de
+					los medios de contacto proporcionados en este sitio web. Correo electrónico: <a
+						href={EMAIL_URL}>{EMAIL_ADDRESS}</a
+					>
+				</p>
+			</section>
+		</main>
+
+		<Footer title={MAIN_TITLE} description={MAIN_DESCRIPTION} />
+	</div>
+</Layout>

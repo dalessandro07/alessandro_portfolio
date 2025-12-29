@@ -50,7 +50,8 @@ export default function RecommendationsCarousel () {
 									<img
 										src={recommendation.image}
 										alt={recommendation.name}
-										className="w-12 h-12 mb-4 rounded-full select-none sm:w-16 sm:h-16"
+										loading="lazy"
+										className="mb-4 w-12 h-12 rounded-full select-none sm:w-16 sm:h-16"
 									/>
 									<h3 className="text-lg font-bold capitalize select-none text-customBlack dark:text-customWhite">
 										{recommendation.name.toLowerCase()}
@@ -60,7 +61,7 @@ export default function RecommendationsCarousel () {
 									</h4>
 								</header>
 
-								<section className="w-full mr-12 overflow-hidden h-44 hover:overflow-auto">
+								<section className="overflow-hidden mr-12 w-full h-44 hover:overflow-auto">
 									<p className="max-w-[80vw] sm:w-5/6 h-full text-base text-gray-700 dark:text-gray-400 whitespace-pre-wrap select-none">
 										{recommendation.message}
 									</p>

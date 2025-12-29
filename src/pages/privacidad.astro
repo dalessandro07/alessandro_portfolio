@@ -1,0 +1,112 @@
+---
+import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro'
+import { MAIN_DESCRIPTION, MAIN_TITLE } from '../utils/consts'
+
+const LAST_UPDATE = '29 de diciembre de 2025'
+---
+
+<Layout
+	title='Política de Privacidad - Alessandro Rios'
+	description='Política de privacidad del portafolio de Alessandro Rios.'>
+	<div
+		class='flex flex-col justify-center px-5 mt-28 mb-6 xs:px-10 sm:px-14 xl:max-w-4xl xl:mx-auto'>
+		<header class='mb-16'>
+			<h1 class='text-4xl font-bold text-customBlack dark:text-customWhite md:text-5xl'>
+				Política de Privacidad
+			</h1>
+			<p class='mt-4 text-lg text-gray-600 dark:text-gray-400'>
+				Última actualización: {LAST_UPDATE}
+			</p>
+		</header>
+
+		<main
+			class='flex flex-col gap-8 mb-32 text-lg leading-relaxed text-gray-700 dark:text-gray-300'>
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					1. Información que Recopilo
+				</h2>
+				<p>
+					Este sitio web es principalmente informativo y no recopila información personal de manera
+					activa.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					2. Uso de la Información
+				</h2>
+				<p>
+					Cualquier información que pueda recopilarse se utiliza únicamente para mejorar la
+					experiencia del usuario en este sitio web (tema de color preferido oscuro o claro) y para
+					fines estadísticos. No vendo, alquilo ni comparto su información personal con terceros
+					para fines comerciales.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>3. Cookies</h2>
+				<p>
+					Este sitio web puede utilizar cookies para mejorar su experiencia. Las cookies son
+					pequeños archivos de texto que se almacenan en su dispositivo. Puede configurar su
+					navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del
+					sitio.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					4. Información de Contacto
+				</h2>
+				<p>
+					Si me contacta a través de los formularios o enlaces de contacto proporcionados en este
+					sitio, la información que proporcione (como su nombre y dirección de correo electrónico)
+					se utilizará únicamente para responder a su consulta y no se almacenara en ningún
+					servidor.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					5. Servicios de Terceros
+				</h2>
+				<p>
+					Este sitio web puede utilizar servicios de terceros (como servicios de análisis web) que
+					pueden recopilar información sobre su visita. Estos servicios tienen sus propias políticas
+					de privacidad que le recomiendo revisar (Google Analytics, Cloudflare, etc.).
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>6. Sus Derechos</h2>
+				<p>
+					Usted tiene derecho a solicitar información sobre los datos personales que pueda tener
+					sobre usted, a solicitar la corrección de datos inexactos, o a solicitar la eliminación de
+					sus datos personales. Para ejercer estos derechos, puede contactarme a través de los
+					medios proporcionados en este sitio.
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>
+					7. Cambios a esta Política
+				</h2>
+				<p>
+					Puedo actualizar esta política de privacidad ocasionalmente. Le notificaré sobre cualquier
+					cambio publicando la nueva política de privacidad en esta página y actualizando la fecha
+					de "Última actualización".
+				</p>
+			</section>
+
+			<section class='flex flex-col gap-4'>
+				<h2 class='text-2xl font-bold text-customBlack dark:text-customWhite'>8. Contacto</h2>
+				<p>
+					Si tiene alguna pregunta sobre esta política de privacidad, puede contactarme a través de
+					los medios de contacto proporcionados en este sitio web.
+				</p>
+			</section>
+		</main>
+
+		<Footer title={MAIN_TITLE} description={MAIN_DESCRIPTION} />
+	</div>
+</Layout>
