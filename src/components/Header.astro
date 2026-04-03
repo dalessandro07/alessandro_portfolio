@@ -2,7 +2,7 @@
 import '@/css/hamburguer.css'
 
 import { Image } from 'astro:assets'
-import ThemeToggle from './buttons/ThemeToggle.astro'
+import ThemeToggle from './buttons/ThemeToggle.tsx'
 import MenuMobileToggle from './buttons/MenuMobileToggle.astro'
 import NavigationMobile from './header/NavigationMobile.astro'
 
@@ -96,7 +96,7 @@ const navigation = [
 		</div>
 
 		<section class='flex items-center gap-8'>
-			<ThemeToggle />
+			<ThemeToggle client:only />
 
 			<div class='lg:hidden'>
 				<MenuMobileToggle />

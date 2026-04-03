@@ -1,0 +1,47 @@
+---
+type Props = {
+	name: string
+	class?: string
+}
+
+const { name, class: className } = Astro.props as Props
+
+const iconEntries = import.meta.glob('../icons/*.svg', { query: '?raw', eager: true })
+
+const iconMap: Record<string, string> = {}
+for (const [path, mod] of Object.entries(iconEntries)) {
+	const filename = path.split('/').pop()?.replace(/\.svg$/, '')
+	if (!filename) continue
+	const raw = mod as { default: string } | string
+	iconMap[filename] = typeof raw === 'string' ? raw : raw.default
+}
+
+function normalizeIconName(input: string): string {
+	if (input.includes(':')) return input.split(':').pop() || input
+	return input
+}
+
+function escapeAttr(value: string): string {
+	return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+}
+
+const key = normalizeIconName(name)
+const svg = iconMap[key]
+
+if (!svg) {
+	throw new Error(`Ícono no encontrado en src/icons para name="${name}" (key="${key}")`)
+}
+
+let svgMarkup = svg
+	.replace(/\s+class="[^"]*"/g, '')
+	.replace(/\s+width="[^"]*"/g, '')
+	.replace(/\s+height="[^"]*"/g, '')
+
+if (className?.trim()) {
+	svgMarkup = svgMarkup.replace('<svg', `<svg aria-hidden="true" class="${escapeAttr(className)}"`)
+} else {
+	svgMarkup = svgMarkup.replace('<svg', '<svg aria-hidden="true"')
+}
+---
+
+<Fragment set:html={svgMarkup} />

@@ -7,7 +7,7 @@ export default [
 		"country": "Peru",
 		"degree": "Computación e Informática",
 		"date": "2022 - 2025",
-		"description": "Estoy estudiando la carrera de Computación e Informática en CIBERTEC. Actualmente viendo algoritmos en <strong>Java</strong>, <strong>C++</strong> y reforzando arquitectura de entornos web.",
+		"description": "Egresado de la carrera de Computación e Informática en CIBERTEC. Aprendí algoritmos en <strong>Java</strong>, <strong>C++</strong> y reforzando arquitectura de entornos web.",
 		"image": cibertecImage,
 		"url": "https://www.cibertec.edu.pe/"
 	},

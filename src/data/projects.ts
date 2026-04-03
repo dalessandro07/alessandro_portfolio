@@ -73,7 +73,24 @@ import multisollMobile from "@/assets/images/multisoll/multisoll-mobile.webp"
 import multisollNosotrosDesktop from "@/assets/images/multisoll/multisoll-nosotros-desktop.webp"
 import multisollProductosDesktop from "@/assets/images/multisoll/multisoll-productos-desktop.webp"
 
+/* Amaru Conservation */
+import amaruHeroDesktop from "@/assets/images/amaru/amaru-conservation-hero-desktop.webp"
+import amaruMobile from "@/assets/images/amaru/amaru-conservation-mobile.webp"
+import amaruNosotrosDesktop from "@/assets/images/amaru/amaru-conservation-nosotros-desktop.webp"
+import amaruServiciosDesktop from "@/assets/images/amaru/amaru-conservation-servicios-desktop.webp"
+
 export const CLIENT_PROJECTS = [
+	{
+		"name": "Amaru Conservation",
+		"description": "Sitio web profesional para <strong class='font-bold dark:text-customWhite text-customBlack'>Amaru Consulting</strong>, sitio web de conservación de la naturaleza, con un diseño enfocado en la marca e identidad de la empresa. <br/><br/> Incluye un formulario de contacto y enlace directo a WhatsApp para consultas rápidas, reservaciones o atención personalizada. <br/><br/> Optimizado para máxima velocidad y rendimiento, asegurando tiempos de carga mínimos y experiencia impecable en cualquier dispositivo. Con animaciones modernas y efectos visuales que capturan la atención del usuario.",
+		"url": "https://www.amaru-conservation.com/",
+		"src": [
+			amaruHeroDesktop,
+			amaruMobile,
+			amaruNosotrosDesktop,
+			amaruServiciosDesktop
+		]
+	},
 	{
 		"name": "3D Rental Car",
 		"description": "Sitio web profesional para <strong class='font-bold dark:text-customWhite text-customBlack'>3D Rental Car — sitio web de alquiler de autos</strong>, portal elegante, moderno y premium que inspira confianza desde el primer vistazo.<br/><br/><strong class='font-bold dark:text-customWhite text-customBlack'>Diseño sofisticado, lujo visual</strong> y experiencia de usuario fluida: navegar entre autos, fotos y servicios es intuitivo y placentero.<br/><br/>Incluye formulario de contacto y enlace directo a WhatsApp para consultas rápidas, reservaciones o atención personalizada.<br/><br/>Optimizado para máxima velocidad y rendimiento, asegurando tiempos de carga mínimos y experiencia impecable en cualquier dispositivo.",

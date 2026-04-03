@@ -1,10 +1,10 @@
 ---
-import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
+import ThemeToggle from '@/components/buttons/ThemeToggle.tsx'
 import TrickCopyPaste from '@/components/trucos/TrickCopyPaste.astro'
 import Layout from '@/layouts/Layout.astro'
 
 import { MAIN_TITLE, MAIN_DESCRIPTION } from '@/utils/consts'
-import { Icon } from 'astro-icon/components'
+import Icon from '@/components/Icon.astro'
 
 // Datos de los trucos para copiar y pegar
 const trucosCopyPaste = [
@@ -291,7 +291,7 @@ const cmdCommands = [
 				<Icon name='mdi:arrow-left' class='w-6 h-6' />
 				<span class='sr-only'>Ir a la página principal</span>
 			</a>
-			<ThemeToggle />
+			<ThemeToggle client:only />
 		</div>
 
 		<header class='flex flex-col items-center gap-2 mt-20 md:mt-10'>

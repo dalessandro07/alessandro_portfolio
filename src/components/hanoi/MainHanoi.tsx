@@ -1,13 +1,13 @@
 import Disk from "@/components/hanoi/Disk"
 import Tower from '@/components/hanoi/Tower'
 import {
-  DndContext,
-  DragOverlay,
-  PointerSensor,
-  useSensor,
-  useSensors,
-  type DragEndEvent,
-  type DragStartEvent,
+    DndContext,
+    DragOverlay,
+    PointerSensor,
+    useSensor,
+    useSensors,
+    type DragEndEvent,
+    type DragStartEvent,
 } from "@dnd-kit/core"
 import { restrictToWindowEdges } from "@dnd-kit/modifiers"
 import { useEffect, useRef, useState } from "react"
@@ -307,7 +307,7 @@ export default function MainHanoi () {
       <div className="flex flex-col items-center justify-center p-6 text-center">
         <button
           onClick={startGame}
-          className="btn btn-lg btn-primary"
+          className="rounded-xl bg-blue-600 px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
         >
           Jugar
         </button>
@@ -321,8 +321,8 @@ export default function MainHanoi () {
       ref={gameContainerRef}
       className={`px-4 py-8 mx-auto ${isFullscreen ? 'landscape:h-screen landscape:flex landscape:flex-col landscape:justify-center' : ''}`}
     >
-      <div className={`w-full shadow-xl card ${isFullscreen ? 'landscape:h-full landscape:flex landscape:flex-col' : ''}`}>
-        <div className="card-body">
+      <div className={`w-full rounded-2xl border border-gray-200 bg-white shadow-xl dark:border-gray-700 dark:bg-gray-900 ${isFullscreen ? 'landscape:h-full landscape:flex landscape:flex-col' : ''}`}>
+        <div className="flex flex-col p-4 sm:p-6">
           {/* Difficulty buttons and controls */}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             <div className="flex flex-wrap gap-2">
@@ -341,7 +341,7 @@ export default function MainHanoi () {
                 return (
                   <button
                     key={level}
-                    className={`btn btn-sm md:btn-md grow ${game.discos === level ? "btn-primary" : "btn-outline"}`}
+                    className={`grow rounded-lg border-2 px-2 py-1.5 text-xs font-semibold transition-colors sm:px-3 sm:py-2 sm:text-sm md:px-4 md:py-2 md:text-base ${game.discos === level ? "border-blue-600 bg-blue-600 text-white hover:bg-blue-700" : "border-gray-300 bg-transparent text-gray-800 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"}`}
                     onClick={() => cambiarDificultad(level)}
                   >
                     {difficultyName} ({level})
@@ -394,11 +394,11 @@ export default function MainHanoi () {
           </DndContext>
 
           {/* Action buttons */}
-          <div className="justify-center mt-4 card-actions">
-            <button className="btn btn-primary" onClick={reiniciarJuego}>Reiniciar Juego</button>
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <button className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700" onClick={reiniciarJuego}>Reiniciar Juego</button>
             {isMobileView && (
               <button
-                className="btn btn-error"
+                className="rounded-lg bg-red-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-red-700"
                 onClick={exitGame}
               >
                 Salir
@@ -411,7 +411,7 @@ export default function MainHanoi () {
       {/* Victory modal */}
       {modalAbierto && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="modal-box">
+          <div className="mx-4 w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
             <h3 className="text-lg font-bold">¡Nivel Completado!</h3>
             <p className="py-2">Has completado el nivel con {game.discos} discos.</p>
 
@@ -428,7 +428,7 @@ export default function MainHanoi () {
               </div>
             </div>
 
-            <div className="alert alert-success">
+            <div className="rounded-lg bg-green-100 p-4 text-green-800 dark:bg-green-900/40 dark:text-green-200">
               <p>
                 {game.movimientos === game.movimientosOptimos
                   ? "¡Perfecto! Has usado el número óptimo de movimientos."
@@ -436,11 +436,11 @@ export default function MainHanoi () {
               </p>
             </div>
 
-            <div className="modal-action">
-              <button className="btn btn-outline" onClick={reiniciarJuego}>
+            <div className="mt-6 flex flex-wrap justify-end gap-3">
+              <button className="rounded-lg border-2 border-gray-300 bg-transparent px-4 py-2 font-semibold transition-colors hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800" onClick={reiniciarJuego}>
                 Reintentar Nivel
               </button>
-              <button className="btn btn-primary" onClick={avanzarNivel}>
+              <button className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-blue-700" onClick={avanzarNivel}>
                 {game.discos < 6 ? "Siguiente Nivel" : "Volver a Empezar"}
               </button>
             </div>

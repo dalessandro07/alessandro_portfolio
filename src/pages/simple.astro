@@ -4,9 +4,9 @@ import { Image } from 'astro:assets'
 
 import Layout from '@/layouts/Layout.astro'
 
-import ThemeToggle from '@/components/buttons/ThemeToggle.astro'
+import ThemeToggle from '@/components/buttons/ThemeToggle.tsx'
 import { LINKEDIN_URL, MAIN_DESCRIPTION, MAIN_TITLE, WHATSAPP_URL } from '@/utils/consts'
-import { Icon } from 'astro-icon/components'
+import Icon from '@/components/Icon.astro'
 
 const enlaces = [
 	{
@@ -36,7 +36,7 @@ const enlaces = [
 				<Icon name='mdi:arrow-left' class='w-6 h-6' />
 				<span class='sr-only'>Ir a la página principal</span>
 			</a>
-			<ThemeToggle />
+			<ThemeToggle client:only />
 		</div>
 
 		<header class='flex flex-col gap-5'>

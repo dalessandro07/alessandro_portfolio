@@ -1,6 +1,6 @@
 ---
 import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL, INSTAGRAM_URL } from '@/utils/consts'
-import { Icon } from 'astro-icon/components'
+import Icon from '@/components/Icon.astro'
 
 const heroTitle = 'Soy Alessandro Rios desarrollador front- end especializado en React.'
 const heroTitleSM = 'Soy Alessandro Rios desarrollador front-end especializado en React.'
@@ -48,6 +48,8 @@ const socialIcons = [
 ---
 
 <style>
+	@reference "../styles/global.css";
+
 	html.sr .load-hidden {
 		visibility: hidden;
 	}
