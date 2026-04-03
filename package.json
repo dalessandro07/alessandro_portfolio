@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/cloudflare": "13.1.2",
@@ -43,13 +44,9 @@
     "@tailwindcss/postcss": "^4.2.2",
     "@types/glidejs__glide": "^3.6.6",
     "@types/sanitize-html": "^2.16.1",
-    "@typescript-eslint/parser": "^8.57.1",
     "astro-robots-txt": "^1.0.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^10.0.3",
-    "eslint-plugin-astro": "^1.6.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-n": "^17.24.0"
+    "husky": "^9.1.7"
   },
   "config": {
     "commitizen": {
