@@ -2,7 +2,7 @@
 export const MAIN_TITLE = "Alessandro Rios - Desarrollador Front-End"
 
 export const MAIN_DESCRIPTION =
-	"Alessandro es desarrollador front end y estudiante de computación e informática, especializado en software y con certificaciones en desarrollo web. Disponible para proyectos freelance."
+	"Alessandro es desarrollador de software y automatizaciones, especializado en desarrollo web. Disponible para proyectos freelance: Páginas web, aplicaciones web, automatizaciones, etc."
 
 // RESOURCES
 export const RESOURCES_TITLE =
