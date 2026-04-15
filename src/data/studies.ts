@@ -14,9 +14,9 @@ export default [
 	{
 		"institute": "CODERHOUSE",
 		"country": "Argentina",
-		"degree": "Desarrollo Front End",
+		"degree": "Desarrollo Front-end",
 		"date": "2021 - 2022",
-		"description": "Estudié la carrera de Desarrollo Front End en Coderhouse. Aprendí HTML, CSS, JavaScript, <strong>React</strong>, Firebase, Git, entre otras tecnologías.",
+		"description": "Estudié la carrera de Desarrollo Front-end en Coderhouse. Aprendí HTML, CSS, JavaScript, <strong>React</strong>, Firebase, Git, entre otras tecnologías.",
 		"image": coderhouseImage,
 		"url": "https://www.coderhouse.com/"
 	}
