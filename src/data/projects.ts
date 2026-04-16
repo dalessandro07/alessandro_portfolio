@@ -79,6 +79,12 @@ import amaruMobile from "@/assets/images/amaru/amaru-conservation-mobile.webp"
 import amaruNosotrosDesktop from "@/assets/images/amaru/amaru-conservation-nosotros-desktop.webp"
 import amaruServiciosDesktop from "@/assets/images/amaru/amaru-conservation-servicios-desktop.webp"
 
+/* CEJBOT */
+import cejbotHeroDesktop from "@/assets/images/cejbot/cejbot-hero-desktop.webp"
+import cejbotMobile from "@/assets/images/cejbot/cejbot-mobile.webp"
+import cejbotTestimonialsDesktop from "@/assets/images/cejbot/cejbot-testimonios-desktop.webp"
+import cejbotProblemDesktop from "@/assets/images/cejbot/cejbot-problem-desktop.webp"
+
 export const CLIENT_PROJECTS = [
 	{
 		"name": "Amaru Conservation",
@@ -171,6 +177,17 @@ export const CLIENT_PROJECTS = [
 ]
 
 export const PERSONAL_PROJECTS = [
+	{
+		"name": "CEJBOT",
+		"description": "CEJBOT es una plataforma LegalTech que centraliza y automatiza el seguimiento de expedientes judiciales en el Perú. Permite a los abogados y estudios jurídicos monitorear casos en portales judiciales, recibiendo alertas automáticas por correo con las resoluciones en PDF adjuntas cada vez que hay una novedad. <br/><br/> Con una interfaz moderna y un <strong>Asistente Jurídico impulsado por IA</strong>, la herramienta elimina el trabajo operativo de buscar información manualmente. Al automatizar esta vigilancia, devuelve horas invaluables a los profesionales del derecho para que se enfoquen netamente en el análisis y la estrategia legal de sus clientes.",
+		"url": "https://cejbot.com",
+		"src": [
+			cejbotHeroDesktop,
+			cejbotMobile,
+			cejbotTestimonialsDesktop,
+			cejbotProblemDesktop
+		]
+	},
 	{
 		"name": "Darmaes",
 		"description": 'Darmaes es una plataforma web para emprendedores que facilita la venta de productos mediante un catálogo interactivo y pedidos por WhatsApp. <br/><br/> Con un diseño responsive que se adapta perfectamente a dispositivos móviles, garantiza una experiencia fluida en cualquier pantalla. <br/><br/> Además, se ha desarrollado con un enfoque en la rapidez de carga de productos y una interfaz minimalista, amigable y moderna, asegurando una experiencia de usuario óptima y atractiva. <br/><br/> Desarrollado con Next.js, Tailwind CSS v4 y Turso.',
